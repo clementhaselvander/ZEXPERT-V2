@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contactez votre courtier — Z'Expert Nancy</title>
+<meta name="description" content="Contactez Z'Expert pour une étude de financement personnalisée et gratuite. Courtier en crédit immobilier à Nancy — réponse sous 48h, sans engagement.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Contactez votre courtier — Z'Expert Nancy">
+<meta property="og:description" content="Contactez Z'Expert pour une étude de financement personnalisée et gratuite. Courtier en crédit immobilier à Nancy — réponse sous 48h, sans engagement.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/contact.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contactez votre courtier — Z'Expert Nancy">
+<meta name="twitter:description" content="Étude de financement gratuite. Réponse sous 48h, sans engagement. Courtier en crédit immobilier à Nancy.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; height: 56vh; min-height: 420px;
+  display: flex; align-items: center; overflow: hidden;
+}
+.page-hero-img {
+  position: absolute; inset: -15% 0;
+  background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1800&q=80&auto=format&fit=crop');
+  background-size: cover; background-position: center 40%;
+  will-change: transform;
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,20,35,0.85) 0%, rgba(10,20,35,0.58) 55%, rgba(10,20,35,0.22) 100%),
+    linear-gradient(to top, rgba(10,20,35,0.55) 0%, transparent 60%);
+}
+.page-hero-line {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(to bottom, transparent, #1E9EBC 30%, #F5C842 70%, transparent);
+  opacity: 0.7;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  padding-top: var(--nav-h);
+}
+.page-hero h1 {
+  color: white;
+  opacity: 0; transform: translateY(20px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
+}
+.page-hero p {
+  color: rgba(255,255,255,0.75); margin-top: 16px; max-width: 540px; font-size: 1.05rem;
+  opacity: 0; transform: translateY(16px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s forwards;
+}
+.page-hero-label {
+  display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(30,158,188,0.9); margin-bottom: 12px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
+}
+@keyframes phIn { to { opacity: 1; transform: translateY(0); } }
+
+/* Layout */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Form card */
+.contact-form-card {
+  background: white; border-radius: 20px;
+  border: 1px solid var(--gray);
+  box-shadow: var(--shadow-md);
+  padding: 48px;
+}
+.contact-form-card h2 { margin-bottom: 8px; }
+.contact-form-card > p { color: var(--text-lt); margin-bottom: 32px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-full { grid-column: 1 / -1; }
+.form-submit-row {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  margin-top: 8px;
+}
+.form-reassurance {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.85rem; color: var(--text-lt);
+}
+.form-reassurance svg { color: var(--blue); flex-shrink: 0; }
+
+/* Success */
+.form-success {
+  display: none; text-align: center; padding: 40px 20px;
+}
+.form-success-icon {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--blue-lt); display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.form-success-icon svg { width: 36px; height: 36px; color: var(--blue); }
+.form-success h3 { color: var(--navy); margin-bottom: 10px; }
+.form-success p { color: var(--text-lt); }
+
+/* Sidebar */
+.contact-sidebar { display: flex; flex-direction: column; gap: 20px; }
+.contact-info-card {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a55 100%);
+  border-radius: 16px; padding: 32px;
+}
+.contact-info-card h3 { color: white; margin-bottom: 20px; font-size: 1.1rem; }
+.contact-info-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  margin-bottom: 20px; padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.contact-info-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.contact-info-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(30,158,188,0.2); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.contact-info-icon svg { width: 18px; height: 18px; color: var(--blue); }
+.contact-info-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; font-weight: 600; }
+.contact-info-value { font-size: 0.95rem; color: white; font-weight: 500; }
+.contact-info-sub { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+/* Garanties */
+.garanties-card {
+  background: white; border-radius: 16px;
+  border: 1px solid var(--gray); padding: 28px;
+}
+.garanties-card h3 { color: var(--navy); margin-bottom: 16px; font-size: 1rem; }
+.garantie-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--gray);
+  font-size: 0.9rem; color: var(--text-lt);
+}
+.garantie-item:last-child { border-bottom: none; }
+.garantie-check {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--blue-lt); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.garantie-check svg { width: 12px; height: 12px; color: var(--blue); }
+
+/* Simulateur encart */
+.sim-encart {
+  background: var(--blue-lt); border-radius: 16px;
+  border: 1px solid rgba(30,158,188,0.2); padding: 24px; text-align: center;
+}
+.sim-encart p { font-size: 0.88rem; color: var(--text-lt); margin-bottom: 14px; }
+
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-form-card { padding: 28px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-submit-row { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Nos services</a>
+      <a href="simulateur.html" class="nav-link">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img" id="phImg4"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-line"></div>
+  <div class="container page-hero-content">
+    <span class="page-hero-label">Prenons contact</span>
+    <h1>Parlons de votre projet</h1>
+    <p>Vous avez un projet immobilier ? Obtenez une réponse claire et rapide d'un expert dédié.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form-card fade-in">
+        <h2>Demande de rappel</h2>
+        <p>Remplissez le formulaire ci-dessous, un expert Z'Expert vous contacte sous 48 heures.</p>
+
+        <form id="contactForm" onsubmit="submitContact(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="nom">Nom complet *</label>
+              <input type="text" class="form-input" id="nom" placeholder="Votre nom et prénom" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tel">Téléphone *</label>
+              <input type="tel" class="form-input" id="tel" placeholder="+33 6 00 00 00 00" required>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" class="form-input" id="email" placeholder="votre@email.fr" required>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="projet">Type de projet</label>
+              <select class="form-select" id="projet">
+                <option value="">Sélectionnez votre projet</option>
+                <option>Achat résidence principale</option>
+                <option>Achat résidence secondaire</option>
+                <option>Investissement locatif</option>
+                <option>Rachat de crédit</option>
+                <option>Prêt relais</option>
+                <option>Renégociation</option>
+                <option>Assurance emprunteur</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group form-full">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" placeholder="Décrivez votre projet, vos questions ou vos besoins spécifiques..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit-row" style="margin-top:24px;">
+            <button type="submit" class="btn btn-primary btn-lg" id="contactBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+              Être rappelé
+            </button>
+            <div class="form-reassurance">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Vos données sont protégées (RGPD)
+            </div>
+          </div>
+          <div id="contactError" style="display:none;align-items:center;gap:8px;padding:12px 16px;background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;margin-top:14px;font-size:0.85rem;color:#B91C1C;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            L'envoi n'a pas abouti. Réessayez ou contactez-nous directement au <strong>06 33 67 72 45</strong>.
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-lt);margin-top:14px;">* Champs obligatoires. En soumettant ce formulaire, vous acceptez d'être recontacté par Z'Expert concernant votre projet immobilier.</p>
+        </form>
+
+        <!-- SUCCESS -->
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Votre demande a bien été envoyée !</h3>
+          <p>Un expert Z'Expert vous contactera sous 48 heures à l'adresse <strong>vincent.haselvander@zexpertnancy.fr</strong>.<br>Merci de votre confiance.</p>
+          <a href="simulateur.html" class="btn btn-outline" style="margin-top:20px;">Accéder au simulateur</a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="contact-sidebar">
+
+        <!-- Infos contact -->
+        <div class="contact-info-card fade-in fade-in-delay-1">
+          <h3>Informations de contact</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01-.07 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">Téléphone</div>
+              <div class="contact-info-value"><a href="tel:+33633677245" style="color:inherit;text-decoration:none;">06 33 67 72 45</a></div>
+              <div class="contact-info-sub">Du lundi au vendredi, 9h–19h</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value" style="font-size:0.85rem;">vincent.haselvander<br>@zexpertnancy.fr</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">Zone d'intervention</div>
+              <div class="contact-info-value">Intervention dans la France entière</div>
+              <div class="contact-info-sub">Rendez-vous possible à distance</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="contact-info-label">Délai de réponse</div>
+              <div class="contact-info-value">Sous 48 heures</div>
+              <div class="contact-info-sub">Étude gratuite et sans engagement</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garanties -->
+        <div class="garanties-card fade-in fade-in-delay-2">
+          <h3>Nos engagements</h3>
+          <div class="garantie-item">
+            <div class="garantie-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Étude personnalisée gratuite
+          </div>
+          <div class="garantie-item">
+            <div class="garantie-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Aucun engagement avant accord
+          </div>
+          <div class="garantie-item">
+            <div class="garantie-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Immatriculé ORIAS
+          </div>
+          <div class="garantie-item">
+            <div class="garantie-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Données protégées (RGPD)
+          </div>
+          <div class="garantie-item">
+            <div class="garantie-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            +150 dossiers financés
+          </div>
+        </div>
+
+        <!-- Simulateur -->
+        <div class="sim-encart fade-in fade-in-delay-3">
+          <div style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;">Avant de nous contacter</div>
+          <p>Estimez votre projet avec notre simulateur gratuit pour mieux préparer votre demande.</p>
+          <a href="simulateur.html" class="btn btn-primary btn-sm">Simuler mon projet</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  const bg = document.getElementById('phImg4');
+  if (bg) bg.style.transform = `translateY(${Math.min(window.scrollY * 0.35, 120)}px)`;
+}, { passive: true });
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav(); window.addEventListener('resize', checkNav);
+
+async function submitContact(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contactBtn');
+  const errEl = document.getElementById('contactError');
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.innerHTML = 'Envoi en cours…';
+
+  const payload = {
+    _subject: "Nouvelle demande de contact Z'Expert",
+    nom: document.getElementById('nom').value,
+    telephone: document.getElementById('tel').value,
+    email: document.getElementById('email').value,
+    projet: document.getElementById('projet').value || '—',
+    message: document.getElementById('message').value || '—'
+  };
+
+  let ok = false;
+  try {
+    const res = await fetch('https://formspree.io/f/maqkjjow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    ok = res.ok;
+  } catch (_) {}
+
+  if (ok) {
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg> Être rappelé';
+    errEl.style.display = 'flex';
+  }
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

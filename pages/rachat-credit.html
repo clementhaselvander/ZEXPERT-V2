@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rachat de Crédit — Z'Expert Courtier Nancy</title>
+<meta name="description" content="Réduisez vos mensualités avec le rachat de crédit. Z'Expert regroupe vos crédits immobiliers et consommation pour alléger votre budget, à Nancy et en Grand Est.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Rachat de Crédit — Z'Expert Courtier Nancy">
+<meta property="og:description" content="Réduisez vos mensualités avec le rachat de crédit. Z'Expert regroupe vos crédits immobiliers et consommation pour alléger votre budget, à Nancy et en Grand Est.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/rachat-credit.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rachat de Crédit — Z'Expert Courtier Nancy">
+<meta name="twitter:description" content="Réduisez vos mensualités en regroupant vos crédits. Z'Expert vous accompagne à Nancy et en Grand Est.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; height: 62vh; min-height: 480px;
+  display: flex; align-items: center; overflow: hidden;
+}
+.page-hero-img {
+  position: absolute; inset: -15% 0;
+  background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1800&q=80&auto=format&fit=crop');
+  background-size: cover; background-position: center 50%;
+  will-change: transform;
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,20,35,0.82) 0%, rgba(10,20,35,0.55) 55%, rgba(10,20,35,0.22) 100%),
+    linear-gradient(to top, rgba(10,20,35,0.55) 0%, transparent 60%);
+}
+.page-hero-line {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(to bottom, transparent, #1E9EBC 30%, #F5C842 70%, transparent);
+  opacity: 0.7;
+}
+.page-hero-content { position: relative; z-index: 2; padding-top: var(--nav-h); }
+.page-hero h1 {
+  color: white; opacity: 0; transform: translateY(20px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
+}
+.page-hero p {
+  color: rgba(255,255,255,0.75); margin-top: 16px; max-width: 560px; font-size: 1.1rem;
+  opacity: 0; transform: translateY(16px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s forwards;
+}
+.page-hero-label {
+  display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(30,158,188,0.9); margin-bottom: 12px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
+}
+.page-hero-ctas {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.65s forwards;
+}
+@keyframes phIn { to { opacity: 1; transform: translateY(0); } }
+
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-bottom: 16px;
+  opacity: 0; transform: translateY(8px);
+  animation: phIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s forwards;
+}
+.breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.breadcrumb a:hover { color: var(--yellow); }
+.breadcrumb span { color: rgba(255,255,255,0.3); }
+
+.stats-band { background: var(--navy); padding: 32px 0; }
+.stats-band-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; text-align: center; }
+.stat-item { padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.1); }
+.stat-item:last-child { border-right: none; }
+.stat-val { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--yellow); line-height: 1; }
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 6px; }
+
+.intro-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.intro-img { border-radius: 20px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.12); aspect-ratio: 4/3; }
+.intro-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.intro-text h2 { margin-bottom: 16px; }
+.intro-text p { color: var(--text-lt); line-height: 1.8; margin-bottom: 16px; }
+
+.types-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+.type-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid var(--gray); transition: all 0.25s; }
+.type-card:hover { box-shadow: var(--shadow-md); border-color: var(--blue); transform: translateY(-3px); }
+.type-card-badge { margin-bottom: 14px; }
+.type-card h4 { color: var(--navy); margin-bottom: 8px; }
+.type-card p { font-size: 0.88rem; color: var(--text-lt); line-height: 1.6; }
+
+.avantages-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.avantage-item { background: linear-gradient(135deg, var(--navy), #1e3a55); border-radius: 16px; padding: 28px; color: white; }
+.avantage-num { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--yellow); opacity: 0.4; line-height: 1; margin-bottom: 12px; }
+.avantage-item h4 { color: white; font-size: 0.95rem; margin-bottom: 8px; }
+.avantage-item p { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.6; }
+
+.steps-list { display: flex; flex-direction: column; gap: 0; }
+.step-item { display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start; padding: 28px 0; border-bottom: 1px solid var(--gray); }
+.step-item:last-child { border-bottom: none; }
+.step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; flex-shrink: 0; }
+.step-content h4 { color: var(--navy); margin-bottom: 6px; }
+.step-content p { color: var(--text-lt); font-size: 0.9rem; line-height: 1.7; }
+.step-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
+
+.cta-final { background: linear-gradient(135deg, var(--blue), var(--blue-dk)); border-radius: 24px; padding: 64px 56px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.cta-final h2 { color: white; margin-bottom: 10px; }
+.cta-final p { color: rgba(255,255,255,0.75); font-size: 1rem; }
+.cta-final-btns { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; white-space: nowrap; }
+
+.section-alt { background: var(--gray-lt); }
+
+@media (max-width: 1024px) {
+  .intro-layout { grid-template-columns: 1fr; gap: 40px; }
+  .stats-band-inner { grid-template-columns: repeat(2,1fr); gap: 24px 0; }
+  .stat-item:nth-child(2) { border-right: none; }
+}
+@media (max-width: 900px) {
+  .types-grid { grid-template-columns: 1fr; }
+  .avantages-grid { grid-template-columns: 1fr; }
+  .cta-final { grid-template-columns: 1fr; padding: 40px 28px; }
+  .cta-final-btns { flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 640px) {
+  .step-item { grid-template-columns: 48px 1fr; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link active">Nos services</a>
+      <a href="simulateur.html" class="nav-link">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img" id="phImgRC"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-line"></div>
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="services.html">Nos services</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,0.8);">Rachat de crédit</span>
+    </nav>
+    <span class="page-hero-label">Optimisation financière</span>
+    <h1>Rachat de crédit :<br>allégez vos mensualités</h1>
+    <p>Regroupez vos crédits en un seul et réduisez votre charge mensuelle pour retrouver de la sérénité financière.</p>
+    <div class="page-hero-ctas">
+      <a href="contact.html" class="btn btn-yellow btn-lg">Analyser mon dossier</a>
+      <a href="simulateur.html" class="btn btn-outline-white">Simuler d'abord</a>
+    </div>
+  </div>
+</div>
+
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-band-inner">
+      <div class="stat-item">
+        <div class="stat-val">-40%</div>
+        <div class="stat-label">Mensualité moyenne réduite</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">20+</div>
+        <div class="stat-label">Banques partenaires</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">48h</div>
+        <div class="stat-label">Délai de réponse</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">0€</div>
+        <div class="stat-label">Étude initiale gratuite</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="intro-layout">
+      <div class="intro-img fade-in">
+        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=900&q=80&auto=format&fit=crop" alt="Famille qui retrouve de la sérénité financière" loading="lazy">
+      </div>
+      <div class="intro-text fade-in fade-in-delay-1">
+        <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Qu'est-ce que le rachat de crédit ?</span>
+        <h2>Un seul crédit, une seule mensualité</h2>
+        <p>Le rachat de crédit (ou regroupement de crédits) consiste à rassembler plusieurs crédits en cours — immobilier, consommation, auto, personnel — en un seul prêt, avec une mensualité unique et réduite.</p>
+        <p>L'objectif est double : alléger votre budget mensuel en allongeant la durée de remboursement, et simplifier votre gestion financière avec un seul interlocuteur bancaire.</p>
+        <p>Z'Expert analyse votre situation globale et négocie les meilleures conditions de regroupement auprès de ses partenaires bancaires spécialisés.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:8px;">Étudier mon rachat gratuitement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Types de regroupement</span>
+      <h2>Quels crédits peut-on regrouper ?</h2>
+    </div>
+    <div class="types-grid">
+      <div class="type-card fade-in">
+        <div class="type-card-badge"><span class="badge badge-blue">Rachat immobilier</span></div>
+        <h4>Rachat incluant un crédit immobilier</h4>
+        <p>Si votre regroupement inclut un crédit immobilier représentant plus de 60 % du total, l'opération est soumise aux règles du crédit immobilier. Généralement plus avantageux sur les taux.</p>
+      </div>
+      <div class="type-card fade-in fade-in-delay-1">
+        <div class="type-card-badge"><span class="badge badge-yellow">Rachat consommation</span></div>
+        <h4>Rachat de crédits à la consommation</h4>
+        <p>Regroupement de prêts personnels, crédits auto, revolving et autres dettes consommation. Solution rapide pour alléger des charges mensuelles multiples et coûteuses.</p>
+      </div>
+      <div class="type-card fade-in">
+        <div class="type-card-badge"><span class="badge badge-blue">Trésorerie incluse</span></div>
+        <h4>Avec trésorerie complémentaire</h4>
+        <p>Il est possible d'inclure une enveloppe de trésorerie supplémentaire dans l'opération pour financer des travaux ou faire face à un projet, sans démarche séparée.</p>
+      </div>
+      <div class="type-card fade-in fade-in-delay-1">
+        <div class="type-card-badge"><span class="badge" style="background:#f0faf0;color:#2a9d3c;">Propriétaire ou locataire</span></div>
+        <h4>Accessible aux propriétaires et locataires</h4>
+        <p>Le rachat de crédit n'est pas réservé aux propriétaires. Les locataires peuvent également regrouper leurs crédits à la consommation sous certaines conditions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Bénéfices</span>
+      <h2>Les avantages du regroupement</h2>
+    </div>
+    <div class="avantages-grid">
+      <div class="avantage-item fade-in">
+        <div class="avantage-num">01</div>
+        <h4>Mensualité allégée</h4>
+        <p>En allongeant la durée totale, vous pouvez réduire votre mensualité jusqu'à 40 % et retrouver du pouvoir d'achat immédiat.</p>
+      </div>
+      <div class="avantage-item fade-in fade-in-delay-1">
+        <div class="avantage-num">02</div>
+        <h4>Gestion simplifiée</h4>
+        <p>Un seul crédit, un seul prélèvement, un seul interlocuteur. Fini les multiples échéances difficiles à suivre.</p>
+      </div>
+      <div class="avantage-item fade-in fade-in-delay-2">
+        <div class="avantage-num">03</div>
+        <h4>Taux renégocié</h4>
+        <p>Si votre crédit immobilier date de plusieurs années, le regroupement peut être l'occasion d'obtenir un taux plus avantageux.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container" style="max-width:760px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Processus</span>
+      <h2>Comment se déroule le rachat ?</h2>
+    </div>
+    <div class="steps-list">
+      <div class="step-item fade-in">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <span class="step-tag">Gratuit · 48h</span>
+          <h4>Analyse de votre situation</h4>
+          <p>Recensement de tous vos crédits en cours, de vos revenus et charges. Calcul de la mensualité cible et évaluation de la faisabilité.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in fade-in-delay-1">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <span class="step-tag">Semaine 1</span>
+          <h4>Constitution du dossier</h4>
+          <p>Collecte des pièces justificatives : relevés de comptes, tableaux d'amortissement des crédits existants, justificatifs de revenus.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <span class="step-tag">Semaine 2–3</span>
+          <h4>Mise en concurrence des banques</h4>
+          <p>Votre dossier est soumis à nos partenaires spécialisés dans le rachat de crédit pour obtenir les meilleures conditions.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in fade-in-delay-1">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <span class="step-tag">Semaine 3–4</span>
+          <h4>Présentation & validation</h4>
+          <p>Nous comparons les offres et vous présentons la solution optimale. Vous choisissez en toute connaissance de cause.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <span class="step-tag">Finalisation</span>
+          <h4>Remboursement des anciens crédits</h4>
+          <p>La nouvelle banque rembourse directement vos anciens crédits. Vous ne payez plus qu'une seule mensualité réduite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:760px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Questions fréquentes</span>
+      <h2>Rachat de crédit : vos questions</h2>
+    </div>
+    <div>
+      <div class="accordion-item open fade-in">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Le rachat de crédit augmente-t-il le coût total ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>En allongeant la durée, le coût total du crédit peut augmenter même si la mensualité baisse. C'est un arbitrage conscient entre budget mensuel et coût global. Z'Expert vous présente une comparaison transparente pour vous aider à décider.</p>
+        </div>
+      </div>
+      <div class="accordion-item fade-in fade-in-delay-1">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Faut-il être propriétaire pour faire un rachat de crédit ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>Non. Les locataires peuvent regrouper leurs crédits à la consommation. Les propriétaires ont accès à des conditions généralement plus avantageuses car le bien peut servir de garantie.</p>
+        </div>
+      </div>
+      <div class="accordion-item fade-in">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Y a-t-il des pénalités sur les crédits remboursés ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>Oui, en principe. Les crédits immobiliers peuvent comporter des indemnités de remboursement anticipé (IRA), plafonnées légalement à 3 % du capital restant dû ou 6 mois d'intérêts. Nous intégrons ce coût dans notre calcul de rentabilité de l'opération.</p>
+          <p>Selon les conditions du dossier, Z'EXPERT peut intervenir auprès de ses partenaires bancaires afin de négocier une réduction, voire une suppression, de certains frais liés au remboursement anticipé.</p>
+        </div>
+      </div>
+      <div class="accordion-item fade-in fade-in-delay-1">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Peut-on inclure des dettes autres que des crédits ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>Dans certains cas, des dettes fiscales ou sociales peuvent être intégrées, selon les établissements partenaires. Nous analysons votre situation au cas par cas pour trouver la solution la plus adaptée.</p>
+          <p>Selon les situations, certains regroupements peuvent également intégrer des dettes fiscales, des contentieux ou des créances suivies par huissier.</p>
+          <p>Dans le cadre d'un rachat de crédits, un taux d'endettement pouvant aller jusqu'à 40 % peut parfois être envisagé selon le profil et la faisabilité du dossier.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="faq-avis.html" style="font-size:0.88rem;color:var(--blue);font-weight:600;">Voir toutes les questions fréquentes →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="cta-final fade-in">
+      <div>
+        <h2>Prêt à alléger vos mensualités ?</h2>
+        <p>Un expert Z'Expert analyse votre situation et vous propose la solution la plus avantageuse. Réponse sous 48h, sans engagement.</p>
+      </div>
+      <div class="cta-final-btns">
+        <a href="contact.html" class="btn btn-yellow btn-lg">Analyser mon rachat de crédit</a>
+        <a href="simulateur.html" class="btn btn-outline-white">Simuler mon projet</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  const bg = document.getElementById('phImgRC');
+  if (bg) bg.style.transform = `translateY(${Math.min(window.scrollY * 0.35, 120)}px)`;
+}, { passive: true });
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav(); window.addEventListener('resize', checkNav);
+function toggleAccordion(btn) {
+  const item = btn.closest('.accordion-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

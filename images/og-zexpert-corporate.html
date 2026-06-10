@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+  }
+  .canvas {
+    width: 1200px; height: 630px; position: relative; overflow: hidden;
+    background: #F7F9FC;
+  }
+
+  /* Bande couleur droite */
+  .right-panel {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 320px;
+    background: #109DBB;
+  }
+  .right-panel-accent {
+    position: absolute; right: 320px; top: 0; bottom: 0; width: 6px;
+    background: #F4D44D;
+  }
+
+  /* Motif géométrique dans le panel droit */
+  .right-pattern {
+    position: absolute; right: 0; top: 0; width: 320px; height: 630px;
+  }
+
+  /* Contenu gauche */
+  .content {
+    position: absolute; left: 0; top: 0; right: 326px; bottom: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 70px 70px 70px 80px;
+  }
+
+  .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: #109DBB; margin-bottom: 28px;
+  }
+
+  .wordmark {
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    font-weight: 800; font-size: 88px; line-height: 1;
+    color: #071c2a; letter-spacing: -0.02em; margin-bottom: 10px;
+    position: relative;
+  }
+
+  .wordmark-under {
+    width: 100%; height: 8px;
+    background: #F4D44D;
+    margin-bottom: 36px;
+    border-radius: 2px;
+    transform: skewX(-1deg);
+  }
+
+  .separator {
+    width: 40px; height: 3px;
+    background: #109DBB; margin-bottom: 24px;
+  }
+
+  .tagline {
+    font-size: 20px; font-weight: 400; line-height: 1.6;
+    color: #3a4a5c; margin-bottom: 40px;
+  }
+  .tagline strong { font-weight: 700; color: #071c2a; }
+
+  /* Badges */
+  .badges {
+    display: flex; gap: 16px;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 8px 18px; border-radius: 6px;
+    border: 1.5px solid #D1DCE8;
+    font-size: 13px; font-weight: 600; color: #3a4a5c; letter-spacing: 0.02em;
+  }
+  .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #109DBB; }
+
+  /* Panel droit contenu */
+  .right-content {
+    position: absolute; right: 0; top: 0; width: 320px; height: 630px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px 32px; gap: 20px;
+  }
+  .right-stat {
+    text-align: center;
+  }
+  .right-stat-num {
+    font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 48px;
+    color: #fff; line-height: 1;
+  }
+  .right-stat-unit {
+    font-size: 28px; font-weight: 300;
+  }
+  .right-stat-label {
+    font-size: 12px; font-weight: 400; letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.7); text-transform: uppercase; margin-top: 6px;
+  }
+  .right-divider {
+    width: 36px; height: 1px; background: rgba(255,255,255,0.25);
+  }
+
+  /* URL bas */
+  .url {
+    position: absolute; bottom: 32px; left: 80px;
+    font-size: 13px; font-weight: 400; color: #9aacbd; letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- Panel droit cyan -->
+  <div class="right-panel"></div>
+  <div class="right-panel-accent"></div>
+
+  <svg class="right-pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 630">
+    <circle cx="300" cy="100" r="200" fill="rgba(255,255,255,0.04)"/>
+    <circle cx="280" cy="560" r="160" fill="rgba(255,255,255,0.04)"/>
+    <line x1="0" y1="0" x2="320" y2="630" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <line x1="40" y1="0" x2="320" y2="550" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  </svg>
+
+  <!-- Stats panel droit -->
+  <div class="right-content">
+    <div class="right-stat">
+      <div class="right-stat-num">+150</div>
+      <div class="right-stat-label">Dossiers financés</div>
+    </div>
+    <div class="right-divider"></div>
+    <div class="right-stat">
+      <div class="right-stat-num">20<span class="right-stat-unit">+</span></div>
+      <div class="right-stat-label">Banques partenaires</div>
+    </div>
+    <div class="right-divider"></div>
+    <div class="right-stat">
+      <div class="right-stat-num">4.9<span class="right-stat-unit">★</span></div>
+      <div class="right-stat-label">Note Google</div>
+    </div>
+  </div>
+
+  <!-- Contenu gauche -->
+  <div class="content">
+    <div class="label">Courtier agréé · ORIAS</div>
+
+    <div class="wordmark">Z'EXPERT</div>
+    <div class="wordmark-under"></div>
+
+    <div class="separator"></div>
+
+    <div class="tagline">
+      <strong>Crédit immobilier & assurance emprunteur</strong><br>
+      Accompagnement personnalisé · Nancy · Grand Est
+    </div>
+
+    <div class="badges">
+      <div class="badge"><div class="badge-dot"></div>Gratuit</div>
+      <div class="badge"><div class="badge-dot"></div>Sans engagement</div>
+    </div>
+  </div>
+
+  <div class="url">zexpert-courtage.com</div>
+</div>
+</body>
+</html>

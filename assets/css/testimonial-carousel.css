@@ -1,0 +1,335 @@
+/* ============================================================
+   TESTIMONIAL SHUFFLE CAROUSEL — Z'Expert
+   Inspiré du pattern ShuffleCards / 21st.dev
+   Vanilla CSS uniquement — pas de Tailwind, pas de React
+   ============================================================ */
+
+/* ── Variables locales ── */
+:root {
+  --tc-primary:    #109DBB;
+  --tc-gold:       #F4D44D;
+  --tc-primary-08: rgba(16, 157, 187, 0.08);
+  --tc-primary-15: rgba(16, 157, 187, 0.15);
+  --tc-primary-25: rgba(16, 157, 187, 0.25);
+  --tc-glow:       rgba(16, 157, 187, 0.18);
+}
+
+/* ── Section wrapper ── */
+.avis-section {
+  background: var(--bg);
+  overflow: visible;
+}
+.avis-mini-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* ── Outer wrap (center + spacing) ── */
+.ts-wrap {
+  position: relative;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 64px;
+}
+
+/* ── Badge "Avis vérifiés Google" ── */
+.ts-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: min(580px, 92vw);
+  margin-bottom: 20px;
+}
+.ts-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-sec);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 10px 4px 8px;
+}
+.ts-badge svg {
+  width: 11px;
+  height: 11px;
+  color: var(--tc-primary);
+  flex-shrink: 0;
+}
+
+/* ── Deck container ── */
+.ts-stack {
+  position: relative;
+  width: min(580px, 92vw);
+  height: 400px;
+  overflow: visible;
+}
+
+/* ── Carte individuelle ── */
+.ts-card {
+  position: absolute;
+  inset: 0;
+  will-change: transform, opacity;
+  transition:
+    transform 0.48s cubic-bezier(0.34, 1.35, 0.64, 1),
+    opacity   0.35s ease,
+    box-shadow 0.3s ease;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+}
+.ts-card.is-active {
+  cursor: grab;
+  z-index: 10;
+}
+.ts-card.is-dragging {
+  transition: none;
+  cursor: grabbing;
+}
+.ts-card.is-flying-out {
+  transition:
+    transform 0.44s cubic-bezier(0.4, 0, 0.9, 0.6),
+    opacity   0.35s ease;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ── Face de la carte (glassmorphism blanc) ── */
+.ts-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border-radius: 24px;
+  border: 1px solid var(--tc-primary-15);
+  box-shadow:
+    0 2px 8px  rgba(0, 0, 0, 0.04),
+    0 8px 28px rgba(0, 0, 0, 0.09),
+    0 24px 56px rgba(0, 0, 0, 0.07);
+  padding: 32px 36px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Accent bar top — dégradé turquoise → doré */
+.ts-card-inner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--tc-primary) 0%, var(--tc-gold) 55%, rgba(244, 212, 77, 0) 100%);
+  border-radius: 24px 24px 0 0;
+}
+
+/* Grande guillemet décorative */
+.ts-card-inner::after {
+  content: '\201C';
+  position: absolute;
+  top: 8px; right: 18px;
+  font-size: 108px;
+  line-height: 1;
+  color: rgba(16, 157, 187, 0.055);
+  font-family: Georgia, 'Times New Roman', serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Glow turquoise au hover — seulement sur la carte active */
+.ts-card.is-active:not(.is-dragging) .ts-card-inner:hover {
+  box-shadow:
+    0 2px 8px  rgba(0, 0, 0, 0.04),
+    0 8px 28px rgba(0, 0, 0, 0.09),
+    0 24px 56px rgba(0, 0, 0, 0.07),
+    0 0 0 2px var(--tc-primary-25),
+    0 0 32px rgba(16, 157, 187, 0.12);
+}
+
+/* ── Intérieur de la carte ── */
+.ts-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Avatar — initiales premium */
+.ts-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.ts-info { flex: 1; min-width: 0; }
+.ts-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0d1b2a;
+  line-height: 1.25;
+}
+.ts-role {
+  font-size: 12px;
+  color: var(--text-sec);
+  margin-top: 2px;
+}
+
+/* Badge "Vérifié Google" */
+.ts-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--tc-primary);
+  background: var(--tc-primary-08);
+  border: 1px solid var(--tc-primary-15);
+  border-radius: 8px;
+  padding: 4px 9px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ts-verified svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+/* Étoiles */
+.ts-stars { display: flex; gap: 2px; }
+.ts-star  { color: var(--tc-gold); font-size: 18px; line-height: 1; }
+
+/* Citation */
+.ts-quote {
+  font-size: 14.5px;
+  line-height: 1.76;
+  color: #384555;
+  flex: 1;
+}
+
+/* Pied de carte */
+.ts-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(16, 157, 187, 0.10);
+  margin-top: auto;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ts-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.ts-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text-sec);
+  border: 1px solid var(--border);
+}
+.ts-tag.featured {
+  background: var(--tc-primary-08);
+  color: var(--tc-primary);
+  border-color: var(--tc-primary-25);
+}
+.ts-date { font-size: 11.5px; color: #8a9aaa; white-space: nowrap; }
+
+/* ── Pagination dots ── */
+.ts-pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.ts-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tc-primary-25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, transform 0.25s, width 0.25s;
+}
+.ts-dot.active {
+  background: var(--tc-primary);
+  transform: scale(1.35);
+  width: 22px;
+  border-radius: 4px;
+}
+
+/* ── Hint drag ── */
+.ts-drag-hint {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-sec);
+  font-size: 12px;
+  opacity: 0.45;
+  user-select: none;
+}
+
+/* ── Boutons navigation (prev / next) ── */
+.ts-nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.ts-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--tc-primary-25);
+  background: var(--surface);
+  color: var(--tc-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.ts-nav-btn:hover {
+  background: var(--tc-primary-08);
+  border-color: var(--tc-primary);
+  transform: scale(1.06);
+}
+.ts-nav-btn svg { width: 16px; height: 16px; }
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .ts-stack { height: 440px; }
+  .ts-card-inner { padding: 24px 22px 20px; gap: 12px; }
+  .ts-quote { font-size: 13.5px; }
+  .ts-verified { display: none; }
+  .ts-avatar { width: 42px; height: 42px; }
+}
+@media (max-width: 479px) {
+  .ts-stack { height: 480px; }
+  .ts-card-inner { padding: 20px 16px 16px; gap: 10px; }
+  .ts-avatar { width: 38px; height: 38px; border-radius: 10px; font-size: 12px; }
+  .ts-quote { font-size: 13px; }
+  .ts-name { font-size: 14.5px; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .ts-card,
+  .ts-card-inner,
+  .ts-dot,
+  .ts-nav-btn {
+    transition: none !important;
+    animation: none !important;
+  }
+}

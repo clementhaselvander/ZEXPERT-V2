@@ -1,0 +1,1220 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analyse Assurance Emprunteur Gratuite — Z'Expert Nancy</title>
+<meta name="description" content="Obtenez une analyse gratuite de votre assurance emprunteur en 6 étapes. Comparez, économisez, changez sans frais. Courtier Z'Expert à Nancy.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Analyse Assurance Emprunteur Gratuite — Z'Expert Nancy">
+<meta property="og:description" content="Obtenez une analyse gratuite de votre assurance emprunteur en 6 étapes. Comparez, économisez, changez sans frais. Courtier Z'Expert à Nancy.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/simulateur-assurance.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Analyse Assurance Emprunteur Gratuite — Z'Expert Nancy">
+<meta name="twitter:description" content="Analyse gratuite de votre assurance emprunteur en 6 étapes. Comparez, économisez, changez sans frais.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+
+/* ============================================================
+   TUNNEL ASSURANCE — 6 étapes
+   ============================================================ */
+.tunnel-page {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  background-color: #0c1b27;
+  background-image:
+    radial-gradient(ellipse 150% 100% at 50% 100%, rgba(3,10,18,0.50) 0%, transparent 58%),
+    radial-gradient(ellipse 120% 60% at 50% 0%, rgba(3,10,18,0.20) 0%, transparent 52%),
+    linear-gradient(160deg,
+      rgba(230,241,248,0.74) 0%,
+      rgba(198,229,243,0.66) 50%,
+      rgba(230,241,248,0.74) 100%
+    ),
+    url('../METZ_2.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .tunnel-page { background-attachment: scroll; }
+}
+
+/* Header */
+.tunnel-header {
+  text-align: center;
+  padding: 52px 24px 40px;
+}
+.tunnel-supertitle {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 12px;
+  animation: simFadeUp 0.55s cubic-bezier(0.22,1,0.36,1) both;
+}
+.tunnel-header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.65rem; font-weight: 700; color: var(--navy);
+  margin: 0 0 14px; line-height: 1.2;
+  letter-spacing: -0.025em;
+  animation: simFadeUp 0.65s 0.08s cubic-bezier(0.22,1,0.36,1) both;
+}
+.tunnel-header-sub {
+  color: var(--text-lt); font-size: 0.95rem; line-height: 1.65;
+  max-width: 480px; margin: 0 auto 24px;
+}
+.trust-row {
+  display: inline-flex; gap: 0;
+  background: white; border: 1px solid var(--gray);
+  border-radius: 50px; padding: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.trust-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.79rem; font-weight: 600; color: var(--text-lt);
+  padding: 8px 18px; border-radius: 50px;
+}
+.trust-item:not(:last-child) { border-right: 1px solid var(--gray); }
+.trust-check { color: var(--blue); font-size: 0.72rem; }
+
+
+/* ============================================================
+   TUNNEL CARD
+   ============================================================ */
+.tunnel-wrap {
+  max-width: 680px; margin: 0 auto; padding: 0 20px 80px;
+}
+.tunnel-card {
+  background: rgba(255,255,255,0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.78);
+  box-shadow: 0 12px 56px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.96);
+  overflow: hidden;
+}
+
+/* ============================================================
+   PROGRESS BAR — 6 étapes
+   ============================================================ */
+.tunnel-progress { padding: 26px 32px 0; }
+.progress-steps { display: flex; align-items: center; }
+.progress-dot {
+  width: 30px; height: 30px; border-radius: 50%;
+  flex-shrink: 0; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700;
+  border: 2.5px solid #DDE2EA;
+  background: white; color: #A0A8B4;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+.progress-dot.active {
+  border-color: var(--blue); background: var(--blue); color: white;
+  box-shadow: 0 0 0 5px rgba(30,158,188,0.14);
+}
+.progress-dot.done { border-color: var(--blue); background: var(--blue); color: white; }
+.progress-line {
+  flex: 1; height: 2px; background: #DDE2EA; position: relative; overflow: hidden;
+}
+.progress-fill { position: absolute; inset: 0; background: var(--blue); width: 0%; transition: width 0.5s ease; }
+.progress-labels { display: flex; margin-top: 9px; }
+.progress-lbl {
+  flex: 1; font-size: 0.64rem; font-weight: 600; color: #A0A8B4;
+  transition: color 0.3s; white-space: nowrap;
+}
+.progress-lbl:nth-child(2),
+.progress-lbl:nth-child(3),
+.progress-lbl:nth-child(4),
+.progress-lbl:nth-child(5) { text-align: center; }
+.progress-lbl:last-child { text-align: right; }
+.progress-lbl.active { color: var(--blue); }
+
+/* ============================================================
+   STEP BODY
+   ============================================================ */
+.tunnel-body { padding: 28px 32px 0; }
+.tunnel-step { display: none; }
+.tunnel-step.active {
+  display: block;
+  animation: stepIn 0.28s ease forwards;
+}
+@keyframes stepIn {
+  from { opacity: 0; transform: translateX(14px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.step-eyebrow {
+  font-size: 0.71rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 6px;
+}
+.step-title {
+  font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700;
+  color: var(--navy); margin: 0 0 5px;
+}
+.step-desc { font-size: 0.87rem; color: var(--text-lt); margin: 0 0 26px; line-height: 1.55; }
+
+/* ============================================================
+   CHOICE CARDS
+   ============================================================ */
+.tf { margin-bottom: 22px; }
+.tf-label {
+  display: block; font-size: 0.82rem; font-weight: 700; color: var(--text);
+  margin-bottom: 10px;
+}
+.tf-label em { font-style: normal; font-weight: 400; color: var(--text-lt); font-size: 0.76rem; }
+.cg { display: grid; gap: 9px; }
+.cg-2 { grid-template-columns: 1fr 1fr; }
+.cg-3 { grid-template-columns: repeat(3, 1fr); }
+.cc {
+  border: 1.5px solid #DDE2EA; border-radius: 11px; padding: 13px 15px;
+  cursor: pointer; background: white;
+  display: flex; align-items: flex-start; gap: 10px;
+  transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+  user-select: none; text-align: left;
+}
+.cc:hover { border-color: var(--blue); background: #F0F9FC; }
+.cc.sel {
+  border-color: var(--blue); background: #EBF6FA;
+  box-shadow: 0 0 0 3px rgba(30,158,188,0.13);
+}
+.cc-ico {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: #EEF8FB; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.18s; margin-top: 1px;
+}
+.cc.sel .cc-ico { background: rgba(30,158,188,0.18); }
+.cc-ico svg { width: 15px; height: 15px; color: var(--blue); }
+.cc-t { font-size: 0.85rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+.cc-s { font-size: 0.73rem; color: var(--text-lt); margin-top: 2px; line-height: 1.3; }
+
+/* ============================================================
+   TOGGLE 3 OPTIONS
+   ============================================================ */
+.toggle-row { display: flex; gap: 9px; }
+.toggle-btn {
+  flex: 1; padding: 12px; border: 1.5px solid #DDE2EA; border-radius: 10px;
+  background: white; cursor: pointer;
+  font-size: 0.87rem; font-weight: 600; color: var(--text-lt);
+  transition: all 0.18s; font-family: var(--font-sans);
+}
+.toggle-btn:hover { border-color: var(--blue); color: var(--blue); }
+.toggle-btn.sel { border-color: var(--blue); background: #EBF6FA; color: var(--blue); }
+
+/* ============================================================
+   RANGE SLIDERS
+   ============================================================ */
+.range-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 11px; }
+.range-display {
+  font-family: var(--font-serif); font-size: 1.08rem; font-weight: 700;
+  color: var(--blue); background: #EBF6FA; padding: 3px 13px; border-radius: 20px;
+}
+input.tr {
+  width: 100%; appearance: none; height: 5px;
+  background: linear-gradient(to right, var(--blue) 0%, var(--blue) var(--p, 35%), #DDE2EA var(--p, 35%), #DDE2EA 100%);
+  border-radius: 3px; outline: none; cursor: pointer;
+}
+input.tr::-webkit-slider-thumb {
+  appearance: none; width: 21px; height: 21px; border-radius: 50%;
+  background: white; border: 2.5px solid var(--blue);
+  box-shadow: 0 2px 7px rgba(30,158,188,0.3);
+  cursor: pointer; transition: transform 0.15s;
+}
+input.tr::-webkit-slider-thumb:hover { transform: scale(1.15); }
+.range-hints { display: flex; justify-content: space-between; margin-top: 6px; }
+.rh { font-size: 0.7rem; color: #A0A8B4; }
+
+/* ============================================================
+   SAVINGS ESTIMATE BOX
+   ============================================================ */
+.savings-box {
+  background: linear-gradient(135deg, rgba(30,158,188,0.07) 0%, rgba(245,200,66,0.06) 100%);
+  border: 1.5px solid rgba(30,158,188,0.22);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.savings-box-label { font-size: 0.82rem; color: var(--text-lt); line-height: 1.5; }
+.savings-box-label strong { display: block; font-size: 0.85rem; color: var(--navy); margin-bottom: 3px; }
+.savings-amounts { text-align: right; flex-shrink: 0; }
+.savings-monthly { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--blue); line-height: 1; }
+.savings-total { font-size: 0.76rem; color: var(--text-lt); margin-top: 4px; }
+.savings-box.hidden { display: none; }
+
+/* ============================================================
+   MULTI-SELECT CHECKBOXES
+   ============================================================ */
+.mc { display: flex; flex-direction: column; gap: 9px; }
+.mc-item {
+  display: flex; align-items: center; gap: 12px;
+  border: 1.5px solid #DDE2EA; border-radius: 11px; padding: 13px 16px;
+  cursor: pointer; background: white;
+  transition: border-color 0.18s, background 0.18s;
+  user-select: none;
+}
+.mc-item:hover { border-color: var(--blue); background: #F0F9FC; }
+.mc-item.sel { border-color: var(--blue); background: #EBF6FA; box-shadow: 0 0 0 3px rgba(30,158,188,0.13); }
+.mc-check {
+  width: 20px; height: 20px; border-radius: 5px;
+  border: 2px solid #DDE2EA; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.18s;
+}
+.mc-item.sel .mc-check { background: var(--blue); border-color: var(--blue); }
+.mc-check svg { width: 11px; height: 11px; color: white; opacity: 0; transition: opacity 0.15s; stroke-width: 3; }
+.mc-item.sel .mc-check svg { opacity: 1; }
+.mc-text { font-size: 0.85rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+.mc-sub { font-size: 0.73rem; color: var(--text-lt); margin-top: 2px; }
+
+/* ============================================================
+   ALERTE INFO
+   ============================================================ */
+.info-banner {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: rgba(30,158,188,0.07); border: 1px solid rgba(30,158,188,0.2);
+  border-radius: 12px; padding: 14px 16px; margin-bottom: 22px;
+  font-size: 0.83rem; color: var(--text-lt); line-height: 1.55;
+}
+.info-banner svg { color: var(--blue); flex-shrink: 0; margin-top: 1px; }
+
+/* ============================================================
+   TEXT INPUTS
+   ============================================================ */
+.ti {
+  width: 100%; padding: 13px 16px; border-radius: 10px;
+  border: 1.5px solid #DDE2EA; background: white;
+  font-family: var(--font-sans); font-size: 0.92rem; color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+  box-sizing: border-box;
+}
+.ti:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(30,158,188,0.12); }
+.ti::placeholder { color: #B8C0CC; }
+.ti.err { border-color: #C0474A; box-shadow: 0 0 0 3px rgba(192,71,74,0.1); }
+textarea.ti { resize: vertical; min-height: 86px; max-height: 180px; }
+
+/* ============================================================
+   FOOTER / BUTTONS
+   ============================================================ */
+.tunnel-footer {
+  padding: 22px 32px;
+  border-top: 1px solid var(--gray);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 28px;
+}
+.btn-back {
+  display: flex; align-items: center; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  font-size: 0.84rem; color: #A0A8B4;
+  font-family: var(--font-sans); padding: 10px 0;
+  transition: color 0.2s;
+}
+.btn-back:hover { color: var(--blue); }
+.btn-back.hidden { visibility: hidden; pointer-events: none; }
+.btn-next {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 12px;
+  font-size: 0.92rem; font-weight: 700; cursor: pointer;
+  border: none; font-family: var(--font-sans);
+  background: var(--blue); color: white;
+  box-shadow: 0 4px 16px rgba(30,158,188,0.35);
+  transition: all 0.2s;
+}
+.btn-next:hover { background: var(--blue-dk); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(30,158,188,0.4); }
+.btn-next:disabled { opacity: 0.65; transform: none; cursor: not-allowed; }
+.btn-submit {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 12px;
+  font-size: 0.92rem; font-weight: 700; cursor: pointer;
+  border: none; font-family: var(--font-sans);
+  background: var(--yellow); color: var(--navy);
+  box-shadow: 0 4px 16px rgba(245,200,66,0.45);
+  transition: all 0.2s;
+}
+.btn-submit:hover { background: #e8c62a; transform: translateY(-1px); box-shadow: 0 6px 22px rgba(245,200,66,0.55); }
+.btn-submit:disabled { opacity: 0.65; transform: none; cursor: not-allowed; }
+
+/* ============================================================
+   SUCCESS
+   ============================================================ */
+.tunnel-success { display: none; padding: 56px 36px; text-align: center; }
+.success-icon {
+  width: 76px; height: 76px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dk));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 10px 32px rgba(30,158,188,0.38);
+}
+.success-icon svg { width: 34px; height: 34px; color: white; stroke-width: 2.5; }
+.success-title {
+  font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 12px;
+}
+.success-sub {
+  font-size: 0.92rem; color: var(--text-lt); line-height: 1.72;
+  max-width: 420px; margin: 0 auto 32px;
+}
+.success-savings-card {
+  display: inline-flex; align-items: center; gap: 16px;
+  background: linear-gradient(135deg, rgba(30,158,188,0.08), rgba(245,200,66,0.06));
+  border: 1.5px solid rgba(30,158,188,0.2);
+  border-radius: 16px; padding: 20px 28px;
+  margin-bottom: 32px; text-align: left;
+}
+.success-savings-num {
+  font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--blue); line-height: 1;
+}
+.success-savings-lbl { font-size: 0.82rem; color: var(--text-lt); margin-top: 4px; }
+.success-items {
+  display: flex; flex-direction: column; gap: 10px;
+  max-width: 340px; margin: 0 auto 32px;
+}
+.success-item { display: flex; align-items: center; gap: 12px; font-size: 0.88rem; color: var(--text); text-align: left; }
+.scheck {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  background: var(--blue-lt); display: flex; align-items: center; justify-content: center;
+}
+.scheck svg { width: 12px; height: 12px; color: var(--blue); stroke-width: 2.8; }
+
+/* ============================================================
+   ERREUR
+   ============================================================ */
+#simError {
+  display: none; align-items: center; gap: 10px;
+  padding: 14px 32px; background: #FEF2F2;
+  border-top: 1px solid #FECACA;
+  font-size: 0.85rem; color: #B91C1C;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 680px) {
+  .tunnel-header { padding: 32px 16px 24px; }
+  .tunnel-header h1 { font-size: 1.55rem; }
+  .trust-row { flex-wrap: wrap; border-radius: 14px; }
+  .trust-item { padding: 8px 12px; font-size: 0.75rem; }
+  .tunnel-progress { padding: 20px 18px 0; }
+  .progress-dot { width: 26px; height: 26px; font-size: 0.66rem; }
+  .progress-lbl { font-size: 0.6rem; }
+  .tunnel-body { padding: 22px 18px 0; }
+  .tunnel-footer { padding: 18px 18px; flex-wrap: wrap; }
+  .btn-next, .btn-submit { width: 100%; justify-content: center; order: -1; }
+  .btn-back { order: 2; margin: 0 auto; }
+  .cg-2, .cg-3 { grid-template-columns: 1fr; }
+  .tunnel-success { padding: 40px 20px; }
+  .savings-box { flex-direction: column; align-items: flex-start; }
+  .savings-amounts { text-align: left; }
+  .success-savings-card { flex-direction: column; gap: 8px; }
+}
+@media (min-width: 681px) and (max-width: 800px) {
+  .cg-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@keyframes simFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── CO-EMPRUNTEUR REVEAL ── */
+.coempr-section {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.52s cubic-bezier(0.22,1,0.36,1), opacity 0.38s ease, margin-top 0.38s ease;
+}
+.coempr-section.visible {
+  max-height: 680px;
+  opacity: 1;
+  margin-top: 4px;
+}
+.coempr-divider {
+  display: flex; align-items: center; gap: 10px;
+  margin: 20px 0 18px;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--blue);
+}
+.coempr-divider::before,
+.coempr-divider::after {
+  content: ""; flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(30,158,188,0.28));
+}
+.coempr-divider::after {
+  background: linear-gradient(90deg, rgba(30,158,188,0.28), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tunnel-supertitle,
+  .tunnel-header h1 {
+    animation: none;
+    opacity: 1;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link active">Nos services</a>
+      <a href="simulateur.html" class="nav-link">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="tunnel-page">
+
+  <!-- En-tête -->
+  <div class="tunnel-header">
+    <span class="tunnel-supertitle">Analyse assurance emprunteur gratuite</span>
+    <h1>Découvrez vos économies<br>en 6 étapes</h1>
+    <p class="tunnel-header-sub">Répondez à quelques questions, obtenez une estimation de vos économies et recevez une analyse personnalisée sous 48h.</p>
+    <div class="trust-row">
+      <div class="trust-item"><span class="trust-check">✔</span> 100 % gratuit</div>
+      <div class="trust-item"><span class="trust-check">✔</span> Sans engagement</div>
+      <div class="trust-item"><span class="trust-check">✔</span> Données protégées</div>
+    </div>
+    <div style="margin-top:18px;">
+      <a href="simulateur.html" style="font-size:0.82rem;color:var(--text-lt);display:inline-flex;align-items:center;gap:6px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color='var(--text-lt)'">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Voir aussi : étude de financement immobilier
+      </a>
+    </div>
+  </div>
+
+  <!-- Carte tunnel -->
+  <div class="tunnel-wrap">
+    <div class="tunnel-card">
+
+      <!-- Barre de progression -->
+      <div class="tunnel-progress" id="tunnelProgress">
+        <div class="progress-steps">
+          <div class="progress-dot active" id="dot1">1</div>
+          <div class="progress-line"><div class="progress-fill" id="fill1"></div></div>
+          <div class="progress-dot" id="dot2">2</div>
+          <div class="progress-line"><div class="progress-fill" id="fill2"></div></div>
+          <div class="progress-dot" id="dot3">3</div>
+          <div class="progress-line"><div class="progress-fill" id="fill3"></div></div>
+          <div class="progress-dot" id="dot4">4</div>
+          <div class="progress-line"><div class="progress-fill" id="fill4"></div></div>
+          <div class="progress-dot" id="dot5">5</div>
+          <div class="progress-line"><div class="progress-fill" id="fill5"></div></div>
+          <div class="progress-dot" id="dot6">6</div>
+        </div>
+        <div class="progress-labels">
+          <span class="progress-lbl active" id="lbl1">Objectif</span>
+          <span class="progress-lbl" id="lbl2">Crédit</span>
+          <span class="progress-lbl" id="lbl3">Profil</span>
+          <span class="progress-lbl" id="lbl4">Santé</span>
+          <span class="progress-lbl" id="lbl5">Garanties</span>
+          <span class="progress-lbl" id="lbl6">Contact</span>
+        </div>
+      </div>
+
+      <!-- Corps des étapes -->
+      <div class="tunnel-body" id="tunnelBody">
+
+        <!-- ══════════ ÉTAPE 1 — OBJECTIF ══════════ -->
+        <div class="tunnel-step active" id="s1">
+          <div class="step-eyebrow">Étape 1 sur 6</div>
+          <h2 class="step-title">Votre objectif</h2>
+          <p class="step-desc">Dites-nous ce que vous souhaitez accomplir avec votre assurance emprunteur.</p>
+
+          <div class="tf">
+            <label class="tf-label">Qu'est-ce qui vous amène aujourd'hui ?</label>
+            <div class="cg cg-2" id="cg-objectif">
+              <div class="cc" data-val="economiser" onclick="pick(this,'cg-objectif')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                <div><div class="cc-t">Réduire le coût de mon assurance</div><div class="cc-s">J'ai une assurance groupe et veux payer moins</div></div>
+              </div>
+              <div class="cc" data-val="nouveau-pret" onclick="pick(this,'cg-objectif')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                <div><div class="cc-t">Assurer un nouveau prêt</div><div class="cc-s">Achat immobilier en cours de montage</div></div>
+              </div>
+              <div class="cc" data-val="ameliorer" onclick="pick(this,'cg-objectif')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div><div class="cc-t">Améliorer mes garanties</div><div class="cc-s">Couverture insuffisante ou inadaptée</div></div>
+              </div>
+              <div class="cc" data-val="conseil" onclick="pick(this,'cg-objectif')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                <div><div class="cc-t">Obtenir un conseil</div><div class="cc-s">Je veux être guidé et comprendre mes options</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Situation actuelle de votre prêt</label>
+            <div class="cg cg-2" id="cg-situation">
+              <div class="cc" data-val="en-cours-groupe" onclick="pick(this,'cg-situation')">
+                <div><div class="cc-t">Prêt en cours</div><div class="cc-s">Assurance groupe bancaire</div></div>
+              </div>
+              <div class="cc" data-val="en-cours-delegation" onclick="pick(this,'cg-situation')">
+                <div><div class="cc-t">Prêt en cours</div><div class="cc-s">Déjà en délégation d'assurance</div></div>
+              </div>
+              <div class="cc" data-val="nouveau" onclick="pick(this,'cg-situation')">
+                <div><div class="cc-t">Nouveau prêt</div><div class="cc-s">Financement en cours de montage</div></div>
+              </div>
+              <div class="cc" data-val="pas-encore" onclick="pick(this,'cg-situation')">
+                <div><div class="cc-t">Pas encore de prêt</div><div class="cc-s">Je prépare mon projet immobilier</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════ ÉTAPE 2 — VOTRE CRÉDIT ══════════ -->
+        <div class="tunnel-step" id="s2">
+          <div class="step-eyebrow">Étape 2 sur 6</div>
+          <h2 class="step-title">Votre crédit</h2>
+          <p class="step-desc">Ces données nous permettent de calculer vos économies potentielles avec précision.</p>
+
+          <div class="tf">
+            <label class="tf-label">Capital restant dû <em>(ou montant à assurer)</em></label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Montant du prêt</span>
+              <span class="range-display" id="d-capital">200 000 €</span>
+            </div>
+            <input class="tr" type="range" id="r-capital" min="50000" max="800000" step="5000" value="200000" oninput="updR(this,'d-capital','€');">
+            <div class="range-hints"><span class="rh">50 000 €</span><span class="rh">800 000 €</span></div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Durée restante du crédit <em>(ou durée totale)</em></label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Durée</span>
+              <span class="range-display" id="d-duree">15 ans</span>
+            </div>
+            <input class="tr" type="range" id="r-duree" min="1" max="30" step="1" value="15" oninput="updRDuree(this);">
+            <div class="range-hints"><span class="rh">1 an</span><span class="rh">30 ans</span></div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Taux d'assurance actuel <em>(TAEA — figurant sur votre offre de prêt)</em></label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Taux actuel</span>
+              <span class="range-display" id="d-taux">0,35 %</span>
+            </div>
+            <input class="tr" type="range" id="r-taux" min="5" max="60" step="1" value="35" oninput="updRTaux(this);">
+            <div class="range-hints"><span class="rh">0,05 %</span><span class="rh">0,60 %</span></div>
+          </div>
+
+        </div>
+
+        <!-- ══════════ ÉTAPE 3 — PROFIL EMPRUNTEUR ══════════ -->
+        <div class="tunnel-step" id="s3">
+          <div class="step-eyebrow">Étape 3 sur 6</div>
+          <h2 class="step-title">Votre profil</h2>
+          <p class="step-desc">Le taux d'assurance est calculé individuellement — ces informations nous permettent de cibler les offres les plus compétitives pour vous.</p>
+
+          <div class="tf">
+            <label class="tf-label">Nombre d'emprunteurs</label>
+            <div class="cg cg-2" id="cg-emprunteurs">
+              <div class="cc" data-val="1" onclick="pick(this,'cg-emprunteurs'); toggleCoEmpr(false);">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                <div><div class="cc-t">1 emprunteur</div><div class="cc-s">Prêt individuel</div></div>
+              </div>
+              <div class="cc" data-val="2" onclick="pick(this,'cg-emprunteurs'); toggleCoEmpr(true);">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+                <div><div class="cc-t">2 co-emprunteurs</div><div class="cc-s">Prêt en couple ou à deux</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Votre âge</label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Âge de l'emprunteur principal</span>
+              <span class="range-display" id="d-age">35 ans</span>
+            </div>
+            <input class="tr" type="range" id="r-age" min="18" max="70" step="1" value="35" oninput="updRAge(this);">
+            <div class="range-hints"><span class="rh">18 ans</span><span class="rh">70 ans</span></div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Fumeur / tabagisme</label>
+            <div class="toggle-row" id="tg-fumeur">
+              <button class="toggle-btn" data-val="non" onclick="tog(this,'tg-fumeur')">Non-fumeur</button>
+              <button class="toggle-btn" data-val="arrete" onclick="tog(this,'tg-fumeur')">Arrêté +2 ans</button>
+              <button class="toggle-btn" data-val="oui" onclick="tog(this,'tg-fumeur')">Fumeur</button>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Situation professionnelle</label>
+            <div class="cg cg-3" id="cg-profession">
+              <div class="cc" data-val="cdi" onclick="pick(this,'cg-profession')"><div><div class="cc-t">CDI / Salarié</div></div></div>
+              <div class="cc" data-val="fonctionnaire" onclick="pick(this,'cg-profession')"><div><div class="cc-t">Fonctionnaire</div></div></div>
+              <div class="cc" data-val="independant" onclick="pick(this,'cg-profession')"><div><div class="cc-t">Indépendant</div></div></div>
+              <div class="cc" data-val="liberal" onclick="pick(this,'cg-profession')"><div><div class="cc-t">Profession libérale</div></div></div>
+              <div class="cc" data-val="retraite" onclick="pick(this,'cg-profession')"><div><div class="cc-t">Retraité</div></div></div>
+              <div class="cc" data-val="autre" onclick="pick(this,'cg-profession')"><div><div class="cc-t">Autre</div></div></div>
+            </div>
+          </div>
+
+          <!-- ── Co-emprunteur (révélé si 2 emprunteurs) ── -->
+          <div class="coempr-section" id="coempr-section">
+            <div class="coempr-divider">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              Co-emprunteur
+            </div>
+            <div class="tf">
+              <label class="tf-label" for="f-co-prenom">Prénom du co-emprunteur</label>
+              <input class="ti" type="text" id="f-co-prenom" placeholder="Ex : Thomas" autocomplete="given-name">
+            </div>
+            <div class="tf">
+              <label class="tf-label">Âge du co-emprunteur</label>
+              <div class="range-header">
+                <span class="rh" style="font-size:0.8rem;">Âge</span>
+                <span class="range-display" id="d-co-age">35 ans</span>
+              </div>
+              <input class="tr" type="range" id="r-co-age" min="18" max="70" step="1" value="35" oninput="updRCoAge(this);">
+              <div class="range-hints"><span class="rh">18 ans</span><span class="rh">70 ans</span></div>
+            </div>
+            <div class="tf">
+              <label class="tf-label">Fumeur / tabagisme</label>
+              <div class="toggle-row" id="tg-co-fumeur">
+                <button class="toggle-btn" data-val="non" onclick="tog(this,'tg-co-fumeur')">Non-fumeur</button>
+                <button class="toggle-btn" data-val="arrete" onclick="tog(this,'tg-co-fumeur')">Arrêté +2 ans</button>
+                <button class="toggle-btn" data-val="oui" onclick="tog(this,'tg-co-fumeur')">Fumeur</button>
+              </div>
+            </div>
+            <div class="tf">
+              <label class="tf-label">Situation professionnelle</label>
+              <div class="cg cg-3" id="cg-co-profession">
+                <div class="cc" data-val="cdi" onclick="pick(this,'cg-co-profession')"><div><div class="cc-t">CDI / Salarié</div></div></div>
+                <div class="cc" data-val="fonctionnaire" onclick="pick(this,'cg-co-profession')"><div><div class="cc-t">Fonctionnaire</div></div></div>
+                <div class="cc" data-val="independant" onclick="pick(this,'cg-co-profession')"><div><div class="cc-t">Indépendant</div></div></div>
+                <div class="cc" data-val="liberal" onclick="pick(this,'cg-co-profession')"><div><div class="cc-t">Profession libérale</div></div></div>
+                <div class="cc" data-val="retraite" onclick="pick(this,'cg-co-profession')"><div><div class="cc-t">Retraité</div></div></div>
+                <div class="cc" data-val="autre" onclick="pick(this,'cg-co-profession')"><div><div class="cc-t">Autre</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════ ÉTAPE 4 — PROFIL DE RISQUE ══════════ -->
+        <div class="tunnel-step" id="s4">
+          <div class="step-eyebrow">Étape 4 sur 6</div>
+          <h2 class="step-title">Votre profil de risque</h2>
+          <p class="step-desc">Ces informations permettent d'identifier les assureurs les plus adaptés à votre profil.</p>
+
+          <div class="tf">
+            <label class="tf-label">Exercez-vous une profession à risque ou pratiquez-vous un sport à risque ?</label>
+            <div class="cg cg-2" id="cg-risques">
+              <div class="cc" data-val="non" onclick="pick(this,'cg-risques')">
+                <div><div class="cc-t">Non</div><div class="cc-s">Activité standard, pas de sport à risque</div></div>
+              </div>
+              <div class="cc" data-val="sport" onclick="pick(this,'cg-risques')">
+                <div><div class="cc-t">Sport à risque</div><div class="cc-s">Moto, escalade, sports extrêmes…</div></div>
+              </div>
+              <div class="cc" data-val="profession" onclick="pick(this,'cg-risques')">
+                <div><div class="cc-t">Profession à risque</div><div class="cc-s">BTP, sécurité, travaux en hauteur…</div></div>
+              </div>
+              <div class="cc" data-val="les-deux" onclick="pick(this,'cg-risques')">
+                <div><div class="cc-t">Les deux</div><div class="cc-s">Profession et sport à risque</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Effectuez-vous plus de 15 000 km par an en voiture ?</label>
+            <div class="toggle-row" id="tg-km">
+              <button class="toggle-btn" data-val="non" onclick="tog(this,'tg-km')">Non</button>
+              <button class="toggle-btn" data-val="oui" onclick="tog(this,'tg-km')">Oui</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════ ÉTAPE 5 — GARANTIES ══════════ -->
+        <div class="tunnel-step" id="s5">
+          <div class="step-eyebrow">Étape 5 sur 6</div>
+          <h2 class="step-title">Vos garanties</h2>
+          <p class="step-desc">Précisez les garanties souhaitées pour votre assurance. Notre expert vérifiera l'équivalence avec les exigences de votre banque.</p>
+
+          <div class="tf">
+            <label class="tf-label">Quotité d'assurance souhaitée</label>
+            <div class="cg cg-2" id="cg-quotite">
+              <div class="cc" data-val="100-seul" onclick="pick(this,'cg-quotite')">
+                <div><div class="cc-t">100% sur 1 emprunteur</div><div class="cc-s">Couverture totale, prêt individuel</div></div>
+              </div>
+              <div class="cc" data-val="100-100" onclick="pick(this,'cg-quotite')">
+                <div><div class="cc-t">100% + 100%</div><div class="cc-s">Chaque co-emprunteur couvert à 100%</div></div>
+              </div>
+              <div class="cc" data-val="50-50" onclick="pick(this,'cg-quotite')">
+                <div><div class="cc-t">50% + 50%</div><div class="cc-s">Répartition à parts égales</div></div>
+              </div>
+              <div class="cc" data-val="a-definir" onclick="pick(this,'cg-quotite')">
+                <div><div class="cc-t">À définir avec l'expert</div><div class="cc-s">Je ne sais pas encore</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Garanties à couvrir <em>(sélectionnez tout ce qui s'applique)</em></label>
+            <div class="mc" id="mc-garanties">
+              <div class="mc-item sel" data-val="dc-ptia" onclick="multiPick(this)">
+                <div class="mc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="mc-text">Décès + PTIA</div>
+                  <div class="mc-sub">Obligatoire — remboursement total du capital restant dû</div>
+                </div>
+              </div>
+              <div class="mc-item sel" data-val="ipt" onclick="multiPick(this)">
+                <div class="mc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="mc-text">Invalidité permanente totale (IPT)</div>
+                  <div class="mc-sub">Invalidité ≥ 66% — prise en charge des mensualités</div>
+                </div>
+              </div>
+              <div class="mc-item" data-val="ipp" onclick="multiPick(this)">
+                <div class="mc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="mc-text">Invalidité permanente partielle (IPP)</div>
+                  <div class="mc-sub">Invalidité entre 33% et 66% — couverture partielle</div>
+                </div>
+              </div>
+              <div class="mc-item sel" data-val="itt" onclick="multiPick(this)">
+                <div class="mc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="mc-text">Incapacité temporaire de travail (ITT)</div>
+                  <div class="mc-sub">Arrêt maladie ou accident — mensualités prises en charge</div>
+                </div>
+              </div>
+              <div class="mc-item" data-val="perte-emploi" onclick="multiPick(this)">
+                <div class="mc-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div>
+                  <div class="mc-text">Perte d'emploi</div>
+                  <div class="mc-sub">Optionnel — licenciement économique (CDI uniquement)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Délai de franchise ITT souhaité <em>(délai avant prise en charge après arrêt)</em></label>
+            <div class="cg cg-2" id="cg-franchise">
+              <div class="cc" data-val="30j" onclick="pick(this,'cg-franchise')"><div><div class="cc-t">30 jours</div><div class="cc-s">Couverture rapide (prime plus élevée)</div></div></div>
+              <div class="cc" data-val="60j" onclick="pick(this,'cg-franchise')"><div><div class="cc-t">60 jours</div><div class="cc-s">Équilibre prime / couverture</div></div></div>
+              <div class="cc" data-val="90j" onclick="pick(this,'cg-franchise')"><div><div class="cc-t">90 jours</div><div class="cc-s">Prime réduite — complément prévoyance</div></div></div>
+              <div class="cc" data-val="nsp" onclick="pick(this,'cg-franchise')"><div><div class="cc-t">Je ne sais pas</div><div class="cc-s">L'expert me conseillera</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════ ÉTAPE 6 — COORDONNÉES ══════════ -->
+        <div class="tunnel-step" id="s6">
+          <div class="step-eyebrow">Étape 6 sur 6 — Dernière étape !</div>
+          <h2 class="step-title">Vos coordonnées</h2>
+          <p class="step-desc">Pour recevoir votre analyse personnalisée et l'estimation de vos économies sous 48h.</p>
+
+          <div class="tf">
+            <label class="tf-label" for="f-prenom">Votre prénom</label>
+            <input class="ti" type="text" id="f-prenom" placeholder="Ex : Sophie" autocomplete="given-name">
+          </div>
+          <div class="tf">
+            <label class="tf-label" for="f-tel">Téléphone <em>*</em></label>
+            <input class="ti" type="tel" id="f-tel" placeholder="06 00 00 00 00" autocomplete="tel">
+          </div>
+          <div class="tf">
+            <label class="tf-label" for="f-email">Email <em>*</em></label>
+            <input class="ti" type="email" id="f-email" placeholder="votre@email.fr" autocomplete="email">
+          </div>
+          <div class="tf">
+            <label class="tf-label" for="f-msg">Informations complémentaires <em>(optionnel)</em></label>
+            <textarea class="ti" id="f-msg" placeholder="Précisez ici toute information utile : nom de votre banque, date de votre prêt, vos questions spécifiques…"></textarea>
+          </div>
+          <p style="font-size:0.73rem;color:var(--text-lt);line-height:1.65;margin-top:-6px;">
+            En soumettant ce formulaire, vous acceptez d'être recontacté par Z'Expert. Vos données sont protégées conformément au RGPD.<br>
+            <em>Les résultats sont donnés à titre indicatif et ne constituent pas une offre d'assurance.</em>
+          </p>
+        </div>
+
+      </div><!-- /tunnel-body -->
+
+      <!-- Pied de carte -->
+      <div class="tunnel-footer" id="tunnelFooter">
+        <button class="btn-back hidden" id="btnBack" onclick="prevStep()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Retour
+        </button>
+        <button class="btn-next" id="btnNext" onclick="nextStep()">
+          Continuer
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Erreur envoi -->
+      <div id="simError">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        L'envoi n'a pas abouti. Réessayez ou contactez-nous directement au <strong>06 33 67 72 45</strong>. Votre PDF a tout de même été téléchargé.
+      </div>
+
+      <!-- Succès -->
+      <div class="tunnel-success" id="tunnelSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="success-title">Votre demande est envoyée !</div>
+        <p class="success-sub">Un expert Z'Expert analyse votre dossier assurance et vous contacte sous <strong>48 heures</strong> avec une proposition personnalisée.</p>
+        <div class="success-items">
+          <div class="success-item">
+            <div class="scheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Analyse de votre contrat actuel en cours
+          </div>
+          <div class="success-item">
+            <div class="scheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Comparaison des assureurs partenaires
+          </div>
+          <div class="success-item">
+            <div class="scheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Rappel sous 48h, sans engagement
+          </div>
+        </div>
+        <a href="../index.html" class="btn btn-primary" style="display:inline-block;margin-top:4px;">Retour à l'accueil</a>
+      </div>
+
+    </div><!-- /tunnel-card -->
+  </div><!-- /tunnel-wrap -->
+</div><!-- /tunnel-page -->
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── STATE ── */
+let step = 1;
+const TOTAL = 6;
+
+/* ── NAVIGATION ── */
+function nextStep() {
+  if (step === TOTAL) { submit(); return; }
+  goTo(step + 1);
+}
+function prevStep() {
+  if (step > 1) goTo(step - 1);
+}
+function goTo(n) {
+  document.getElementById('s' + step).classList.remove('active');
+  step = n;
+  document.getElementById('s' + step).classList.add('active');
+  updateProgress();
+  updateFooterBtn();
+  const card = document.querySelector('.tunnel-card');
+  if (card) window.scrollTo({ top: card.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+}
+function updateProgress() {
+  for (let i = 1; i <= TOTAL; i++) {
+    const dot = document.getElementById('dot' + i);
+    const lbl = document.getElementById('lbl' + i);
+    if (i < step) {
+      dot.className = 'progress-dot done';
+      dot.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>';
+    } else if (i === step) {
+      dot.className = 'progress-dot active';
+      dot.textContent = i;
+    } else {
+      dot.className = 'progress-dot';
+      dot.textContent = i;
+    }
+    lbl.classList.toggle('active', i === step);
+    if (i <= TOTAL - 1) {
+      document.getElementById('fill' + i).style.width = (i < step) ? '100%' : '0%';
+    }
+  }
+  document.getElementById('btnBack').classList.toggle('hidden', step === 1);
+}
+function updateFooterBtn() {
+  const btn = document.getElementById('btnNext');
+  if (step === TOTAL) {
+    btn.className = 'btn-submit';
+    btn.innerHTML = 'Analyser mon assurance <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
+  } else {
+    btn.className = 'btn-next';
+    btn.innerHTML = 'Continuer <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+  }
+}
+
+/* ── CHOICE CARDS (single) ── */
+function pick(card, groupId) {
+  document.querySelectorAll('#' + groupId + ' .cc').forEach(c => c.classList.remove('sel'));
+  card.classList.add('sel');
+}
+function tog(btn, rowId) {
+  btn.closest('#' + rowId).querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+}
+
+/* ── MULTI-SELECT CHECKBOXES ── */
+function multiPick(item) {
+  item.classList.toggle('sel');
+}
+
+/* ── RANGE SLIDERS ── */
+function updR(input, displayId, suffix) {
+  const val = parseInt(input.value);
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
+  input.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+  document.getElementById(displayId).textContent = val.toLocaleString('fr-FR') + ' ' + suffix;
+}
+function updRDuree(input) {
+  const val = parseInt(input.value);
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
+  input.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+  document.getElementById('d-duree').textContent = val + ' an' + (val > 1 ? 's' : '');
+}
+function updRTaux(input) {
+  const val = parseInt(input.value);
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
+  input.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+  document.getElementById('d-taux').textContent = '0,' + (val < 10 ? '0' : '') + val + ' %';
+}
+function updRAge(input) {
+  const val = parseInt(input.value);
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
+  input.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+  document.getElementById('d-age').textContent = val + ' ans';
+}
+function updRCoAge(input) {
+  const val = parseInt(input.value);
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
+  input.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+  document.getElementById('d-co-age').textContent = val + ' ans';
+}
+function toggleCoEmpr(show) {
+  const sec = document.getElementById('coempr-section');
+  if (show) sec.classList.add('visible');
+  else sec.classList.remove('visible');
+}
+
+/* Init slider fills */
+document.querySelectorAll('.tr').forEach(r => {
+  const val = parseInt(r.value), min = parseInt(r.min), max = parseInt(r.max);
+  r.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+});
+
+/* ── DATA COLLECTION ── */
+function getSimData() {
+  const sel  = id => { const el = document.querySelector('#' + id + ' .cc.sel');         return el ? el.dataset.val : ''; };
+  const togV = id => { const el = document.querySelector('#' + id + ' .toggle-btn.sel'); return el ? el.dataset.val : ''; };
+  const mcVals = () => [...document.querySelectorAll('#mc-garanties .mc-item.sel')].map(el => el.dataset.val);
+  return {
+    objectif:     sel('cg-objectif'),
+    situation:    sel('cg-situation'),
+    capital:      document.getElementById('r-capital').value,
+    duree:        document.getElementById('r-duree').value,
+    taux:         document.getElementById('r-taux').value,
+    emprunteurs:  sel('cg-emprunteurs'),
+    age:          document.getElementById('r-age').value,
+    fumeur:       togV('tg-fumeur'),
+    profession:   sel('cg-profession'),
+    co_prenom:    (document.getElementById('f-co-prenom') || {value:''}).value.trim(),
+    co_age:       (document.getElementById('r-co-age') || {value:''}).value,
+    co_fumeur:    togV('tg-co-fumeur'),
+    co_profession:sel('cg-co-profession'),
+    risques:      sel('cg-risques'),
+    km_annuels:   togV('tg-km'),
+    quotite:      sel('cg-quotite'),
+    garanties:    mcVals(),
+    franchise:    sel('cg-franchise'),
+    prenom:       document.getElementById('f-prenom').value.trim(),
+    tel:          document.getElementById('f-tel').value.trim(),
+    email:        document.getElementById('f-email').value.trim(),
+    message:      document.getElementById('f-msg').value.trim()
+  };
+}
+
+/* ── SUBMIT ── */
+async function submit() {
+  const tel   = document.getElementById('f-tel').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  let ok = true;
+  [['f-tel', tel], ['f-email', email]].forEach(([id, v]) => {
+    const el = document.getElementById(id);
+    if (!v) { el.classList.add('err'); ok = false; }
+    else el.classList.remove('err');
+  });
+  if (!ok) return;
+
+  const btn   = document.getElementById('btnNext');
+  const errEl = document.getElementById('simError');
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.innerHTML = 'Envoi en cours…';
+
+  const d = getSimData();
+
+  const garLblMap = { 'dc-ptia': 'DC+PTIA', ipt: 'IPT', ipp: 'IPP', itt: 'ITT', 'perte-emploi': 'Perte emploi' };
+  const fmt  = n => parseInt(n).toLocaleString('fr-FR') + ' €';
+  const taux = n => '0,' + (parseInt(n) < 10 ? '0' : '') + parseInt(n) + ' %';
+
+  const payload = {
+    _subject: "Analyse assurance emprunteur — " + (d.prenom || 'Client') + ' (' + d.tel + ')',
+    prenom:               d.prenom || '—',
+    telephone:            d.tel,
+    email:                d.email,
+    objectif:             d.objectif || '—',
+    situation_pret:       d.situation || '—',
+    capital:              fmt(d.capital),
+    duree_restante:       d.duree + ' ans',
+    taux_assurance_actuel: taux(d.taux),
+    nombre_emprunteurs:   d.emprunteurs || '—',
+    age:                  d.age + ' ans',
+    fumeur:               d.fumeur || '—',
+    profession:           d.profession || '—',
+    co_prenom:            d.emprunteurs === '2' ? (d.co_prenom || '—') : undefined,
+    co_age:               d.emprunteurs === '2' ? (d.co_age ? d.co_age + ' ans' : '—') : undefined,
+    co_fumeur:            d.emprunteurs === '2' ? (d.co_fumeur || '—') : undefined,
+    co_profession:        d.emprunteurs === '2' ? (d.co_profession || '—') : undefined,
+    risques:              d.risques || '—',
+    km_annuels_15000:     d.km_annuels || '—',
+    quotite:              d.quotite || '—',
+    garanties:            d.garanties.map(g => garLblMap[g] || g).join(', ') || '—',
+    franchise_itt:        d.franchise || '—',
+    message:              d.message || '—'
+  };
+
+  let sent = false;
+  try {
+    const res = await fetch('https://formspree.io/f/maqkjjow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    sent = res.ok;
+  } catch (_) {}
+
+  if (sent) {
+    document.getElementById('tunnelProgress').style.display = 'none';
+    document.getElementById('tunnelBody').style.display = 'none';
+    document.getElementById('tunnelFooter').style.display = 'none';
+    document.getElementById('tunnelSuccess').style.display = 'block';
+  } else {
+    btn.disabled = false;
+    updateFooterBtn();
+    errEl.style.display = 'flex';
+  }
+}
+
+/* ── NAV ── */
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav();
+window.addEventListener('resize', checkNav);
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 334 72" role="img" aria-label="Z'Expert — Accompagne vos financements">
+  <title>Z'Expert — Accompagne vos financements</title>
+
+  <defs>
+    <style>
+      <![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
+      ]]>
+    </style>
+  </defs>
+
+  <!-- Barre jaune conservée — identité visuelle intacte sur fond foncé -->
+  <polygon points="0,40 208,44 210,54 2,50" fill="#F4D44D"/>
+
+  <!-- Wordmark blanc pour fond bleu/turquoise -->
+  <text
+    font-family="'Montserrat', 'Arial Black', 'Helvetica Neue', sans-serif"
+    font-weight="800"
+    font-size="34"
+    fill="#FFFFFF"
+    letter-spacing="3"
+    x="6"
+    y="47"
+  >Z&apos;EXPERT</text>
+
+  <!-- Séparateur discret -->
+  <line x1="218" y1="22" x2="218" y2="54" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1"/>
+
+  <!-- Slogan blanc — ligne 1 -->
+  <text
+    font-family="'Montserrat', 'Segoe UI', Arial, sans-serif"
+    font-weight="400"
+    font-size="11"
+    fill="#FFFFFF"
+    fill-opacity="0.80"
+    letter-spacing="0.4"
+    x="228"
+    y="35"
+  >Accompagne</text>
+
+  <!-- Slogan blanc — ligne 2 -->
+  <text
+    font-family="'Montserrat', 'Segoe UI', Arial, sans-serif"
+    font-weight="300"
+    font-size="11"
+    fill="#FFFFFF"
+    fill-opacity="0.80"
+    letter-spacing="0.4"
+    x="228"
+    y="49"
+  >vos financements</text>
+
+</svg>

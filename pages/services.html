@@ -1,0 +1,1269 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Services — Z'Expert Courtier Nancy</title>
+<meta name="description" content="Découvrez les services de Z'Expert : prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais. Courtier expert à Nancy.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Nos Services — Z'Expert Courtier Nancy">
+<meta property="og:description" content="Découvrez les services de Z'Expert : prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais. Courtier expert à Nancy.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/services.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nos Services — Z'Expert Courtier Nancy">
+<meta name="twitter:description" content="Prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais. Votre courtier expert à Nancy.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; height: 56vh; min-height: 420px;
+  display: flex; align-items: center; overflow: hidden;
+}
+.page-hero-img {
+  position: absolute; inset: -15% 0;
+  background-image: url('../assets/images/services-hero-generated.png');
+  background-size: cover; background-position: center 50%;
+  will-change: transform;
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,20,35,0.82) 0%, rgba(10,20,35,0.55) 55%, rgba(10,20,35,0.22) 100%),
+    linear-gradient(to top, rgba(10,20,35,0.55) 0%, transparent 60%);
+}
+.page-hero-line {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(to bottom, transparent, #1E9EBC 30%, #F5C842 70%, transparent);
+  opacity: 0.7;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  padding-top: var(--nav-h);
+}
+.page-hero h1 {
+  color: white;
+  opacity: 0; transform: translateY(20px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
+}
+.page-hero p {
+  color: rgba(255,255,255,0.75); margin-top: 16px; max-width: 540px; font-size: 1.05rem;
+  opacity: 0; transform: translateY(16px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s forwards;
+}
+.page-hero-label {
+  display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(30,158,188,0.9); margin-bottom: 12px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
+}
+@keyframes phIn { to { opacity: 1; transform: translateY(0); } }
+
+/* Services grid — bento layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  perspective: 1400px;
+}
+/* Prêt immobilier : carte principale 2/3 */
+.service-card:first-child { grid-column: span 2; }
+/* Prêt relais : accent 2/3 en bas */
+.service-card:nth-child(4) { grid-column: span 2; }
+.service-card {
+  background: white; border-radius: 20px;
+  border: 1px solid var(--gray);
+  border-top: 4px solid var(--yellow);
+  overflow: hidden;
+  overflow: clip;
+  box-shadow: 0 14px 36px rgba(18,37,58,0.07);
+  transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1), transform 0.28s cubic-bezier(0.4,0,0.2,1), border-color 0.28s;
+  display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+  position: relative;
+}
+.service-card:hover {
+  box-shadow: 0 24px 64px rgba(18,37,58,0.16), 0 10px 32px rgba(30,158,188,0.12);
+  transform: translateY(-5px);
+  border-color: rgba(30,158,188,0.4);
+  border-top-color: var(--yellow);
+}
+/* Image plus haute sur les cartes larges */
+.service-card:first-child .service-card-img,
+.service-card:nth-child(4) .service-card-img { height: 220px; }
+.service-card-img {
+  height: 180px;
+  overflow: hidden;
+  overflow: clip;
+  position: relative;
+  border-radius: 16px 16px 0 0;
+  clip-path: inset(0 round 16px 16px 0 0);
+  transform: translateZ(0);
+  isolation: isolate;
+}
+.service-card-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  border-radius: inherit;
+  clip-path: inherit;
+  transition: transform 0.5s ease;
+  transform: translateZ(0) scale(1);
+  transform-origin: center;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.service-card:hover .service-card-img img {
+  transform: translateZ(0) scale(1.04);
+}
+.service-card-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(10,20,35,0.45) 100%);
+  border-radius: inherit;
+  clip-path: inherit;
+}
+.service-card-badge {
+  position: absolute; bottom: 14px; left: 16px;
+}
+.service-card-body {
+  padding: 28px 28px 32px; flex: 1;
+  display: flex; flex-direction: column;
+}
+.service-card-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; flex-shrink: 0;
+}
+.service-card-icon svg { width: 22px; height: 22px; }
+.service-card-kicker {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(30,158,188,0.08);
+  color: var(--blue-dk);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.service-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--navy); }
+.service-card p { color: var(--text-lt); font-size: 0.9rem; line-height: 1.7; flex: 1; }
+.service-card-points {
+  display: flex; flex-direction: column; gap: 7px; margin: 16px 0 20px;
+}
+.service-card-point {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 0.85rem; color: var(--text-lt);
+}
+.service-card-point::before {
+  content: ''; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px rgba(30,158,188,0.08);
+  flex-shrink: 0;
+}
+.service-card-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  width: max-content;
+  max-width: 100%;
+  font-size: 0.88rem; font-weight: 800; color: var(--blue);
+  margin-top: auto;
+  padding: 10px 14px;
+  border: 1px solid rgba(30,158,188,0.2);
+  border-radius: 999px;
+  background: rgba(30,158,188,0.06);
+  transition: gap 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+}
+.service-card:hover .service-card-cta {
+  gap: 10px;
+  color: var(--navy);
+  border-color: rgba(244,212,77,0.55);
+  background: rgba(244,212,77,0.18);
+}
+
+/* Effet holographique premium, adapte aux cartes existantes */
+.holographic-service-card {
+  --x: 50%;
+  --y: 50%;
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+  position: relative;
+  isolation: isolate;
+  transform: perspective(1100px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) translateY(0);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.holographic-service-card::before,
+.holographic-service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+  z-index: 2;
+}
+.holographic-service-card::before {
+  background:
+    radial-gradient(260px circle at var(--x) var(--y), rgba(30,158,188,0.24), rgba(30,158,188,0.07) 38%, transparent 68%),
+    radial-gradient(180px circle at calc(var(--x) + 12%) calc(var(--y) - 14%), rgba(245,200,66,0.12), transparent 62%);
+  mix-blend-mode: soft-light;
+}
+.holographic-service-card::after {
+  background:
+    linear-gradient(115deg, transparent 18%, rgba(255,255,255,0.18) 32%, rgba(255,255,255,0.04) 43%, transparent 58%),
+    radial-gradient(360px circle at var(--x) var(--y), rgba(255,255,255,0.20), transparent 58%);
+}
+.holographic-service-card:hover {
+  transform: perspective(1100px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) translateY(-5px);
+  border-color: rgba(30,158,188,0.34);
+  border-top-color: var(--yellow);
+  box-shadow:
+    0 22px 58px rgba(18,37,58,0.18),
+    0 0 0 1px rgba(255,255,255,0.45) inset,
+    0 0 36px rgba(30,158,188,0.13),
+    0 0 18px rgba(245,200,66,0.06);
+}
+.holographic-service-card:hover::before,
+.holographic-service-card:hover::after {
+  opacity: 1;
+}
+.holographic-service-card .service-card-img,
+.holographic-service-card .service-card-body {
+  position: relative;
+  z-index: 1;
+}
+.holographic-service-card:hover .service-card-body {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.90)),
+    radial-gradient(520px circle at var(--x) var(--y), rgba(30,158,188,0.08), transparent 68%);
+  backdrop-filter: blur(10px);
+}
+.holographic-service-card:hover .service-card-icon {
+  box-shadow: 0 10px 24px rgba(30,158,188,0.14);
+}
+
+/* Why Z'Expert */
+.why-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+}
+.why-item {
+  text-align: center; padding: 32px 24px;
+}
+.why-icon {
+  width: 60px; height: 60px; border-radius: 16px;
+  background: var(--blue-lt); display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.why-icon svg { width: 26px; height: 26px; color: var(--blue); }
+.why-item h4 { color: var(--navy); margin-bottom: 8px; }
+.why-item p { color: var(--text-lt); font-size: 0.88rem; line-height: 1.6; }
+
+/* CTA band */
+.cta-band {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dk));
+  border-radius: 24px; padding: 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(244,212,77,0.28);
+  box-shadow: 0 24px 70px rgba(30,158,188,0.20);
+}
+.cta-band h2 { color: white; margin-bottom: 10px; }
+.cta-band p { color: rgba(255,255,255,0.75); margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.cta-band-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cta-proof-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 28px;
+}
+.cta-proof-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.16);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+/* Guided path */
+.path-shell {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dk) 100%);
+  color: white;
+  border-radius: 24px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(244,212,77,0.32);
+  box-shadow:
+    inset 0 3px 0 var(--yellow),
+    0 24px 70px rgba(30,158,188,0.24),
+    0 16px 42px rgba(244,212,77,0.10);
+}
+.path-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.75), transparent 85%);
+  pointer-events: none;
+}
+.path-shell > * { position: relative; z-index: 1; }
+.path-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+.path-header h2 { color: white; margin-bottom: 10px; }
+.path-header p { color: rgba(255,255,255,0.72); max-width: 560px; margin: 0; }
+.path-shell .section-label { color: var(--yellow); }
+.path-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.path-tab {
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.76);
+  border-radius: 999px;
+  padding: 10px 15px 10px 12px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.22s, color 0.22s, border-color 0.22s, transform 0.18s, box-shadow 0.22s;
+}
+.path-tab svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.path-tab:hover,
+.path-tab.active {
+  background: var(--yellow);
+  color: var(--navy);
+  border-color: var(--yellow);
+  box-shadow: 0 10px 24px rgba(244,212,77,0.22);
+  transform: translateY(-1px);
+}
+.path-progress {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: -4px 0 22px;
+}
+.path-progress-step {
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  overflow: hidden;
+}
+.path-progress-step::before {
+  content: '';
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+.path-progress-step.active::before { transform: scaleX(1); }
+.path-panel {
+  display: none;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 22px;
+  align-items: stretch;
+}
+.path-panel.active { display: grid; }
+.path-card,
+.path-aside {
+  border-radius: 16px;
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 28px;
+}
+.path-card h3 { color: white; margin-bottom: 10px; font-size: 1.34rem; }
+.path-card p,
+.path-aside p { color: rgba(255,255,255,0.74); margin: 0; }
+.path-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+.path-point {
+  min-height: 92px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.16);
+  padding: 14px;
+}
+.path-point strong {
+  display: block;
+  color: var(--yellow);
+  font-size: 0.82rem;
+  margin-bottom: 5px;
+}
+.path-point span {
+  display: block;
+  color: rgba(255,255,255,0.68);
+  font-size: 0.81rem;
+  line-height: 1.45;
+}
+.path-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  background: rgba(255,255,255,0.16);
+}
+.path-mini-label {
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  font-size: 0.68rem;
+}
+.path-outcome {
+  font-family: var(--font-serif);
+  color: white;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1.08;
+}
+.path-next-step {
+  border-left: 3px solid var(--yellow);
+  padding-left: 14px;
+}
+.path-next-step span {
+  display: block;
+  color: rgba(255,255,255,0.58);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.path-next-step strong {
+  display: block;
+  color: white;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+.path-aside .btn-yellow {
+  background: var(--yellow);
+  color: var(--navy);
+  border-color: var(--yellow);
+  box-shadow: 0 10px 28px rgba(244,212,77,0.24);
+}
+.path-aside .btn-yellow:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(244,212,77,0.34);
+}
+
+/* Process timeline */
+.process-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--yellow));
+  border-radius: 999px;
+}
+.process-step {
+  position: relative;
+  background: white;
+  border: 1px solid rgba(18,37,58,0.07);
+  border-radius: 16px;
+  padding: 86px 22px 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.process-step::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--yellow));
+}
+.process-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(30,158,188,0.24);
+  box-shadow: 0 18px 42px rgba(18,37,58,0.12);
+}
+.process-num {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  box-shadow: 0 0 0 8px white, 0 10px 24px rgba(244,212,77,0.28);
+}
+.process-tag {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.process-step h3 { font-size: 1rem; margin-bottom: 8px; }
+.process-step p { font-size: 0.86rem; line-height: 1.6; }
+
+/* Comparison */
+.comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.compare-card {
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid rgba(18,37,58,0.08);
+  background: white;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.compare-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: rgba(138,155,176,0.35);
+}
+.compare-card--expert {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dk));
+  color: white;
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 22px 60px rgba(30,158,188,0.24);
+}
+.compare-card--expert::before {
+  background: var(--yellow);
+}
+.compare-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.compare-heading h3 { margin-bottom: 0; }
+.compare-badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(18,37,58,0.06);
+  color: var(--text-lt);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.compare-card--expert .compare-badge {
+  background: var(--yellow);
+  color: var(--navy);
+}
+.compare-card h3 { margin-bottom: 18px; }
+.compare-card .compare-heading h3 { margin-bottom: 0; }
+.compare-card--expert h3 { color: white; }
+.compare-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.compare-list li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  color: var(--text-lt);
+  line-height: 1.55;
+}
+.compare-card--expert .compare-list li { color: rgba(255,255,255,0.82); }
+.compare-list svg {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.compare-card--expert .compare-list svg { color: var(--yellow); }
+.compare-foot {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(18,37,58,0.08);
+  color: var(--text-lt);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.compare-card--expert .compare-foot {
+  color: rgba(255,255,255,0.88);
+  border-top-color: rgba(255,255,255,0.18);
+}
+
+.services-mobile-cta {
+  display: none;
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 90;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(18,37,58,0.94);
+  box-shadow: 0 16px 40px rgba(18,37,58,0.28);
+  backdrop-filter: blur(12px);
+}
+.services-mobile-cta span {
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.services-mobile-cta a {
+  flex-shrink: 0;
+  text-decoration: none;
+  color: var(--navy);
+  background: var(--yellow);
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+.services-mobile-cta.hidden { display: none !important; }
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card:first-child,
+  .service-card:nth-child(4) { grid-column: span 1; }
+  .service-card:first-child .service-card-img,
+  .service-card:nth-child(4) .service-card-img { height: 180px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .cta-band { padding: 40px 24px; }
+  .path-shell { padding: 28px 20px; }
+  .path-header,
+  .path-panel,
+  .comparison-cards { grid-template-columns: 1fr; }
+  .path-tabs { justify-content: flex-start; }
+  .path-progress { gap: 6px; }
+  .path-points { grid-template-columns: 1fr; }
+  .process-timeline { grid-template-columns: 1fr; }
+  .process-timeline::before { display: none; }
+  .process-step { padding-top: 76px; }
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .services-grid { perspective: none; }
+  .holographic-service-card {
+    transform: none !important;
+    will-change: auto;
+  }
+  .holographic-service-card::before {
+    opacity: 0.42;
+    background: radial-gradient(420px circle at 50% 0%, rgba(30,158,188,0.10), transparent 62%);
+  }
+  .holographic-service-card::after {
+    display: none;
+  }
+  .holographic-service-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+@media (max-width: 768px) {
+  .services-mobile-cta { display: flex; }
+  body { padding-bottom: 76px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link active">Nos services</a>
+      <a href="simulateur.html" class="nav-link">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img" id="phImgS"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-line"></div>
+  <div class="container page-hero-content">
+    <span class="page-hero-label">Nos solutions</span>
+    <h1>Des solutions adaptées<br>à chaque projet</h1>
+    <p>Prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais — Z'Expert vous accompagne à chaque étape de votre parcours financier.</p>
+  </div>
+</div>
+
+<!-- Services grid -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 56px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Expertise</span>
+      <h2>Nos domaines d'intervention</h2>
+      <p style="color:var(--text-lt);">Chaque service est assuré par un expert dédié. Étude initiale gratuite et sans engagement.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Prêt immobilier -->
+      <a href="pret-immobilier.html" class="service-card holographic-service-card fade-in">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=75&auto=format&fit=crop" alt="Prêt immobilier" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge badge-blue">Prêt immobilier</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#e8f7fb;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1E9EBC" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="service-card-kicker">Idéal pour acheter</span>
+          <h3>Prêt immobilier</h3>
+          <p>Obtenez les meilleures conditions pour financer votre achat. Résidence principale, secondaire ou investissement locatif — nous négocions le taux et les conditions pour vous.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Mise en concurrence de 20+ banques</div>
+            <div class="service-card-point">Négociation du taux et des frais</div>
+            <div class="service-card-point">Accompagnement jusqu'à la signature</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Rachat de crédit -->
+      <a href="rachat-credit.html" class="service-card holographic-service-card fade-in fade-in-delay-1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=75&auto=format&fit=crop" alt="Rachat de crédit" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge badge-yellow">Rachat de crédit</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#fff8dc;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="2"><path d="M1 4v6h6"/><path d="M23 20v-6h-6"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg>
+          </div>
+          <span class="service-card-kicker">Mensualités à alléger</span>
+          <h3>Rachat de crédit</h3>
+          <p>Regroupez vos crédits en cours pour réduire vos mensualités et retrouver de la sérénité financière. Une solution idéale si votre situation a évolué.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Regroupement de tous vos crédits</div>
+            <div class="service-card-point">Réduction des mensualités</div>
+            <div class="service-card-point">Nouvelle durée adaptée à votre budget</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Assurance emprunteur -->
+      <a href="assurance-emprunteur.html" class="service-card holographic-service-card fade-in">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=75&auto=format&fit=crop" alt="Assurance emprunteur" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge badge-blue">Assurance emprunteur</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#e8f7fb;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1E9EBC" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="service-card-kicker">Changer d'assurance</span>
+          <h3>Assurance emprunteur</h3>
+          <p>L'assurance peut représenter jusqu'à 30 % du coût total de votre crédit. Grâce à la délégation, nous trouvons une offre équivalente à un tarif souvent deux fois inférieur.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Comparaison des offres du marché</div>
+            <div class="service-card-point">Délégation d'assurance (loi Lemoine)</div>
+            <div class="service-card-point">Économies sur la durée totale</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Prêt relais -->
+      <a href="pret-relais.html" class="service-card holographic-service-card fade-in fade-in-delay-1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=75&auto=format&fit=crop" alt="Prêt relais" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge" style="background:rgba(42,157,60,0.15);color:#2a9d3c;">Prêt relais</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#f0faf0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2a9d3c" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+          <span class="service-card-kicker">Vendre puis acheter</span>
+          <h3>Prêt relais</h3>
+          <p>Achetez votre nouveau bien avant d'avoir vendu l'ancien. Le prêt relais vous permet de sécuriser votre acquisition sans attendre la vente.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Financement temporaire de la transition</div>
+            <div class="service-card-point">Gestion de la double charge</div>
+            <div class="service-card-point">Sécurisation de votre nouveau projet</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Parcours guidé -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="path-shell fade-in">
+      <div class="path-header">
+        <div>
+          <span class="section-label">Parcours guidé</span>
+          <h2>Quel est votre besoin aujourd'hui ?</h2>
+          <p>Sélectionnez votre situation pour visualiser rapidement la solution la plus adaptée et les points à sécuriser avant de lancer votre dossier.</p>
+        </div>
+        <div class="path-tabs" role="tablist" aria-label="Choisir un parcours">
+          <button class="path-tab active" type="button" data-path-tab="acheter" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>Acheter</button>
+          <button class="path-tab" type="button" data-path-tab="renegocier" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h13a4 4 0 0 1 0 8H8"/><path d="M8 10 4 14l4 4"/></svg>Renégocier</button>
+          <button class="path-tab" type="button" data-path-tab="assurer" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Assurer</button>
+          <button class="path-tab" type="button" data-path-tab="regrouper" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h10"/><path d="M4 12h16"/><path d="M4 17h10"/><path d="m16 8 4 4-4 4"/></svg>Regrouper</button>
+        </div>
+      </div>
+
+      <div class="path-progress" aria-hidden="true">
+        <span class="path-progress-step active" data-path-progress="acheter"></span>
+        <span class="path-progress-step" data-path-progress="renegocier"></span>
+        <span class="path-progress-step" data-path-progress="assurer"></span>
+        <span class="path-progress-step" data-path-progress="regrouper"></span>
+      </div>
+
+      <div class="path-panel active" data-path-panel="acheter">
+        <div class="path-card">
+          <h3>Vous achetez un bien</h3>
+          <p>Nous construisons un dossier bancaire solide, comparons les établissements et négocions les conditions qui sécurisent votre acquisition.</p>
+          <div class="path-points">
+            <div class="path-point"><strong>À préparer</strong><span>Revenus, apport, compromis ou budget cible.</span></div>
+            <div class="path-point"><strong>À optimiser</strong><span>Taux, frais, assurance et modularité.</span></div>
+            <div class="path-point"><strong>À sécuriser</strong><span>Délais bancaires et conditions suspensives.</span></div>
+          </div>
+        </div>
+        <div class="path-aside">
+          <div>
+            <div class="path-mini-label">Solution recommandée</div>
+            <div class="path-outcome">Prêt immobilier négocié</div>
+          </div>
+          <div class="path-next-step"><span>Prochaine étape</span><strong>Préparer revenus, apport et budget cible.</strong></div>
+          <a href="pret-immobilier.html" class="btn btn-yellow">Voir le service</a>
+        </div>
+      </div>
+
+      <div class="path-panel" data-path-panel="renegocier">
+        <div class="path-card">
+          <h3>Vous voulez améliorer votre crédit</h3>
+          <p>Nous analysons votre prêt actuel, le capital restant dû et les conditions du marché pour mesurer si une renégociation est pertinente.</p>
+          <div class="path-points">
+            <div class="path-point"><strong>À préparer</strong><span>Tableau d'amortissement et offre de prêt.</span></div>
+            <div class="path-point"><strong>À optimiser</strong><span>Taux, durée, mensualité ou coût total.</span></div>
+            <div class="path-point"><strong>À arbitrer</strong><span>Frais, indemnités et économies nettes.</span></div>
+          </div>
+        </div>
+        <div class="path-aside">
+          <div>
+            <div class="path-mini-label">Solution recommandée</div>
+            <div class="path-outcome">Renégociation ou rachat</div>
+          </div>
+          <div class="path-next-step"><span>Prochaine étape</span><strong>Vérifier le gain net après frais et indemnités.</strong></div>
+          <a href="rachat-credit.html" class="btn btn-yellow">Voir le service</a>
+        </div>
+      </div>
+
+      <div class="path-panel" data-path-panel="assurer">
+        <div class="path-card">
+          <h3>Vous voulez réduire votre assurance</h3>
+          <p>Nous comparons les garanties, le coût total et les exclusions pour remplacer votre assurance emprunteur sans fragiliser votre dossier.</p>
+          <div class="path-points">
+            <div class="path-point"><strong>À préparer</strong><span>Offre de prêt et contrat d'assurance actuel.</span></div>
+            <div class="path-point"><strong>À optimiser</strong><span>Quotités, garanties et taux d'assurance.</span></div>
+            <div class="path-point"><strong>À sécuriser</strong><span>Équivalence des garanties et acceptation banque.</span></div>
+          </div>
+        </div>
+        <div class="path-aside">
+          <div>
+            <div class="path-mini-label">Solution recommandée</div>
+            <div class="path-outcome">Délégation d'assurance</div>
+          </div>
+          <div class="path-next-step"><span>Prochaine étape</span><strong>Comparer les garanties à contrat équivalent.</strong></div>
+          <a href="assurance-emprunteur.html" class="btn btn-yellow">Voir le service</a>
+        </div>
+      </div>
+
+      <div class="path-panel" data-path-panel="regrouper">
+        <div class="path-card">
+          <h3>Vous avez plusieurs crédits</h3>
+          <p>Nous étudions vos charges, vos crédits en cours et votre reste à vivre pour rechercher une mensualité plus respirable.</p>
+          <div class="path-points">
+            <div class="path-point"><strong>À préparer</strong><span>Relevés de crédits, charges et revenus.</span></div>
+            <div class="path-point"><strong>À optimiser</strong><span>Mensualité, durée et équilibre budgétaire.</span></div>
+            <div class="path-point"><strong>À sécuriser</strong><span>Coût total et visibilité long terme.</span></div>
+          </div>
+        </div>
+        <div class="path-aside">
+          <div>
+            <div class="path-mini-label">Solution recommandée</div>
+            <div class="path-outcome">Rachat de crédit</div>
+          </div>
+          <div class="path-next-step"><span>Prochaine étape</span><strong>Calculer la mensualité cible et le reste à vivre.</strong></div>
+          <a href="rachat-credit.html" class="btn btn-yellow">Voir le service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="section" style="background:var(--gray-lt);">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto 52px;">
+      <span class="section-label">Méthode</span>
+      <h2>Un accompagnement en 4 étapes</h2>
+      <p style="color:var(--text-lt);">Un parcours simple, lisible et cadré pour transformer votre projet en financement accepté.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step fade-in">
+        <div class="process-num">1</div>
+        <span class="process-tag">Cadrage</span>
+        <h3>Analyse</h3>
+        <p>Nous étudions votre situation, vos objectifs et les contraintes du dossier.</p>
+      </div>
+      <div class="process-step fade-in fade-in-delay-1">
+        <div class="process-num">2</div>
+        <span class="process-tag">Marché</span>
+        <h3>Mise en concurrence</h3>
+        <p>Votre dossier est présenté aux partenaires les plus pertinents.</p>
+      </div>
+      <div class="process-step fade-in fade-in-delay-2">
+        <div class="process-num">3</div>
+        <span class="process-tag">Optimisation</span>
+        <h3>Négociation</h3>
+        <p>Nous optimisons taux, assurance, frais et conditions de remboursement.</p>
+      </div>
+      <div class="process-step fade-in fade-in-delay-3">
+        <div class="process-num">4</div>
+        <span class="process-tag">Finalisation</span>
+        <h3>Signature</h3>
+        <p>Vous êtes accompagné jusqu'à l'accord, l'offre et la finalisation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparaison -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto 52px;">
+      <span class="section-label">Comparaison</span>
+      <h2>Seul face aux banques ou accompagné ?</h2>
+      <p style="color:var(--text-lt);">Le bon financement dépend autant de la négociation que de la présentation du dossier.</p>
+    </div>
+    <div class="comparison-cards">
+      <div class="compare-card fade-in">
+        <div class="compare-heading">
+          <h3>En direct</h3>
+          <span class="compare-badge">En autonomie</span>
+        </div>
+        <ul class="compare-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#8A9BB0" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Démarches répétées auprès de chaque banque.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#8A9BB0" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Comparaison difficile entre taux, assurance et frais.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#8A9BB0" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Risque de dossier mal présenté ou incomplet.</span></li>
+        </ul>
+        <div class="compare-foot">Vous portez seul la comparaison et les relances.</div>
+      </div>
+      <div class="compare-card compare-card--expert fade-in fade-in-delay-1">
+        <div class="compare-heading">
+          <h3>Avec Z'Expert</h3>
+          <span class="compare-badge">Recommandé</span>
+        </div>
+        <ul class="compare-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Un interlocuteur unique pour piloter le dossier.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>20+ partenaires consultés selon votre profil.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Négociation du financement, de l'assurance et des frais.</span></li>
+        </ul>
+        <div class="compare-foot">Vous gardez une vision claire, de l'étude à l'accord.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi Z'Expert -->
+<section class="section" style="background:var(--gray-lt);">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Nos engagements</span>
+      <h2>Pourquoi choisir Z'Expert ?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h4>Gain de temps</h4>
+        <p>Nous démarchons les banques à votre place et centralisons toutes les offres. Vous recevez une synthèse claire, sans démarches répétées.</p>
+      </div>
+      <div class="why-item fade-in fade-in-delay-1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h4>Meilleures conditions</h4>
+        <p>Nos relations privilégiées avec 20+ banques partenaires nous permettent d'obtenir des taux et des conditions inaccessibles en direct.</p>
+      </div>
+      <div class="why-item fade-in fade-in-delay-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>Accompagnement expert</h4>
+        <p>Un interlocuteur unique, disponible et réactif, qui connaît votre dossier de bout en bout et vous guide à chaque étape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band fade-in">
+      <h2>Prêt à démarrer votre projet ?</h2>
+      <p>Un expert Z'Expert analyse votre situation et vous propose la solution adaptée. Réponse sous 48h, sans engagement.</p>
+      <div class="cta-proof-row" aria-label="Garanties de prise de contact">
+        <span>Étude gratuite</span>
+        <span>Sans engagement</span>
+        <span>Réponse sous 48h</span>
+      </div>
+      <div class="cta-band-btns">
+        <a href="contact.html" class="btn btn-yellow btn-lg">Prendre contact</a>
+        <a href="simulateur.html" class="btn btn-outline-white">Simuler mon projet</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="services-mobile-cta" aria-label="Action rapide">
+  <span>Projet à financer ?</span>
+  <a href="contact.html">Être rappelé</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  const bg = document.getElementById('phImgS');
+  if (bg) bg.style.transform = `translateY(${Math.min(window.scrollY * 0.35, 120)}px)`;
+}, { passive: true });
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav(); window.addEventListener('resize', checkNav);
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+(function initHolographicServiceCards() {
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!canHover || reducedMotion) return;
+
+  document.querySelectorAll('.holographic-service-card').forEach(card => {
+    card.addEventListener('mousemove', event => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((centerY - y) / centerY) * 6;
+      const rotateY = ((x - centerX) / centerX) * 7;
+
+      card.style.setProperty('--x', `${x}px`);
+      card.style.setProperty('--y', `${y}px`);
+      card.style.setProperty('--rotate-x', `${rotateX.toFixed(2)}deg`);
+      card.style.setProperty('--rotate-y', `${rotateY.toFixed(2)}deg`);
+    }, { passive: true });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--x', '50%');
+      card.style.setProperty('--y', '50%');
+      card.style.setProperty('--rotate-x', '0deg');
+      card.style.setProperty('--rotate-y', '0deg');
+    });
+  });
+})();
+
+(function initServicePathTabs() {
+  const tabs = Array.from(document.querySelectorAll('[data-path-tab]'));
+  const panels = Array.from(document.querySelectorAll('[data-path-panel]'));
+  const progressSteps = Array.from(document.querySelectorAll('[data-path-progress]'));
+  if (!tabs.length || !panels.length) return;
+
+  function activatePath(id) {
+    tabs.forEach(tab => {
+      const isActive = tab.dataset.pathTab === id;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-pressed', String(isActive));
+    });
+    panels.forEach(panel => panel.classList.toggle('active', panel.dataset.pathPanel === id));
+    progressSteps.forEach(step => step.classList.toggle('active', step.dataset.pathProgress === id));
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activatePath(tab.dataset.pathTab));
+  });
+})();
+
+(function initServicesMobileCta() {
+  const cta = document.querySelector('.services-mobile-cta');
+  const footer = document.querySelector('.footer');
+  if (!cta || !footer) return;
+  new IntersectionObserver(
+    entries => cta.classList.toggle('hidden', entries[0].isIntersecting),
+    { threshold: 0.05 }
+  ).observe(footer);
+})();
+</script>
+</body>
+</html>

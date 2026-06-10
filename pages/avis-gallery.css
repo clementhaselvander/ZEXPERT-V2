@@ -1,0 +1,295 @@
+/* ============================================================
+   AVIS GALLERY — Z'Expert · pages/faq-avis.html
+   Carrousel horizontal premium, inspiré Circular Gallery
+   Compatible shared.css — aucune dépendance externe
+   ============================================================ */
+
+/* ── Section ── */
+.ag-section {
+  background: var(--gray-lt);
+  padding-top: 80px;
+  padding-bottom: 72px;
+  overflow: hidden;
+}
+
+/* ── Logo Z'Expert inline dans le titre ── */
+.ag-h2-logo {
+  display: inline-block;
+  height: 1.6em;
+  width: auto;
+  vertical-align: -0.38em;
+  margin-left: 0.12em;
+}
+
+/* ── En-tête ── */
+.ag-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+/* ── Stage — conteneur pleine largeur de la galerie ── */
+.ag-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  /* perspective partagée pour créer l'effet d'arc circulaire */
+  perspective: 1600px;
+  perspective-origin: 50% 45%;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+}
+.ag-stage.is-dragging { cursor: grabbing; }
+
+/* ── Carte individuelle (absolute, positionnée par JS) ── */
+.ag-card {
+  position: absolute;
+  top: 0; left: 0;
+  width: 380px;
+  height: 448px;
+  will-change: transform, opacity;
+  /* transition OFF pendant le drag, ON pour snap/nav */
+  transition: transform 0s linear, opacity 0s linear;
+  touch-action: none;
+}
+.ag-card.is-snapping {
+  transition:
+    transform 0.52s cubic-bezier(0.34, 1.2, 0.64, 1),
+    opacity   0.38s ease;
+}
+
+/* ── Face de la carte ── */
+.ag-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(30, 158, 188, 0.12);
+  /* shadow contrôlée par --ag-s via JS */
+  box-shadow:
+    0 calc(var(--ag-s, 1) * 4px)  calc(var(--ag-s, 1) * 16px) rgba(18, 37, 58, 0.06),
+    0 calc(var(--ag-s, 1) * 12px) calc(var(--ag-s, 1) * 40px) rgba(18, 37, 58, 0.09),
+    0 calc(var(--ag-s, 1) * 24px) calc(var(--ag-s, 1) * 64px) rgba(18, 37, 58, 0.05);
+  padding: 32px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  backface-visibility: hidden;
+}
+
+/* Barre accent turquoise → doré */
+.ag-card-inner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--yellow) 60%, rgba(245,200,66,0) 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+/* Guillemet décoratif */
+.ag-card-inner::after {
+  content: '\201C';
+  position: absolute;
+  top: 4px; right: 14px;
+  font-size: 120px; line-height: 1;
+  color: rgba(30, 158, 188, 0.048);
+  font-family: Georgia, 'Times New Roman', serif;
+  pointer-events: none; user-select: none;
+}
+
+/* Glow turquoise sur la carte active (défini par JS via .is-active) */
+.ag-card.is-active .ag-card-inner {
+  border-color: rgba(30, 158, 188, 0.22);
+  box-shadow:
+    0 4px  16px rgba(18, 37, 58, 0.06),
+    0 12px 40px rgba(18, 37, 58, 0.09),
+    0 24px 64px rgba(18, 37, 58, 0.05),
+    0 0 0 1.5px rgba(30, 158, 188, 0.18),
+    0 0 28px rgba(30, 158, 188, 0.09);
+}
+
+/* ── Intérieur de la carte ── */
+.ag-card-header { display: flex; align-items: center; gap: 14px; }
+
+.ag-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.4px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+.ag-info { flex: 1; min-width: 0; }
+.ag-name {
+  font-size: 16px; font-weight: 700;
+  color: var(--navy); line-height: 1.2;
+  font-family: var(--font-sans);
+}
+.ag-role {
+  font-size: 12px; color: var(--text-lt);
+  margin-top: 2px;
+}
+.ag-verified {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 600; color: var(--blue);
+  background: rgba(30,158,188,0.08);
+  border: 1px solid rgba(30,158,188,0.18);
+  border-radius: 8px; padding: 4px 9px;
+  white-space: nowrap; flex-shrink: 0;
+}
+.ag-verified svg { width: 10px; height: 10px; flex-shrink: 0; }
+
+.ag-stars { display: flex; gap: 2px; }
+.ag-star { color: var(--yellow); font-size: 18px; line-height: 1; }
+
+.ag-quote {
+  font-size: 14.5px; line-height: 1.76; color: #3e5060;
+  flex: 1;
+  font-family: var(--font-sans);
+}
+
+.ag-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(30,158,188,0.09);
+  margin-top: auto; gap: 8px; flex-wrap: wrap;
+}
+.ag-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.ag-tag {
+  font-size: 11px; font-weight: 600;
+  padding: 3px 9px; border-radius: 6px;
+  background: var(--gray-lt);
+  color: var(--text-lt);
+  border: 1px solid var(--gray);
+}
+.ag-tag.featured {
+  background: rgba(30,158,188,0.08);
+  color: var(--blue);
+  border-color: rgba(30,158,188,0.22);
+}
+.ag-date { font-size: 11.5px; color: #9aacba; white-space: nowrap; }
+
+/* ── Fondu gauche / droite ── */
+.ag-fade {
+  position: absolute; top: 0; bottom: 0; z-index: 12;
+  width: 160px; pointer-events: none;
+}
+.ag-fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--gray-lt) 0%, rgba(242,244,246,0.85) 40%, transparent 100%);
+}
+.ag-fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--gray-lt) 0%, rgba(242,244,246,0.85) 40%, transparent 100%);
+}
+
+/* ── Boutons navigation (prev / next) ── */
+.ag-nav {
+  position: absolute;
+  top: 50%; z-index: 20;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid rgba(30,158,188,0.25);
+  color: var(--blue);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 18px rgba(18,37,58,0.11);
+  transition: background 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s, color 0.22s;
+}
+.ag-nav:hover {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+  box-shadow: 0 6px 22px rgba(30,158,188,0.28);
+  transform: translateY(-50%) scale(1.07);
+}
+.ag-nav svg { width: 18px; height: 18px; flex-shrink: 0; }
+.ag-prev { left: 20px; }
+.ag-next { right: 20px; }
+
+/* ── Dots pagination ── */
+.ag-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+.ag-dots { display: flex; gap: 8px; align-items: center; }
+.ag-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(30,158,188,0.22);
+  border: none; cursor: pointer; padding: 0;
+  transition: background 0.25s, transform 0.25s, width 0.3s, border-radius 0.3s;
+}
+.ag-dot.active {
+  background: var(--blue);
+  transform: scale(1.25);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Compteur discret */
+.ag-counter {
+  font-size: 12px;
+  color: var(--text-lt);
+  opacity: 0.6;
+  font-family: var(--font-sans);
+}
+
+/* Hint glisser */
+.ag-hint {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--text-lt);
+  opacity: 0.45; margin-top: 4px;
+}
+
+/* ── Responsive — Tablette ── */
+@media (max-width: 1100px) {
+  .ag-stage { height: 500px; }
+  .ag-card { width: 340px; height: 440px; }
+  .ag-fade { width: 100px; }
+}
+
+/* ── Responsive — Mobile ── */
+@media (max-width: 767px) {
+  .ag-section { padding-top: 56px; padding-bottom: 48px; }
+  .ag-stage { height: 480px; }
+  .ag-card { width: 88vw; max-width: 340px; height: 450px; }
+  .ag-card-inner { padding: 24px 20px 20px; gap: 12px; }
+  .ag-quote { font-size: 13.5px; line-height: 1.72; }
+  .ag-verified { display: none; }
+  .ag-avatar { width: 42px; height: 42px; }
+  .ag-name { font-size: 15px; }
+  .ag-star { font-size: 17px; }
+  .ag-fade { width: 32px; }
+  .ag-nav { width: 40px; height: 40px; }
+  .ag-nav svg { width: 16px; height: 16px; }
+  .ag-prev { left: 8px; }
+  .ag-next { right: 8px; }
+}
+
+@media (max-width: 479px) {
+  .ag-stage { height: 500px; }
+  .ag-card { width: 91vw; height: 460px; }
+  .ag-card-inner { padding: 20px 16px 18px; }
+  .ag-avatar { width: 38px; height: 38px; font-size: 13px; }
+  .ag-quote { font-size: 13px; }
+}
+
+/* ── Prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .ag-card,
+  .ag-card.is-snapping,
+  .ag-card-inner,
+  .ag-dot,
+  .ag-nav { transition: none !important; animation: none !important; }
+}

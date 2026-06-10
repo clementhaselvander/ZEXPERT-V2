@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Z'Expert — Courtier en crédit immobilier et assurance emprunteur">
+  <title>Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur</title>
+  <defs>
+    <!-- Fond dégradé sombre -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#05121e"/>
+      <stop offset="45%" stop-color="#071c2a"/>
+      <stop offset="100%" stop-color="#071a28"/>
+    </linearGradient>
+
+    <!-- Glow teal gauche -->
+    <radialGradient id="glowLeft" cx="0%" cy="50%" r="55%">
+      <stop offset="0%"  stop-color="#109DBB" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#109DBB" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glow jaune droit-bas -->
+    <radialGradient id="glowRight" cx="110%" cy="120%" r="55%">
+      <stop offset="0%"  stop-color="#F4D44D" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#F4D44D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dégradé barre accent gauche -->
+    <linearGradient id="accentBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#109DBB" stop-opacity="0"/>
+      <stop offset="35%"  stop-color="#109DBB"/>
+      <stop offset="65%"  stop-color="#F4D44D"/>
+      <stop offset="100%" stop-color="#F4D44D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Dégradé séparateur -->
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#109DBB"/>
+      <stop offset="100%" stop-color="#F4D44D"/>
+    </linearGradient>
+
+    <!-- Filtre glow sur texte -->
+    <filter id="textGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- === FOND === -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glows -->
+  <rect width="1200" height="630" fill="url(#glowLeft)"/>
+  <rect width="1200" height="630" fill="url(#glowRight)"/>
+
+  <!-- Grille de points -->
+  <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#109DBB" fill-opacity="0.07"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- === ÉLÉMENTS DÉCORATIFS === -->
+  <!-- Lignes diagonales -->
+  <line x1="700" y1="0"   x2="1200" y2="280" stroke="#109DBB" stroke-opacity="0.07" stroke-width="1"/>
+  <line x1="750" y1="0"   x2="1200" y2="230" stroke="#109DBB" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0"   y1="450" x2="400"  y2="630" stroke="#109DBB" stroke-opacity="0.05" stroke-width="1"/>
+
+  <!-- Cercles discrets coin haut droit -->
+  <circle cx="1100" cy="80"  r="180" fill="none" stroke="#109DBB" stroke-opacity="0.05" stroke-width="1"/>
+  <circle cx="1100" cy="80"  r="140" fill="none" stroke="#F4D44D" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Losanges décoratifs -->
+  <rect x="80" y="80" width="18" height="18" fill="none" stroke="#109DBB" stroke-opacity="0.22" stroke-width="1.5" transform="rotate(45 89 89)"/>
+  <rect x="1080" y="530" width="14" height="14" fill="none" stroke="#F4D44D" stroke-opacity="0.20" stroke-width="1.5" transform="rotate(45 1087 537)"/>
+  <rect x="52" y="510" width="8" height="8" fill="none" stroke="#109DBB" stroke-opacity="0.16" stroke-width="1" transform="rotate(45 56 514)"/>
+
+  <!-- Barre accent gauche -->
+  <rect x="0" y="0" width="5" height="630" fill="url(#accentBar)"/>
+
+  <!-- === BADGE ORIAS === -->
+  <!-- Fond pill -->
+  <rect x="456" y="118" width="288" height="36" rx="18" fill="#109DBB" fill-opacity="0.12"/>
+  <rect x="456" y="118" width="288" height="36" rx="18" fill="none" stroke="#109DBB" stroke-opacity="0.30" stroke-width="1"/>
+  <!-- Dot pulsant -->
+  <circle cx="482" cy="136" r="4" fill="#7DDAEE"/>
+  <!-- Texte badge -->
+  <text x="496" y="141"
+    font-family="'Montserrat','Arial Black','Helvetica Neue',Arial,sans-serif"
+    font-weight="700" font-size="12" fill="#7DDAEE" letter-spacing="2.5">COURTIER AGRÉÉ ORIAS</text>
+
+  <!-- === WORDMARK Z'EXPERT === -->
+  <!-- Accent jaune sous le texte -->
+  <polygon points="313,289 889,293 891,307 315,303" fill="#F4D44D" opacity="0.88"/>
+
+  <!-- Texte principal -->
+  <text x="310" y="298"
+    font-family="'Montserrat','Arial Black','Helvetica Neue',Arial,sans-serif"
+    font-weight="800" font-size="108" fill="#109DBB" letter-spacing="-1"
+    filter="url(#textGlow)">Z'EXPERT</text>
+
+  <!-- === SÉPARATEUR === -->
+  <rect x="492" y="336" width="216" height="2.5" rx="1.5" fill="url(#divGrad)"/>
+
+  <!-- === TAGLINE === -->
+  <!-- Ligne 1 strong -->
+  <text x="600" y="382"
+    font-family="'Montserrat','Helvetica Neue',Arial,sans-serif"
+    font-weight="600" font-size="22" fill="rgba(255,255,255,0.94)"
+    letter-spacing="0.5" text-anchor="middle">Crédit immobilier · Assurance emprunteur</text>
+
+  <!-- Ligne 2 light -->
+  <text x="600" y="415"
+    font-family="'Montserrat','Helvetica Neue',Arial,sans-serif"
+    font-weight="300" font-size="18" fill="rgba(255,255,255,0.60)"
+    letter-spacing="0.5" text-anchor="middle">Accompagnement personnalisé, du projet à la signature</text>
+
+  <!-- === LOCALISATION === -->
+  <text x="600" y="478"
+    font-family="'Montserrat','Helvetica Neue',Arial,sans-serif"
+    font-weight="400" font-size="13" fill="rgba(255,255,255,0.35)"
+    letter-spacing="2.5" text-anchor="middle">NANCY  ·  METZ  ·  GRAND EST</text>
+
+  <!-- === PIED DE PAGE === -->
+  <!-- URL bas droit -->
+  <text x="1148" y="598"
+    font-family="'Montserrat','Helvetica Neue',Arial,sans-serif"
+    font-weight="400" font-size="13" fill="rgba(255,255,255,0.25)"
+    letter-spacing="1" text-anchor="end">zexpert-courtage.com</text>
+
+  <!-- Certification bas gauche -->
+  <circle cx="60" cy="592" r="9" fill="none" stroke="#F4D44D" stroke-opacity="0.40" stroke-width="1.5"/>
+  <polyline points="55,592 59,596 66,588" fill="none" stroke="#F4D44D" stroke-opacity="0.65" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="76" y="597"
+    font-family="'Montserrat','Helvetica Neue',Arial,sans-serif"
+    font-weight="500" font-size="12" fill="rgba(244,212,77,0.55)"
+    letter-spacing="1">Enregistré ORIAS · Membre APIC</text>
+</svg>

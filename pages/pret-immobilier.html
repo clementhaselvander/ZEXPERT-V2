@@ -1,0 +1,766 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prêt Immobilier — Z'Expert Courtier Nancy</title>
+<meta name="description" content="Obtenez le meilleur taux pour votre prêt immobilier avec Z'Expert, courtier à Nancy. Résidence principale, investissement locatif, accompagnement complet.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Prêt Immobilier — Z'Expert Courtier Nancy">
+<meta property="og:description" content="Obtenez le meilleur taux pour votre prêt immobilier avec Z'Expert, courtier à Nancy. Résidence principale, investissement locatif, accompagnement complet.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/pret-immobilier.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prêt Immobilier — Z'Expert Courtier Nancy">
+<meta name="twitter:description" content="Obtenez le meilleur taux pour votre prêt immobilier. Z'Expert, courtier à Nancy, compare 20+ banques pour votre projet.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; height: 62vh; min-height: 480px;
+  display: flex; align-items: center; overflow: hidden;
+}
+.page-hero-img {
+  position: absolute; inset: -15% 0;
+  background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1800&q=80&auto=format&fit=crop');
+  background-size: cover; background-position: center 50%;
+  will-change: transform;
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,20,35,0.82) 0%, rgba(10,20,35,0.55) 55%, rgba(10,20,35,0.22) 100%),
+    linear-gradient(to top, rgba(10,20,35,0.55) 0%, transparent 60%);
+}
+.page-hero-line {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(to bottom, transparent, #1E9EBC 30%, #F5C842 70%, transparent);
+  opacity: 0.7;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  padding-top: var(--nav-h);
+}
+.page-hero h1 {
+  color: white;
+  opacity: 0; transform: translateY(20px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
+}
+.page-hero p {
+  color: rgba(255,255,255,0.75); margin-top: 16px; max-width: 560px; font-size: 1.1rem;
+  opacity: 0; transform: translateY(16px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s forwards;
+}
+.page-hero-label {
+  display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(30,158,188,0.9); margin-bottom: 12px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
+}
+.page-hero-ctas {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.65s forwards;
+}
+@keyframes phIn { to { opacity: 1; transform: translateY(0); } }
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.82rem; color: rgba(255,255,255,0.55);
+  margin-bottom: 16px;
+  opacity: 0; transform: translateY(8px);
+  animation: phIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s forwards;
+}
+.breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.breadcrumb a:hover { color: var(--yellow); }
+.breadcrumb span { color: rgba(255,255,255,0.3); }
+
+/* Stats band */
+.stats-band {
+  background: var(--navy);
+  padding: 32px 0;
+}
+.stats-band-inner {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0; text-align: center;
+}
+.stat-item {
+  padding: 0 24px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat-item:last-child { border-right: none; }
+.stat-val {
+  font-family: var(--font-serif); font-size: 2rem; font-weight: 700;
+  color: var(--yellow); line-height: 1;
+}
+.stat-label {
+  font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 6px;
+}
+
+/* Section intro */
+.intro-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.intro-img {
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+  aspect-ratio: 4/3;
+}
+.intro-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.intro-text h2 { margin-bottom: 16px; }
+.intro-text p { color: var(--text-lt); line-height: 1.8; margin-bottom: 16px; }
+
+/* Pour qui */
+.audience-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+}
+.audience-card {
+  background: white; border-radius: 16px; padding: 28px;
+  border: 1px solid var(--gray);
+  transition: all 0.25s;
+}
+.audience-card:hover { box-shadow: var(--shadow-md); border-color: var(--blue); transform: translateY(-3px); }
+.audience-icon {
+  width: 48px; height: 48px; border-radius: 12px; background: var(--blue-lt);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.audience-icon svg { width: 22px; height: 22px; color: var(--blue); }
+.audience-card h4 { font-size: 1rem; margin-bottom: 8px; color: var(--navy); }
+.audience-card p { font-size: 0.88rem; color: var(--text-lt); line-height: 1.6; }
+
+/* Conditions */
+.conditions-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+}
+.condition-card {
+  background: white; border-radius: 16px; padding: 32px;
+  border: 1px solid var(--gray);
+}
+.condition-card h4 { color: var(--navy); margin-bottom: 16px; font-size: 1rem; display: flex; align-items: center; gap: 10px; }
+.condition-card h4 svg { width: 20px; height: 20px; color: var(--blue); }
+.condition-list { list-style: none; padding: 0; margin: 0; }
+.condition-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid var(--gray);
+  font-size: 0.9rem; color: var(--text-lt);
+}
+.condition-list li:last-child { border-bottom: none; }
+.condition-check {
+  width: 20px; height: 20px; border-radius: 50%; background: var(--blue-lt);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+.condition-check svg { width: 10px; height: 10px; color: var(--blue); }
+
+/* Ce qu'on prend en charge */
+.takeover-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+}
+.takeover-item {
+  background: linear-gradient(135deg, var(--navy), #1e3a55);
+  border-radius: 16px; padding: 28px; color: white;
+}
+.takeover-num {
+  font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700;
+  color: var(--yellow); opacity: 0.4; line-height: 1; margin-bottom: 12px;
+}
+.takeover-item h4 { color: white; font-size: 0.95rem; margin-bottom: 8px; }
+.takeover-item p { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.6; }
+
+/* Étapes */
+.steps-list { display: flex; flex-direction: column; gap: 0; }
+.step-item {
+  display: grid; grid-template-columns: 60px 1fr; gap: 24px; align-items: start;
+  padding: 28px 0; border-bottom: 1px solid var(--gray);
+}
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--blue); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700;
+  flex-shrink: 0;
+}
+.step-content h4 { color: var(--navy); margin-bottom: 6px; }
+.step-content p { color: var(--text-lt); font-size: 0.9rem; line-height: 1.7; }
+.step-tag {
+  display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 6px;
+}
+
+/* Documents */
+.docs-grid {
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 20px;
+}
+.doc-group {
+  background: white; border-radius: 16px; padding: 28px; border: 1px solid var(--gray);
+}
+.doc-group h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 14px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--gray);
+  display: flex; align-items: center; gap: 8px;
+}
+.doc-group h4 svg { width: 18px; height: 18px; color: var(--blue); }
+.doc-list { list-style: none; padding: 0; margin: 0; }
+.doc-list li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.88rem; color: var(--text-lt);
+  padding: 6px 0;
+}
+.doc-list li::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--blue); flex-shrink: 0;
+}
+
+/* FAQ */
+.faq-compact { display: flex; flex-direction: column; gap: 0; }
+
+/* CTA final */
+.cta-final {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dk));
+  border-radius: 24px; padding: 64px 56px;
+  display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+}
+.cta-final h2 { color: white; margin-bottom: 10px; }
+.cta-final p { color: rgba(255,255,255,0.75); font-size: 1rem; }
+.cta-final-btns { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; white-space: nowrap; }
+
+/* Section background alternée */
+.section-alt { background: var(--gray-lt); }
+
+@media (max-width: 1024px) {
+  .intro-layout { grid-template-columns: 1fr; gap: 40px; }
+  .stats-band-inner { grid-template-columns: repeat(2,1fr); gap: 24px 0; }
+  .stat-item:nth-child(2) { border-right: none; }
+}
+@media (max-width: 900px) {
+  .audience-grid { grid-template-columns: 1fr; }
+  .conditions-layout { grid-template-columns: 1fr; }
+  .takeover-grid { grid-template-columns: 1fr; }
+  .docs-grid { grid-template-columns: 1fr; }
+  .cta-final { grid-template-columns: 1fr; padding: 40px 28px; }
+  .cta-final-btns { flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 640px) {
+  .stats-band-inner { grid-template-columns: 1fr 1fr; }
+  .stat-item { border-right: none; }
+  .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1); }
+  .step-item { grid-template-columns: 48px 1fr; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link active">Nos services</a>
+      <a href="simulateur.html" class="nav-link">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img" id="phImg1"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-line"></div>
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="services.html">Nos services</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,0.8);">Prêt immobilier</span>
+    </nav>
+    <span class="page-hero-label">Financement immobilier</span>
+    <h1>Prêt immobilier :<br>obtenez le meilleur taux</h1>
+    <p>Nous négocions pour vous auprès de nos banques partenaires pour financer votre achat aux meilleures conditions.</p>
+    <div class="page-hero-ctas">
+      <a href="contact.html" class="btn btn-yellow btn-lg">Étudier mon projet</a>
+      <a href="simulateur.html" class="btn btn-outline-white">Simuler d'abord</a>
+    </div>
+  </div>
+</div>
+
+<!-- Stats band -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-band-inner">
+      <div class="stat-item">
+        <div class="stat-val">+150</div>
+        <div class="stat-label">Dossiers financés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">20+</div>
+        <div class="stat-label">Banques partenaires</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">48h</div>
+        <div class="stat-label">Délai de réponse</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">0€</div>
+        <div class="stat-label">Étude initiale gratuite</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Intro -->
+<section class="section">
+  <div class="container">
+    <div class="intro-layout">
+      <div class="intro-img fade-in">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80&auto=format&fit=crop" alt="Famille dans leur maison financée par Z'Expert" loading="lazy">
+      </div>
+      <div class="intro-text fade-in fade-in-delay-1">
+        <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Qu'est-ce que le prêt immobilier ?</span>
+        <h2>Un financement sur mesure pour votre projet</h2>
+        <p>Le prêt immobilier est un crédit à long terme qui vous permet de financer l'achat d'un bien : résidence principale, résidence secondaire ou investissement locatif.</p>
+        <p>Il est remboursé par mensualités sur une durée généralement comprise entre 10 et 25 ans, avec un taux fixe ou variable. Le taux d'intérêt, la durée, les frais de dossier et l'assurance emprunteur constituent les quatre leviers sur lesquels Z'Expert négocie pour vous.</p>
+        <p>En passant par un courtier, vous bénéficiez d'un accès à des offres préférentielles inaccessibles en direct, et d'un accompagnement de A à Z.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:8px;">Démarrer mon analyse gratuite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pour qui -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Profils accompagnés</span>
+      <h2>Pour quel type de projet ?</h2>
+      <p style="color:var(--text-lt);">Que vous soyez primo-accédant ou investisseur chevronné, nous adaptons notre approche à votre situation.</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-card fade-in">
+        <div class="audience-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h4>Résidence principale</h4>
+        <p>Vous achetez votre premier logement ou changez de résidence. Nous optimisons votre taux et structurons votre dossier pour maximiser vos chances.</p>
+      </div>
+      <div class="audience-card fade-in fade-in-delay-1">
+        <div class="audience-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/><circle cx="18" cy="8" r="4"/><path d="M18 6v4M16 8h4"/></svg>
+        </div>
+        <h4>Investissement locatif</h4>
+        <p>Vous souhaitez constituer un patrimoine ou générer des revenus complémentaires. Nous intégrons les spécificités fiscales et les contraintes de rentabilité.</p>
+      </div>
+      <div class="audience-card fade-in fade-in-delay-2">
+        <div class="audience-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h4>Résidence secondaire</h4>
+        <p>Un projet de maison de vacances ou un pied-à-terre ? Nous analysons l'impact sur votre endettement global et cherchons l'offre la plus adaptée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conditions d'éligibilité -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Éligibilité</span>
+      <h2>Conditions générales d'accès</h2>
+      <p style="color:var(--text-lt);">Chaque dossier est unique. Ces critères sont indicatifs — nous étudions votre situation en détail lors de l'analyse gratuite.</p>
+    </div>
+    <div class="conditions-layout fade-in">
+      <div class="condition-card">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Profil emprunteur
+        </h4>
+        <ul class="condition-list">
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Revenus stables (CDI, fonctionnaire, indépendant avec bilan)</li>
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Taux d'endettement inférieur à 35 %</li>
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Comportement bancaire sain (pas d'incident de paiement)</li>
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Apport personnel conseillé (5 % minimum)</li>
+        </ul>
+      </div>
+      <div class="condition-card">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          Le bien financé
+        </h4>
+        <ul class="condition-list">
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ancien ou neuf (VEFA, maison individuelle)</li>
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Travaux de rénovation inclus dans le financement possible</li>
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Terrain + construction</li>
+          <li><span class="condition-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Localisé en France métropolitaine</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ce que Z'Expert prend en charge -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Notre rôle</span>
+      <h2>Ce que Z'Expert prend en charge pour vous</h2>
+    </div>
+    <div class="takeover-grid">
+      <div class="takeover-item fade-in">
+        <div class="takeover-num">01</div>
+        <h4>Analyse de votre dossier</h4>
+        <p>Étude complète de votre situation financière, de vos revenus, charges et objectifs pour construire un dossier solide.</p>
+      </div>
+      <div class="takeover-item fade-in fade-in-delay-1">
+        <div class="takeover-num">02</div>
+        <h4>Prospection bancaire</h4>
+        <p>Mise en concurrence de nos 20+ banques partenaires pour identifier les offres les plus avantageuses pour votre profil.</p>
+      </div>
+      <div class="takeover-item fade-in fade-in-delay-2">
+        <div class="takeover-num">03</div>
+        <h4>Négociation des conditions</h4>
+        <p>Négociation du taux, des frais de dossier, des pénalités de remboursement anticipé et des conditions d'assurance.</p>
+      </div>
+      <div class="takeover-item fade-in">
+        <div class="takeover-num">04</div>
+        <h4>Montage administratif</h4>
+        <p>Constitution et suivi du dossier administratif complet — vous n'avez qu'à fournir les documents demandés.</p>
+      </div>
+      <div class="takeover-item fade-in fade-in-delay-1">
+        <div class="takeover-num">05</div>
+        <h4>Coordination avec les parties</h4>
+        <p>Interface entre vous, la banque, le notaire et l'agent immobilier pour fluidifier toutes les étapes.</p>
+      </div>
+      <div class="takeover-item fade-in fade-in-delay-2">
+        <div class="takeover-num">06</div>
+        <h4>Jusqu'à la signature</h4>
+        <p>Présence et conseil jusqu'à l'acte authentique. Nous restons disponibles après la signature pour tout suivi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Étapes -->
+<section class="section">
+  <div class="container" style="max-width:760px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Processus</span>
+      <h2>Les étapes de votre projet immobilier</h2>
+    </div>
+    <div class="steps-list">
+      <div class="step-item fade-in">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <span class="step-tag">Gratuit · 48h</span>
+          <h4>Premier contact & analyse</h4>
+          <p>Échange téléphonique ou en visio pour comprendre votre projet, votre situation et vos objectifs. Première évaluation de votre capacité d'emprunt, sans engagement.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in fade-in-delay-1">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <span class="step-tag">Semaine 1</span>
+          <h4>Constitution du dossier</h4>
+          <p>Nous vous guidons dans la collecte des pièces justificatives et préparons un dossier présenté de façon optimale aux banques.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <span class="step-tag">Semaine 2–3</span>
+          <h4>Mise en concurrence des banques</h4>
+          <p>Votre dossier est soumis simultanément à plusieurs établissements partenaires. Nous recueillons et comparons les offres pour vous.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in fade-in-delay-1">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <span class="step-tag">Semaine 3–4</span>
+          <h4>Présentation & choix de l'offre</h4>
+          <p>Nous vous présentons les meilleures offres, analysons chaque condition et vous accompagnons dans votre décision.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <span class="step-tag">Semaine 4–6</span>
+          <h4>Édition de l'offre de prêt</h4>
+          <p>La banque retenue édite votre offre officielle. Délai légal de réflexion de 11 jours avant signature.</p>
+        </div>
+      </div>
+      <div class="step-item fade-in fade-in-delay-1">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <span class="step-tag">Signature</span>
+          <h4>Acte authentique chez le notaire</h4>
+          <p>Remise des clés et déblocage des fonds. Félicitations, votre projet est financé.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Documents -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Checklist</span>
+      <h2>Documents nécessaires</h2>
+      <p style="color:var(--text-lt);">Nous vous guidons dans leur collecte. Voici les pièces généralement demandées par les banques.</p>
+    </div>
+    <div class="docs-grid fade-in">
+      <div class="doc-group">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Identité & situation
+        </h4>
+        <ul class="doc-list">
+          <li>Carte d'identité ou passeport</li>
+          <li>Justificatif de domicile (moins de 3 mois)</li>
+          <li>Livret de famille / PACS / contrat de mariage</li>
+        </ul>
+      </div>
+      <div class="doc-group">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Revenus & emploi
+        </h4>
+        <ul class="doc-list">
+          <li>3 derniers bulletins de salaire</li>
+          <li>Contrat de travail (CDI / CDD)</li>
+          <li>2 derniers avis d'imposition</li>
+          <li>Bilan comptable (si indépendant)</li>
+        </ul>
+      </div>
+      <div class="doc-group">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          Situation bancaire
+        </h4>
+        <ul class="doc-list">
+          <li>3 derniers relevés de compte bancaire</li>
+          <li>Relevés d'épargne (livret A, PEL, assurance-vie)</li>
+          <li>Justificatif d'apport personnel</li>
+        </ul>
+      </div>
+      <div class="doc-group">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          Le bien immobilier
+        </h4>
+        <ul class="doc-list">
+          <li>Compromis ou promesse de vente</li>
+          <li>Devis de travaux (si applicable)</li>
+          <li>Contrat de réservation (VEFA)</li>
+          <li>Diagnostics immobiliers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container" style="max-width:760px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Questions fréquentes</span>
+      <h2>Prêt immobilier : vos questions</h2>
+    </div>
+    <div class="faq-compact">
+      <div class="accordion-item open fade-in">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Combien puis-je emprunter ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>Votre capacité d'emprunt dépend de vos revenus nets, de vos charges actuelles et de votre apport. Les banques limitent généralement le taux d'endettement à 35 % de vos revenus. Notre <a href="simulateur.html" style="color:var(--blue);">simulateur gratuit</a> vous donne une première estimation en quelques secondes.</p>
+        </div>
+      </div>
+      <div class="accordion-item fade-in fade-in-delay-1">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Quel apport est nécessaire ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>Un apport de 10 % est recommandé pour couvrir les frais de notaire et rassurer la banque. Selon la situation de l'emprunteur, certains financements peuvent néanmoins être envisagés avec un faible apport, voire sans apport. Nous évaluons votre dossier et identifions les établissements les mieux adaptés à votre profil.</p>
+        </div>
+      </div>
+      <div class="accordion-item fade-in">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Combien de temps pour obtenir un accord ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>En moyenne 6 à 9 semaines entre la constitution du dossier et l'accord bancaire. Grâce à nos relations établies avec les banques partenaires et la qualité de nos dossiers, nous réduisons souvent ce délai.</p>
+        </div>
+      </div>
+      <div class="accordion-item fade-in fade-in-delay-1">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Quelle est la différence entre TAEG et taux nominal ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>Le taux nominal est le taux d'intérêt brut du prêt. Le TAEG (Taux Annuel Effectif Global) intègre tous les coûts : taux nominal, frais de dossier, assurance emprunteur et garanties. C'est l'indicateur le plus fiable pour comparer des offres. Nous vous aidons à décrypter chaque proposition.</p>
+        </div>
+      </div>
+      <div class="accordion-item fade-in">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Y a-t-il des frais de courtage ?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>L'étude de votre dossier est entièrement gratuite. Les frais de courtage, transparents et présentés avant tout engagement, ne sont dus qu'en cas de concrétisation du financement et après acceptation de l'offre de prêt. Si le dossier n'aboutit pas, aucun frais n'est facturé.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="faq-avis.html" style="font-size:0.88rem;color:var(--blue);font-weight:600;">Voir toutes les questions fréquentes →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="cta-final fade-in">
+      <div>
+        <h2>Prêt à financer votre projet ?</h2>
+        <p>Un expert Z'Expert étudie votre dossier et vous propose la solution adaptée. Réponse sous 48h, sans engagement.</p>
+      </div>
+      <div class="cta-final-btns">
+        <a href="contact.html" class="btn btn-yellow btn-lg">Étudier mon projet immobilier</a>
+        <a href="simulateur.html" class="btn btn-outline-white">Simuler mon financement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  const bg = document.getElementById('phImg1');
+  if (bg) bg.style.transform = `translateY(${Math.min(window.scrollY * 0.35, 120)}px)`;
+}, { passive: true });
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav(); window.addEventListener('resize', checkNav);
+
+function toggleAccordion(btn) {
+  const item = btn.closest('.accordion-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

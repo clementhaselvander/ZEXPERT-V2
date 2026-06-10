@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Z'Expert</title>
+<meta name="description" content="Mentions légales et informations réglementaires de Z'Expert, courtier en crédit immobilier immatriculé ORIAS n° 24003114.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Mentions légales — Z'Expert">
+<meta property="og:description" content="Mentions légales et informations réglementaires de Z'Expert, courtier en crédit immobilier immatriculé ORIAS n° 24003114.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/mentions-legales.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mentions légales — Z'Expert">
+<meta name="twitter:description" content="Informations réglementaires de Z'Expert, courtier en crédit immobilier immatriculé ORIAS n° 24003114.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; height: 38vh; min-height: 280px;
+  display: flex; align-items: center; overflow: hidden;
+}
+.page-hero-img {
+  position: absolute; inset: -15% 0;
+  background: linear-gradient(135deg, #0a1422 0%, #12253A 55%, #1580A0 100%);
+  will-change: transform;
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,20,35,0.55) 0%, rgba(10,20,35,0.2) 100%);
+}
+.page-hero-line {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(to bottom, transparent, #1E9EBC 30%, #F5C842 70%, transparent);
+  opacity: 0.7;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  padding-top: var(--nav-h);
+}
+.page-hero h1 {
+  color: white;
+  opacity: 0; transform: translateY(20px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
+}
+.page-hero p {
+  color: rgba(255,255,255,0.75); margin-top: 16px; max-width: 540px; font-size: 1.05rem;
+  opacity: 0; transform: translateY(16px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s forwards;
+}
+.page-hero-label {
+  display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(30,158,188,0.9); margin-bottom: 12px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
+}
+@keyframes phIn { to { opacity: 1; transform: translateY(0); } }
+
+/* Layout */
+.legal-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Sections légales */
+.legal-section {
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.legal-section:last-child {
+  border-bottom: none; padding-bottom: 0; margin-bottom: 0;
+}
+.legal-section h2 {
+  font-size: 1.25rem; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.legal-section h2::before {
+  content: ''; display: block; width: 4px; height: 22px;
+  background: var(--blue); border-radius: 2px; flex-shrink: 0;
+}
+.legal-table {
+  width: 100%; border-collapse: collapse;
+}
+.legal-table tr {
+  border-bottom: 1px solid var(--gray-lt);
+}
+.legal-table tr:last-child { border-bottom: none; }
+.legal-table td {
+  padding: 10px 0; font-size: 0.92rem; vertical-align: top;
+}
+.legal-table td:first-child {
+  color: var(--text-lt); width: 200px; font-weight: 500; padding-right: 16px;
+}
+.legal-table td:last-child {
+  color: var(--text); font-weight: 400;
+}
+.legal-section p {
+  font-size: 0.92rem; line-height: 1.75; color: var(--text-lt); margin-bottom: 12px;
+}
+.legal-section p:last-child { margin-bottom: 0; }
+.legal-section a { color: var(--blue); text-decoration: none; }
+.legal-section a:hover { text-decoration: underline; }
+
+/* Badge ORIAS */
+.orias-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--blue-lt); border: 1px solid rgba(30,158,188,0.25);
+  border-radius: 10px; padding: 12px 18px; margin-top: 16px;
+}
+.orias-badge-num {
+  font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--blue);
+}
+.orias-badge-label { font-size: 0.78rem; color: var(--text-lt); line-height: 1.4; }
+
+/* Sidebar */
+.legal-sidebar { display: flex; flex-direction: column; gap: 20px; }
+.sidebar-card {
+  background: white; border-radius: var(--radius);
+  border: 1px solid var(--gray); padding: 24px;
+  box-shadow: var(--shadow);
+}
+.sidebar-card h3 {
+  font-size: 0.95rem; margin-bottom: 14px; color: var(--navy);
+}
+.sidebar-card p {
+  font-size: 0.85rem; color: var(--text-lt); line-height: 1.65;
+}
+.sidebar-nav-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 0; border-bottom: 1px solid var(--gray-lt);
+  font-size: 0.85rem; color: var(--text-lt); text-decoration: none;
+  transition: color 0.2s;
+}
+.sidebar-nav-item:last-child { border-bottom: none; }
+.sidebar-nav-item:hover { color: var(--blue); }
+.sidebar-nav-item::before {
+  content: '›'; color: var(--blue); font-size: 1rem; flex-shrink: 0;
+}
+.highlight-card {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a55 100%);
+  border-radius: var(--radius); padding: 24px;
+}
+.highlight-card h3 { color: white; font-size: 0.95rem; margin-bottom: 10px; }
+.highlight-card p { font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+.highlight-card a { color: var(--yellow); text-decoration: none; }
+.highlight-card a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .legal-layout { grid-template-columns: 1fr; }
+  .legal-sidebar { order: -1; }
+  .legal-table td:first-child { width: 140px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Nos services</a>
+      <a href="simulateur.html" class="nav-link">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-line"></div>
+  <div class="container page-hero-content">
+    <span class="page-hero-label">Transparence & réglementation</span>
+    <h1>Mentions légales</h1>
+    <p>Informations légales et réglementaires relatives à l'activité de Z'Expert.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="legal-layout">
+
+      <!-- CONTENU PRINCIPAL -->
+      <div>
+
+        <!-- 1. Éditeur -->
+        <div class="legal-section fade-in">
+          <h2>Éditeur du site</h2>
+          <table class="legal-table">
+            <tr><td>Dénomination sociale</td><td><strong>SARL Z EXPERT</strong></td></tr>
+            <tr><td>Forme juridique</td><td>Société à Responsabilité Limitée (SARL)</td></tr>
+            <tr><td>Capital social</td><td>100 €</td></tr>
+            <tr><td>Siège social</td><td>7 Rue du Maréchal Joffre<br>54130 Saint-Max</td></tr>
+            <tr><td>RCS</td><td>RCS Nancy 952 463 263</td></tr>
+            <tr><td>SIREN</td><td>952 463 263</td></tr>
+            <tr><td>Code APE</td><td>66.19B — Autres activités auxiliaires de services financiers</td></tr>
+            <tr><td>Téléphone</td><td><a href="tel:+33633677245">06 33 67 72 45</a></td></tr>
+            <tr><td>Email</td><td><a href="mailto:vincent.haselvander@zexpertnancy.fr">vincent.haselvander@zexpertnancy.fr</a></td></tr>
+          </table>
+        </div>
+
+        <!-- 2. Activité réglementée -->
+        <div class="legal-section fade-in">
+          <h2>Activité réglementée — ORIAS</h2>
+          <p>Z'Expert est immatriculé au registre unique des intermédiaires en assurance, banque et finance (<strong>ORIAS</strong>) en qualité de :</p>
+          <p><strong>Courtier en Opérations de Banque et Services de Paiement (COBSP)</strong><br>
+          Immatriculation valide depuis le 17/05/2024 jusqu'au 28/02/2027.</p>
+          <div class="orias-badge">
+            <div>
+              <div class="orias-badge-num">24003114</div>
+              <div class="orias-badge-label">Numéro ORIAS<br>Vérifiable sur <a href="https://www.orias.fr" target="_blank" rel="noopener">www.orias.fr</a></div>
+            </div>
+          </div>
+          <p style="margin-top:16px;">Conformément à l'article L. 519-1 du Code monétaire et financier, Z'Expert agit en qualité d'intermédiaire en opérations de banque et en services de paiement. Son activité est soumise à la supervision de l'<strong>Autorité de Contrôle Prudentiel et de Résolution (ACPR)</strong>.</p>
+        </div>
+
+        <!-- 3. RC Pro -->
+        <div class="legal-section fade-in">
+          <h2>Assurance Responsabilité Civile Professionnelle</h2>
+          <p>Conformément à la réglementation en vigueur, Z'Expert est couvert par une assurance de responsabilité civile professionnelle souscrite auprès de :</p>
+          <table class="legal-table">
+            <tr><td>Assureur</td><td><strong>CGPA</strong></td></tr>
+            <tr><td>N° de police</td><td>RCP80880</td></tr>
+            <tr><td>Garantie par sinistre</td><td>6 000 000 €</td></tr>
+            <tr><td>Garantie annuelle</td><td>8 000 000 €</td></tr>
+            <tr><td>Couverture</td><td>COBSP et démarchage bancaire et financier</td></tr>
+            <tr><td>Période</td><td>Du 01/03/2026 au 28/02/2027</td></tr>
+          </table>
+        </div>
+
+        <!-- 4. Hébergement -->
+        <div class="legal-section fade-in">
+          <h2>Hébergement du site</h2>
+          <p>Le site internet <strong>zexpertnancy.fr</strong> est hébergé par un prestataire dont les coordonnées sont disponibles sur demande à l'adresse <a href="mailto:vincent.haselvander@zexpertnancy.fr">vincent.haselvander@zexpertnancy.fr</a>.</p>
+        </div>
+
+        <!-- 5. Propriété intellectuelle -->
+        <div class="legal-section fade-in">
+          <h2>Propriété intellectuelle</h2>
+          <p>L'ensemble des contenus présents sur ce site (textes, images, graphismes, logo, icônes, sons, logiciels…) est la propriété exclusive de Z'Expert ou fait l'objet d'une autorisation d'utilisation.</p>
+          <p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de Z'Expert.</p>
+        </div>
+
+        <!-- 6. Données personnelles -->
+        <div class="legal-section fade-in">
+          <h2>Données personnelles (RGPD)</h2>
+          <p>Z'Expert collecte des données personnelles uniquement dans le cadre de l'instruction de vos demandes de financement et de mise en relation avec des établissements de crédit partenaires. Ces données sont traitées conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679).</p>
+          <p><strong>Finalités de traitement :</strong> analyse de votre dossier de financement, comparaison des offres partenaires, envoi de communications liées à votre projet.</p>
+          <p><strong>Durée de conservation :</strong> les données sont conservées pendant la durée nécessaire à l'instruction de votre dossier, et au maximum 3 ans à compter de notre dernier contact.</p>
+          <p><strong>Vos droits :</strong> vous disposez d'un droit d'accès, de rectification, d'opposition, d'effacement et de portabilité de vos données. Pour exercer ces droits, contactez-nous à <a href="mailto:vincent.haselvander@zexpertnancy.fr">vincent.haselvander@zexpertnancy.fr</a>.</p>
+          <p>En cas de désaccord sur l'usage de vos données, vous pouvez adresser une réclamation à la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+        </div>
+
+        <!-- 7. Cookies -->
+        <div class="legal-section fade-in">
+          <h2>Cookies</h2>
+          <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie publicitaire ou de tracking tiers n'est déposé sans votre consentement explicite.</p>
+          <p>Vous pouvez paramétrer votre navigateur pour refuser ou supprimer les cookies. Cette action peut affecter certaines fonctionnalités du site.</p>
+        </div>
+
+        <!-- 8. Médiation -->
+        <div class="legal-section fade-in">
+          <h2>Médiation</h2>
+          <p>Conformément aux articles L. 616-1 et R. 616-1 du Code de la consommation, Z'Expert a mis en place un dispositif de médiation de la consommation.</p>
+          <p>En cas de litige non résolu avec Z'Expert, vous pouvez saisir gratuitement le Médiateur de l'ACPR (Autorité de Contrôle Prudentiel et de Résolution) :</p>
+          <table class="legal-table">
+            <tr><td>Médiateur</td><td>Médiateur de l'ACPR</td></tr>
+            <tr><td>Adresse</td><td>4 Place de Budapest, CS 92459<br>75436 Paris Cedex 09</td></tr>
+            <tr><td>Site</td><td><a href="https://acpr.banque-france.fr" target="_blank" rel="noopener">acpr.banque-france.fr</a></td></tr>
+          </table>
+          <p style="margin-top:16px;">La saisine du médiateur doit être précédée d'une réclamation écrite adressée à Z'Expert. En l'absence de réponse satisfaisante dans un délai de 2 mois, vous pouvez engager la procédure de médiation.</p>
+        </div>
+
+        <!-- 9. Limitation de responsabilité -->
+        <div class="legal-section fade-in">
+          <h2>Limitation de responsabilité</h2>
+          <p>Les simulations et estimations fournies sur ce site sont données à titre indicatif et ne constituent pas des offres contractuelles de crédit. Elles ne sauraient engager Z'Expert ou les établissements partenaires. L'attribution d'un crédit dépend de l'étude complète du dossier par l'établissement prêteur.</p>
+          <p>Z'Expert s'efforce de maintenir les informations de ce site à jour mais ne peut garantir l'exactitude, la complétude ou l'actualité de l'ensemble des contenus publiés.</p>
+        </div>
+
+        <!-- 10. Contact -->
+        <div class="legal-section fade-in">
+          <h2>Contact</h2>
+          <p>Pour toute question relative aux présentes mentions légales :</p>
+          <p><strong>SARL Z EXPERT</strong><br>
+          7 Rue du Maréchal Joffre, 54130 Saint-Max<br>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr">vincent.haselvander@zexpertnancy.fr</a></p>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:20px;color:#ffffff;">Nous contacter</a>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="legal-sidebar">
+
+        <!-- Sommaire -->
+        <div class="sidebar-card fade-in">
+          <h3>Sommaire</h3>
+          <a href="#" class="sidebar-nav-item">Éditeur du site</a>
+          <a href="#" class="sidebar-nav-item">Activité réglementée</a>
+          <a href="#" class="sidebar-nav-item">Assurance RC Pro</a>
+          <a href="#" class="sidebar-nav-item">Hébergement</a>
+          <a href="#" class="sidebar-nav-item">Propriété intellectuelle</a>
+          <a href="#" class="sidebar-nav-item">Données personnelles</a>
+          <a href="#" class="sidebar-nav-item">Cookies</a>
+          <a href="#" class="sidebar-nav-item">Médiation</a>
+        </div>
+
+        <!-- Badge ORIAS -->
+        <div class="highlight-card fade-in fade-in-delay-1">
+          <h3>Immatriculation ORIAS</h3>
+          <p>Z'Expert est immatriculé et contrôlé. Vérifiez notre statut en temps réel :</p>
+          <p style="margin-top:10px;font-size:0.95rem;color:white;font-weight:600;">N° 24003114</p>
+          <a href="https://www.orias.fr" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:0.83rem;">Vérifier sur orias.fr →</a>
+        </div>
+
+        <!-- Mise à jour -->
+        <div class="sidebar-card fade-in fade-in-delay-2">
+          <h3>Mise à jour</h3>
+          <p>Dernière mise à jour : <strong>mai 2026</strong><br>
+          Ces mentions légales sont susceptibles d'évoluer. Nous vous invitons à les consulter régulièrement.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav(); window.addEventListener('resize', checkNav);
+
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 215 50" role="img" aria-label="Z'Expert">
+  <title>Z'Expert</title>
+  <defs>
+    <style>
+      <![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+      ]]>
+    </style>
+  </defs>
+  <polygon points="0,40 208,44 210,54 2,50" fill="#F4D44D"/>
+  <text
+    font-family="'Montserrat','Arial Black','Helvetica Neue',sans-serif"
+    font-weight="800"
+    font-size="34"
+    fill="#109DBB"
+    letter-spacing="3"
+    x="6"
+    y="47"
+  >Z&apos;EXPERT</text>
+</svg>

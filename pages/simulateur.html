@@ -1,0 +1,1094 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Étude Personnalisée Gratuite — Z'Expert Courtier Nancy</title>
+<meta name="description" content="Obtenez votre étude personnalisée en 3 étapes. Gratuit, sans engagement, réponse sous 48h. Courtier immobilier Nancy.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Étude Personnalisée Gratuite — Z'Expert Courtier Nancy">
+<meta property="og:description" content="Obtenez votre étude de financement personnalisée en 3 étapes. Gratuit, sans engagement, réponse sous 48h. Courtier immobilier à Nancy.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/simulateur.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Étude Personnalisée Gratuite — Z'Expert Nancy">
+<meta name="twitter:description" content="Étude de financement gratuite en 3 étapes. Sans engagement, réponse sous 48h. Courtier immobilier Nancy.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+
+/* ============================================================
+   TUNNEL PAGE
+   ============================================================ */
+.tunnel-page {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  background-color: #0c1b27;
+  background-image:
+    radial-gradient(ellipse 150% 100% at 50% 100%, rgba(3,10,18,0.50) 0%, transparent 58%),
+    radial-gradient(ellipse 120% 60% at 50% 0%, rgba(3,10,18,0.20) 0%, transparent 52%),
+    linear-gradient(160deg,
+      rgba(230,241,248,0.74) 0%,
+      rgba(198,229,243,0.66) 50%,
+      rgba(230,241,248,0.74) 100%
+    ),
+    url('../METZ_2.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .tunnel-page { background-attachment: scroll; }
+}
+
+/* Header */
+.tunnel-header {
+  text-align: center;
+  padding: 56px 24px 44px;
+}
+.tunnel-supertitle {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 12px;
+  animation: simFadeUp 0.55s cubic-bezier(0.22,1,0.36,1) both;
+}
+.tunnel-header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.65rem; font-weight: 700; color: var(--navy);
+  margin: 0 0 14px; line-height: 1.2;
+  letter-spacing: -0.025em;
+  animation: simFadeUp 0.65s 0.08s cubic-bezier(0.22,1,0.36,1) both;
+}
+.tunnel-header-sub {
+  color: var(--text-lt); font-size: 0.95rem; line-height: 1.65;
+  max-width: 440px; margin: 0 auto 24px;
+}
+.trust-row {
+  display: inline-flex; gap: 0;
+  background: white; border: 1px solid var(--gray);
+  border-radius: 50px; padding: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.trust-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.79rem; font-weight: 600; color: var(--text-lt);
+  padding: 8px 18px;
+  border-radius: 50px;
+}
+.trust-item:not(:last-child) { border-right: 1px solid var(--gray); }
+.trust-check { color: var(--blue); font-size: 0.72rem; }
+
+/* ============================================================
+   ÉCRAN DE CHOIX
+   ============================================================ */
+.sim-choice-screen { padding: 92px 24px 92px; text-align: center; }
+.sim-choice-header { margin-bottom: 52px; }
+.sim-choice-header h1 {
+  font-family: var(--font-serif); font-size: 2.85rem; font-weight: 700;
+  color: var(--navy); margin: 8px 0 16px; line-height: 1.18;
+  letter-spacing: -0.028em;
+  animation: simFadeUp 0.65s 0.08s cubic-bezier(0.22,1,0.36,1) both;
+}
+.sim-choice-header p {
+  color: var(--text-lt); font-size: 0.97rem; max-width: 440px; margin: 0 auto;
+  animation: simFadeUp 0.65s 0.18s cubic-bezier(0.22,1,0.36,1) both;
+}
+.sim-choice-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  max-width: 840px; margin: 0 auto;
+}
+.sim-choice-card {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.72);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10), 0 2px 12px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.92);
+  cursor: pointer; text-decoration: none;
+  display: flex; flex-direction: column; text-align: left; overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s cubic-bezier(0.22,1,0.36,1), border-color 0.3s;
+  animation: simCardIn 0.6s cubic-bezier(0.22,1,0.36,1) both;
+}
+.sim-choice-card:nth-child(2) { animation-delay: 0.13s; }
+.sim-choice-card:hover {
+  transform: translateY(-10px) scale(1.012);
+  border-color: rgba(255,255,255,0.90);
+}
+.sim-choice-card.card-pret  { border-top: 4px solid var(--blue); }
+.sim-choice-card.card-assurance { border-top: 4px solid var(--yellow); }
+.sim-choice-card.card-pret:hover  { box-shadow: 0 28px 72px rgba(16,157,187,0.20), 0 4px 18px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,0.96); }
+.sim-choice-card.card-assurance:hover { box-shadow: 0 28px 72px rgba(244,212,77,0.24), 0 4px 18px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,0.96); }
+.sim-card-top { padding: 32px 32px 24px; flex: 1; }
+.sim-card-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+}
+.card-pret .sim-card-icon { background: rgba(30,158,188,0.1); }
+.card-assurance .sim-card-icon { background: rgba(245,200,66,0.15); }
+.sim-card-icon svg { width: 24px; height: 24px; }
+.card-pret .sim-card-icon svg { color: var(--blue); }
+.card-assurance .sim-card-icon svg { color: #a07c00; }
+.sim-card-title {
+  font-family: var(--font-serif); font-size: 1.22rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 10px; line-height: 1.3;
+}
+.sim-card-desc { font-size: 0.88rem; color: var(--text-lt); line-height: 1.65; margin-bottom: 18px; }
+.sim-card-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+.sim-card-tag {
+  display: inline-block; font-size: 0.72rem; font-weight: 600;
+  padding: 4px 10px; border-radius: 20px;
+}
+.card-pret .sim-card-tag { background: rgba(30,158,188,0.09); color: var(--blue); }
+.card-assurance .sim-card-tag { background: rgba(245,200,66,0.2); color: #8a6a00; }
+.sim-card-meta { font-size: 0.77rem; color: var(--text-lt); display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.sim-card-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #C8D0DC; flex-shrink: 0; }
+.sim-card-cta {
+  padding: 20px 32px; border-top: 1px solid var(--gray);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.sim-card-cta-label { font-size: 0.9rem; font-weight: 700; }
+.card-pret .sim-card-cta-label { color: var(--blue); }
+.card-assurance .sim-card-cta-label { color: #8a6a00; }
+.sim-card-cta-arrow {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.22s;
+}
+.card-pret .sim-card-cta-arrow { background: rgba(30,158,188,0.1); color: var(--blue); }
+.card-assurance .sim-card-cta-arrow { background: rgba(245,200,66,0.22); color: #8a6a00; }
+.sim-choice-card:hover .sim-card-cta-arrow { transform: translateX(5px); }
+@media (max-width: 640px) {
+  .sim-choice-screen { padding: 44px 16px 56px; }
+  .sim-choice-header h1 { font-size: 1.7rem; }
+  .sim-choice-grid { grid-template-columns: 1fr; }
+  .sim-card-top { padding: 24px 22px 18px; }
+  .sim-card-cta { padding: 16px 22px; }
+}
+
+/* ============================================================
+   TUNNEL CARD
+   ============================================================ */
+.tunnel-wrap {
+  max-width: 640px; margin: 0 auto; padding: 0 20px 72px;
+}
+.tunnel-card {
+  background: rgba(255,255,255,0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.78);
+  box-shadow: 0 12px 56px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.96);
+  overflow: hidden;
+}
+
+/* ============================================================
+   PROGRESS BAR
+   ============================================================ */
+.tunnel-progress {
+  padding: 28px 36px 0;
+}
+.progress-steps {
+  display: flex; align-items: center;
+}
+.progress-dot {
+  width: 34px; height: 34px; border-radius: 50%;
+  flex-shrink: 0; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 700;
+  border: 2.5px solid #DDE2EA;
+  background: white; color: #A0A8B4;
+  transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+.progress-dot.active {
+  border-color: var(--blue); background: var(--blue); color: white;
+  box-shadow: 0 0 0 5px rgba(30,158,188,0.14);
+}
+.progress-dot.done {
+  border-color: var(--blue); background: var(--blue); color: white;
+}
+.progress-line {
+  flex: 1; height: 2px; background: #DDE2EA; position: relative; overflow: hidden;
+}
+.progress-fill {
+  position: absolute; inset: 0; background: var(--blue);
+  width: 0%; transition: width 0.5s ease;
+}
+.progress-labels {
+  display: flex; margin-top: 10px;
+}
+.progress-lbl {
+  flex: 1; font-size: 0.71rem; font-weight: 600; color: #A0A8B4;
+  transition: color 0.3s;
+}
+.progress-lbl:nth-child(2) { text-align: center; }
+.progress-lbl:last-child { text-align: right; }
+.progress-lbl.active { color: var(--blue); }
+
+/* ============================================================
+   STEP BODY
+   ============================================================ */
+.tunnel-body { padding: 32px 36px 0; }
+
+.tunnel-step { display: none; }
+.tunnel-step.active {
+  display: block;
+  animation: stepIn 0.28s ease forwards;
+}
+@keyframes stepIn {
+  from { opacity: 0; transform: translateX(14px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.step-eyebrow {
+  font-size: 0.71rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 6px;
+}
+.step-title {
+  font-family: var(--font-serif); font-size: 1.38rem; font-weight: 700;
+  color: var(--navy); margin: 0 0 5px;
+}
+.step-desc {
+  font-size: 0.87rem; color: var(--text-lt); margin: 0 0 28px; line-height: 1.55;
+}
+
+/* ============================================================
+   CHOICE CARDS
+   ============================================================ */
+.tf { margin-bottom: 24px; }
+.tf-label {
+  display: block; font-size: 0.82rem; font-weight: 700; color: var(--text);
+  margin-bottom: 10px;
+}
+.tf-label em { font-style: normal; font-weight: 400; color: var(--text-lt); font-size: 0.76rem; }
+
+.cg { display: grid; gap: 9px; }
+.cg-2 { grid-template-columns: 1fr 1fr; }
+.cg-3 { grid-template-columns: repeat(3, 1fr); }
+.cc {
+  border: 1.5px solid #DDE2EA; border-radius: 11px; padding: 13px 15px;
+  cursor: pointer; background: white;
+  display: flex; align-items: center; gap: 10px;
+  transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+  user-select: none; text-align: left;
+}
+.cc:hover { border-color: var(--blue); background: #F0F9FC; }
+.cc.sel {
+  border-color: var(--blue); background: #EBF6FA;
+  box-shadow: 0 0 0 3px rgba(30,158,188,0.13);
+}
+.cc-ico {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: #EEF8FB; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.18s;
+}
+.cc.sel .cc-ico { background: rgba(30,158,188,0.18); }
+.cc-ico svg { width: 15px; height: 15px; color: var(--blue); }
+.cc-t { font-size: 0.85rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+.cc-s { font-size: 0.73rem; color: var(--text-lt); margin-top: 2px; line-height: 1.3; }
+
+/* ============================================================
+   TOGGLE OUI/NON
+   ============================================================ */
+.toggle-row { display: flex; gap: 9px; }
+.toggle-btn {
+  flex: 1; padding: 12px; border: 1.5px solid #DDE2EA; border-radius: 10px;
+  background: white; cursor: pointer;
+  font-size: 0.87rem; font-weight: 600; color: var(--text-lt);
+  transition: all 0.18s; font-family: var(--font-sans);
+}
+.toggle-btn:hover { border-color: var(--blue); color: var(--blue); }
+.toggle-btn.sel { border-color: var(--blue); background: #EBF6FA; color: var(--blue); }
+
+/* ============================================================
+   RANGE SLIDERS
+   ============================================================ */
+.range-header {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 11px;
+}
+.range-display {
+  font-family: var(--font-serif); font-size: 1.08rem; font-weight: 700;
+  color: var(--blue); background: #EBF6FA; padding: 3px 13px; border-radius: 20px;
+}
+input.tr {
+  width: 100%; appearance: none; height: 5px;
+  background: linear-gradient(to right, var(--blue) 0%, var(--blue) var(--p, 35%), #DDE2EA var(--p, 35%), #DDE2EA 100%);
+  border-radius: 3px; outline: none; cursor: pointer;
+}
+input.tr::-webkit-slider-thumb {
+  appearance: none; width: 21px; height: 21px; border-radius: 50%;
+  background: white; border: 2.5px solid var(--blue);
+  box-shadow: 0 2px 7px rgba(30,158,188,0.3);
+  cursor: pointer; transition: transform 0.15s;
+}
+input.tr::-webkit-slider-thumb:hover { transform: scale(1.15); }
+.range-hints {
+  display: flex; justify-content: space-between; margin-top: 6px;
+}
+.rh { font-size: 0.7rem; color: #A0A8B4; }
+
+/* ============================================================
+   TEXT INPUTS
+   ============================================================ */
+.ti {
+  width: 100%; padding: 13px 16px; border-radius: 10px;
+  border: 1.5px solid #DDE2EA; background: white;
+  font-family: var(--font-sans); font-size: 0.92rem; color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+  box-sizing: border-box;
+}
+.ti:focus {
+  border-color: var(--blue); box-shadow: 0 0 0 3px rgba(30,158,188,0.12);
+}
+.ti::placeholder { color: #B8C0CC; }
+.ti.err { border-color: #C0474A; box-shadow: 0 0 0 3px rgba(192,71,74,0.1); }
+textarea.ti { resize: vertical; min-height: 86px; max-height: 180px; }
+
+/* ============================================================
+   FOOTER / BUTTONS
+   ============================================================ */
+.tunnel-footer {
+  padding: 24px 36px;
+  border-top: 1px solid var(--gray);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 30px;
+}
+.btn-back {
+  display: flex; align-items: center; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  font-size: 0.84rem; color: #A0A8B4;
+  font-family: var(--font-sans); padding: 10px 0;
+  transition: color 0.2s;
+}
+.btn-back:hover { color: var(--blue); }
+.btn-back.hidden { visibility: hidden; pointer-events: none; }
+.btn-next {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 12px;
+  font-size: 0.92rem; font-weight: 700; cursor: pointer;
+  border: none; font-family: var(--font-sans);
+  background: var(--blue); color: white;
+  box-shadow: 0 4px 16px rgba(30,158,188,0.35);
+  transition: all 0.2s;
+}
+.btn-next:hover { background: var(--blue-dk); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(30,158,188,0.4); }
+.btn-submit {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 12px;
+  font-size: 0.92rem; font-weight: 700; cursor: pointer;
+  border: none; font-family: var(--font-sans);
+  background: var(--yellow); color: var(--navy);
+  box-shadow: 0 4px 16px rgba(245,200,66,0.45);
+  transition: all 0.2s;
+}
+.btn-submit:hover { background: #e8c62a; transform: translateY(-1px); box-shadow: 0 6px 22px rgba(245,200,66,0.55); }
+
+/* ============================================================
+   SUCCESS
+   ============================================================ */
+.tunnel-success {
+  display: none; padding: 60px 36px; text-align: center;
+}
+.success-icon {
+  width: 76px; height: 76px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dk));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 10px 32px rgba(30,158,188,0.38);
+}
+.success-icon svg { width: 34px; height: 34px; color: white; stroke-width: 2.5; }
+.success-title {
+  font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700;
+  color: var(--navy); margin-bottom: 12px;
+}
+.success-sub {
+  font-size: 0.92rem; color: var(--text-lt); line-height: 1.72;
+  max-width: 380px; margin: 0 auto 36px;
+}
+.success-items {
+  display: flex; flex-direction: column; gap: 11px;
+  max-width: 300px; margin: 0 auto 32px;
+}
+.success-item {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.88rem; color: var(--text); text-align: left;
+}
+.scheck {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  background: var(--blue-lt); display: flex; align-items: center; justify-content: center;
+}
+.scheck svg { width: 12px; height: 12px; color: var(--blue); stroke-width: 2.8; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 680px) {
+  .tunnel-header { padding: 36px 16px 28px; }
+  .tunnel-header h1 { font-size: 1.6rem; }
+  .trust-row { flex-wrap: wrap; border-radius: 14px; }
+  .trust-item { padding: 8px 14px; font-size: 0.76rem; }
+  .tunnel-progress { padding: 22px 22px 0; }
+  .tunnel-body { padding: 24px 22px 0; }
+  .tunnel-footer { padding: 20px 22px; flex-wrap: wrap; }
+  .btn-next, .btn-submit { width: 100%; justify-content: center; order: -1; }
+  .btn-back { order: 2; margin: 0 auto; }
+  .cg-2, .cg-3 { grid-template-columns: 1fr; }
+  .tunnel-success { padding: 44px 22px; }
+}
+@media (min-width: 681px) and (max-width: 800px) {
+  .cg-3 { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   PREMIUM MICRO-ANIMATIONS
+   ============================================================ */
+@keyframes simFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes simCardIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 640px) {
+  .sim-choice-screen { padding: 52px 16px 64px; }
+  .sim-choice-header h1 { font-size: 1.9rem; letter-spacing: -0.02em; }
+  .sim-choice-card:nth-child(2) { animation-delay: 0.08s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sim-choice-card,
+  .sim-choice-header h1,
+  .sim-choice-header p,
+  .tunnel-supertitle,
+  .tunnel-header h1 {
+    animation: none;
+    opacity: 1;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Nos services</a>
+      <a href="simulateur.html" class="nav-link active">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="tunnel-page">
+
+  <!-- ══════════ ÉCRAN DE CHOIX ══════════ -->
+  <div class="sim-choice-screen" id="simChoice">
+    <div class="sim-choice-header">
+      <span class="tunnel-supertitle">Votre étude gratuite — Z'Expert</span>
+      <h1>Quel simulateur<br>vous correspond ?</h1>
+      <p>Choisissez l'analyse adaptée à votre besoin. Gratuit, sans engagement, réponse sous 48h.</p>
+    </div>
+    <div class="sim-choice-grid">
+
+      <!-- Card 1 — Prêt immobilier -->
+      <div class="sim-choice-card card-pret" onclick="startPret()">
+        <div class="sim-card-top">
+          <div class="sim-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="sim-card-title">Étude de financement immobilier</div>
+          <p class="sim-card-desc">Obtenez une analyse complète de votre capacité d'emprunt et recevez les meilleures offres du marché pour votre projet.</p>
+          <div class="sim-card-tags">
+            <span class="sim-card-tag">Achat résidence principale</span>
+            <span class="sim-card-tag">Investissement locatif</span>
+            <span class="sim-card-tag">Rachat de crédit</span>
+            <span class="sim-card-tag">Prêt relais</span>
+          </div>
+          <div class="sim-card-meta">
+            <span>3 étapes</span>
+            <span class="sim-card-meta-dot"></span>
+            <span>~3 min</span>
+            <span class="sim-card-meta-dot"></span>
+            <span>Réponse sous 48h</span>
+          </div>
+        </div>
+        <div class="sim-card-cta">
+          <span class="sim-card-cta-label">Démarrer mon étude</span>
+          <span class="sim-card-cta-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Card 2 — Assurance emprunteur -->
+      <a href="simulateur-assurance.html" class="sim-choice-card card-assurance">
+        <div class="sim-card-top">
+          <div class="sim-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="sim-card-title">Analyse assurance emprunteur</div>
+          <p class="sim-card-desc">Calculez vos économies potentielles avec la délégation d'assurance. Jusqu'à -50% sur le coût total de votre assurance.</p>
+          <div class="sim-card-tags">
+            <span class="sim-card-tag">Économiser sur l'assurance</span>
+            <span class="sim-card-tag">Nouveau prêt</span>
+            <span class="sim-card-tag">Changer d'assureur</span>
+          </div>
+          <div class="sim-card-meta">
+            <span>6 étapes</span>
+            <span class="sim-card-meta-dot"></span>
+            <span>~5 min</span>
+            <span class="sim-card-meta-dot"></span>
+            <span>Estimation d'économies en direct</span>
+          </div>
+        </div>
+        <div class="sim-card-cta">
+          <span class="sim-card-cta-label">Analyser mon assurance</span>
+          <span class="sim-card-cta-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ══════════ TUNNEL PRÊT IMMOBILIER (masqué initialement) ══════════ -->
+  <div id="tunnelSection" style="display:none;">
+
+  <!-- En-tête -->
+  <div class="tunnel-header">
+    <span class="tunnel-supertitle">Étude de financement immobilier</span>
+    <h1>Votre étude personnalisée<br>en 3 étapes</h1>
+    <p class="tunnel-header-sub">Décrivez votre projet, partagez votre situation, et recevez une analyse claire de la part d'un expert sous 48h.</p>
+    <div class="trust-row">
+      <div class="trust-item"><span class="trust-check">✔</span> Étude gratuite</div>
+      <div class="trust-item"><span class="trust-check">✔</span> Réponse sous 48h</div>
+      <div class="trust-item"><span class="trust-check">✔</span> Sans engagement</div>
+    </div>
+    <div style="margin-top:18px;">
+      <button onclick="backToChoice()" style="background:none;border:none;cursor:pointer;font-size:0.82rem;color:var(--text-lt);font-family:var(--font-sans);display:inline-flex;align-items:center;gap:6px;padding:6px 0;transition:color 0.2s;" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color='var(--text-lt)'">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Changer de simulateur
+      </button>
+    </div>
+  </div>
+
+  <!-- Carte tunnel -->
+  <div class="tunnel-wrap">
+    <div class="tunnel-card">
+
+      <!-- Barre de progression -->
+      <div class="tunnel-progress" id="tunnelProgress">
+        <div class="progress-steps">
+          <div class="progress-dot active" id="dot1">1</div>
+          <div class="progress-line"><div class="progress-fill" id="fill1"></div></div>
+          <div class="progress-dot" id="dot2">2</div>
+          <div class="progress-line"><div class="progress-fill" id="fill2"></div></div>
+          <div class="progress-dot" id="dot3">3</div>
+        </div>
+        <div class="progress-labels">
+          <span class="progress-lbl active" id="lbl1">Votre projet</span>
+          <span class="progress-lbl" id="lbl2">Votre situation</span>
+          <span class="progress-lbl" id="lbl3">Coordonnées</span>
+        </div>
+      </div>
+
+      <!-- Corps des étapes -->
+      <div class="tunnel-body" id="tunnelBody">
+
+        <!-- ═══════════════ ÉTAPE 1 ═══════════════ -->
+        <div class="tunnel-step active" id="s1">
+          <div class="step-eyebrow">Étape 1 sur 3</div>
+          <h2 class="step-title">Votre projet</h2>
+          <p class="step-desc">Dites-nous ce que vous souhaitez réaliser.</p>
+
+          <div class="tf">
+            <label class="tf-label">Quel est votre besoin ?</label>
+            <div class="cg cg-2" id="cg-besoin">
+              <div class="cc" data-val="achat-principal" onclick="pick(this,'cg-besoin')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                <div><div class="cc-t">Achat résidence principale</div></div>
+              </div>
+              <div class="cc" data-val="investissement" onclick="pick(this,'cg-besoin')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <div><div class="cc-t">Investissement locatif</div></div>
+              </div>
+              <div class="cc" data-val="rachat" onclick="pick(this,'cg-besoin')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M23 20v-6h-6"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg></div>
+                <div><div class="cc-t">Rachat de crédit</div></div>
+              </div>
+              <div class="cc" data-val="assurance" onclick="pick(this,'cg-besoin')">
+                <div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div><div class="cc-t">Assurance emprunteur</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Où en êtes-vous ?</label>
+            <div class="cg cg-2" id="cg-avancement">
+              <div class="cc" data-val="debut" onclick="pick(this,'cg-avancement')">
+                <div><div class="cc-t">Je commence à chercher</div><div class="cc-s">Aucun bien identifié</div></div>
+              </div>
+              <div class="cc" data-val="bien-trouve" onclick="pick(this,'cg-avancement')">
+                <div><div class="cc-t">J'ai trouvé un bien</div><div class="cc-s">En cours de négociation</div></div>
+              </div>
+              <div class="cc" data-val="compromis" onclick="pick(this,'cg-avancement')">
+                <div><div class="cc-t">Compromis signé</div><div class="cc-s">Financement urgent</div></div>
+              </div>
+              <div class="cc" data-val="reneg" onclick="pick(this,'cg-avancement')">
+                <div><div class="cc-t">Crédit en cours</div><div class="cc-s">Renégociation ou assurance</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Budget approximatif <em>(montant du bien)</em></label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Fourchette estimée</span>
+              <span class="range-display" id="d-budget">200 000 €</span>
+            </div>
+            <input class="tr" type="range" id="r-budget" min="50000" max="1000000" step="10000" value="200000" oninput="updR(this,'d-budget','€')">
+            <div class="range-hints"><span class="rh">50 000 €</span><span class="rh">1 000 000 €</span></div>
+          </div>
+        </div>
+
+        <!-- ═══════════════ ÉTAPE 2 ═══════════════ -->
+        <div class="tunnel-step" id="s2">
+          <div class="step-eyebrow">Étape 2 sur 3</div>
+          <h2 class="step-title">Votre situation</h2>
+          <p class="step-desc">Ces informations permettent d'affiner votre étude personnalisée.</p>
+
+          <div class="tf">
+            <label class="tf-label">Statut professionnel</label>
+            <div class="cg cg-3" id="cg-statut">
+              <div class="cc" data-val="cdi" onclick="pick(this,'cg-statut')"><div><div class="cc-t">CDI</div></div></div>
+              <div class="cc" data-val="independant" onclick="pick(this,'cg-statut')"><div><div class="cc-t">Indépendant</div></div></div>
+              <div class="cc" data-val="fonctionnaire" onclick="pick(this,'cg-statut')"><div><div class="cc-t">Fonctionnaire</div></div></div>
+              <div class="cc" data-val="cdd" onclick="pick(this,'cg-statut')"><div><div class="cc-t">CDD / Intérim</div></div></div>
+              <div class="cc" data-val="retraite" onclick="pick(this,'cg-statut')"><div><div class="cc-t">Retraité</div></div></div>
+              <div class="cc" data-val="autre" onclick="pick(this,'cg-statut')"><div><div class="cc-t">Autre</div></div></div>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Revenus mensuels nets <em>(foyer)</em></label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Revenus estimés</span>
+              <span class="range-display" id="d-rev">3 500 €/mois</span>
+            </div>
+            <input class="tr" type="range" id="r-rev" min="1000" max="15000" step="100" value="3500" oninput="updR(this,'d-rev','€/mois')">
+            <div class="range-hints"><span class="rh">1 000 €</span><span class="rh">15 000 €</span></div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Apport personnel disponible</label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Apport estimé</span>
+              <span class="range-display" id="d-apport">20 000 €</span>
+            </div>
+            <input class="tr" type="range" id="r-apport" min="0" max="200000" step="5000" value="20000" oninput="updR(this,'d-apport','€')">
+            <div class="range-hints"><span class="rh">0 €</span><span class="rh">200 000 €</span></div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Avez-vous des crédits en cours ?</label>
+            <div class="toggle-row" id="tg-credits">
+              <button class="toggle-btn" data-val="oui" onclick="tog(this,'tg-credits')">Oui</button>
+              <button class="toggle-btn" data-val="non" onclick="tog(this,'tg-credits')">Non</button>
+            </div>
+          </div>
+
+          <div class="tf">
+            <label class="tf-label">Mensualité souhaitée <em>(optionnel)</em></label>
+            <div class="range-header">
+              <span class="rh" style="font-size:0.8rem;">Budget mensuel</span>
+              <span class="range-display" id="d-mens">800 €/mois</span>
+            </div>
+            <input class="tr" type="range" id="r-mens" min="200" max="5000" step="50" value="800" oninput="updR(this,'d-mens','€/mois')">
+            <div class="range-hints"><span class="rh">200 €</span><span class="rh">5 000 €</span></div>
+          </div>
+        </div>
+
+        <!-- ═══════════════ ÉTAPE 3 ═══════════════ -->
+        <div class="tunnel-step" id="s3">
+          <div class="step-eyebrow">Étape 3 sur 3 — Dernière étape !</div>
+          <h2 class="step-title">Vos coordonnées</h2>
+          <p class="step-desc">Pour recevoir votre étude personnalisée sous 48h.</p>
+
+          <div class="tf">
+            <label class="tf-label" for="f-prenom">Votre prénom</label>
+            <input class="ti" type="text" id="f-prenom" placeholder="Ex : Marie" autocomplete="given-name">
+          </div>
+          <div class="tf">
+            <label class="tf-label" for="f-tel">Téléphone <em>*</em></label>
+            <input class="ti" type="tel" id="f-tel" placeholder="06 00 00 00 00" autocomplete="tel">
+          </div>
+          <div class="tf">
+            <label class="tf-label" for="f-email">Email <em>*</em></label>
+            <input class="ti" type="email" id="f-email" placeholder="votre@email.fr" autocomplete="email">
+          </div>
+          <div class="tf">
+            <label class="tf-label" for="f-msg">Message libre <em>(optionnel)</em></label>
+            <textarea class="ti" id="f-msg" placeholder="Précisez ici toute information utile à votre projet…"></textarea>
+          </div>
+          <p style="font-size:0.73rem;color:var(--text-lt);line-height:1.65;margin-top:-6px;">
+            En soumettant ce formulaire, vous acceptez d'être recontacté par Z'Expert. Vos données sont protégées conformément au RGPD.<br>
+            <em>Les résultats sont donnés à titre indicatif et ne constituent pas une offre de financement.</em>
+          </p>
+        </div>
+
+      </div><!-- /tunnel-body -->
+
+      <!-- Pied de carte -->
+      <div class="tunnel-footer" id="tunnelFooter">
+        <button class="btn-back hidden" id="btnBack" onclick="prevStep()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Retour
+        </button>
+        <button class="btn-next" id="btnNext" onclick="nextStep()">
+          Continuer
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Erreur envoi -->
+      <div id="simError" style="display:none;align-items:center;gap:10px;padding:14px 36px;background:#FEF2F2;border-top:1px solid #FECACA;font-size:0.85rem;color:#B91C1C;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        L'envoi n'a pas abouti. Réessayez ou contactez-nous au <strong>06 33 67 72 45</strong>. Votre PDF a tout de même été téléchargé.
+      </div>
+
+      <!-- Succès -->
+      <div class="tunnel-success" id="tunnelSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="success-title">Votre demande est envoyée !</div>
+        <p class="success-sub">Un expert Z'Expert analyse votre projet et vous contacte sous <strong>48 heures</strong> à l'adresse transmise.</p>
+        <div class="success-items">
+          <div class="success-item">
+            <div class="scheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Étude personnalisée en cours
+          </div>
+          <div class="success-item">
+            <div class="scheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Rappel sous 48h garanti
+          </div>
+          <div class="success-item">
+            <div class="scheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Aucun engagement de votre part
+          </div>
+        </div>
+        <a href="../index.html" class="btn btn-primary" style="display:inline-block;margin-top:4px;">Retour à l'accueil</a>
+      </div>
+
+    </div><!-- /tunnel-card -->
+  </div><!-- /tunnel-wrap -->
+
+  </div><!-- /tunnelSection -->
+</div><!-- /tunnel-page -->
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── CHOICE SCREEN ── */
+function startPret() {
+  const choice  = document.getElementById('simChoice');
+  const tunnel  = document.getElementById('tunnelSection');
+  choice.style.opacity = '0';
+  choice.style.transition = 'opacity 0.22s';
+  setTimeout(() => {
+    choice.style.display = 'none';
+    tunnel.style.display = 'block';
+    tunnel.style.opacity = '0';
+    tunnel.style.transition = 'opacity 0.28s';
+    requestAnimationFrame(() => { tunnel.style.opacity = '1'; });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 200);
+}
+function backToChoice() {
+  const choice = document.getElementById('simChoice');
+  const tunnel = document.getElementById('tunnelSection');
+  tunnel.style.display = 'none';
+  choice.style.display = 'block';
+  choice.style.opacity = '1';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ── STATE ── */
+let step = 1;
+const TOTAL = 3;
+
+/* ── NAVIGATION ── */
+function nextStep() {
+  if (step === TOTAL) { submit(); return; }
+  goTo(step + 1);
+}
+function prevStep() {
+  if (step > 1) goTo(step - 1);
+}
+function goTo(n) {
+  document.getElementById('s' + step).classList.remove('active');
+  step = n;
+  const el = document.getElementById('s' + step);
+  el.classList.add('active');
+  updateProgress();
+  updateFooterBtn();
+  window.scrollTo({ top: document.getElementById('tunnelCard') ? document.querySelector('.tunnel-card').getBoundingClientRect().top + window.scrollY - 120 : 0, behavior: 'smooth' });
+}
+function updateProgress() {
+  for (let i = 1; i <= TOTAL; i++) {
+    const dot = document.getElementById('dot' + i);
+    const lbl = document.getElementById('lbl' + i);
+    if (i < step) {
+      dot.className = 'progress-dot done';
+      dot.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>';
+    } else if (i === step) {
+      dot.className = 'progress-dot active';
+      dot.textContent = i;
+      lbl.classList.add('active');
+    } else {
+      dot.className = 'progress-dot';
+      dot.textContent = i;
+      lbl.classList.remove('active');
+    }
+    lbl.classList.toggle('active', i === step);
+  }
+  document.getElementById('fill1').style.width = step > 1 ? '100%' : '0%';
+  document.getElementById('fill2').style.width = step > 2 ? '100%' : '0%';
+  document.getElementById('btnBack').classList.toggle('hidden', step === 1);
+}
+function updateFooterBtn() {
+  const btn = document.getElementById('btnNext');
+  if (step === TOTAL) {
+    btn.className = 'btn-submit';
+    btn.innerHTML = 'Envoyer mon étude <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
+  } else {
+    btn.className = 'btn-next';
+    btn.innerHTML = 'Continuer <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+  }
+}
+
+/* ── CHOICE CARDS ── */
+function pick(card, groupId) {
+  document.querySelectorAll('#' + groupId + ' .cc').forEach(c => c.classList.remove('sel'));
+  card.classList.add('sel');
+}
+function tog(btn, rowId) {
+  btn.closest('#' + rowId).querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+}
+
+/* ── RANGE SLIDERS ── */
+function updR(input, displayId, suffix) {
+  const val = parseInt(input.value);
+  const min = parseInt(input.min);
+  const max = parseInt(input.max);
+  input.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+  const fmt = val.toLocaleString('fr-FR');
+  document.getElementById(displayId).textContent = fmt + ' ' + suffix;
+}
+document.querySelectorAll('.tr').forEach(r => {
+  const val = parseInt(r.value), min = parseInt(r.min), max = parseInt(r.max);
+  r.style.setProperty('--p', ((val - min) / (max - min) * 100) + '%');
+});
+
+/* ── DATA COLLECTION ── */
+function getSimData() {
+  const sel = id => { const el = document.querySelector('#' + id + ' .cc.sel'); return el ? el.dataset.val : ''; };
+  const tog = id => { const el = document.querySelector('#' + id + ' .toggle-btn.sel'); return el ? el.dataset.val : ''; };
+  return {
+    besoin:     sel('cg-besoin'),
+    avancement: sel('cg-avancement'),
+    budget:     document.getElementById('r-budget').value,
+    statut:     sel('cg-statut'),
+    revenus:    document.getElementById('r-rev').value,
+    apport:     document.getElementById('r-apport').value,
+    credits:    tog('tg-credits'),
+    mensualite: document.getElementById('r-mens').value,
+    prenom:     document.getElementById('f-prenom').value.trim(),
+    tel:        document.getElementById('f-tel').value.trim(),
+    email:      document.getElementById('f-email').value.trim(),
+    message:    document.getElementById('f-msg').value.trim()
+  };
+}
+
+/* ── SUBMIT ── */
+async function submit() {
+  const tel   = document.getElementById('f-tel').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  let ok = true;
+  [['f-tel', tel], ['f-email', email]].forEach(([id, v]) => {
+    const el = document.getElementById(id);
+    if (!v) { el.classList.add('err'); ok = false; }
+    else el.classList.remove('err');
+  });
+  if (!ok) return;
+
+  const btn   = document.getElementById('btnNext');
+  const errEl = document.getElementById('simError');
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.innerHTML = 'Envoi en cours…';
+
+  const d = getSimData();
+  const besoinLbl = { 'achat-principal': 'Achat résidence principale', investissement: 'Investissement locatif', rachat: 'Rachat de crédit', assurance: 'Assurance emprunteur' };
+  const avanLbl   = { debut: 'Je commence à chercher', 'bien-trouve': "J'ai trouvé un bien", compromis: 'Compromis signé', reneg: 'Crédit en cours' };
+  const statLbl   = { cdi: 'CDI', independant: 'Indépendant', fonctionnaire: 'Fonctionnaire', cdd: 'CDD / Intérim', retraite: 'Retraité', autre: 'Autre' };
+  const fmt  = n => parseInt(n).toLocaleString('fr-FR') + ' €';
+  const fmtM = n => parseInt(n).toLocaleString('fr-FR') + ' €/mois';
+
+  const payload = {
+    _subject: "Nouvelle étude simulateur Z'Expert — " + (d.prenom || 'Client') + ' (' + d.tel + ')',
+    prenom:              d.prenom || '—',
+    telephone:           d.tel,
+    email:               d.email,
+    projet:              besoinLbl[d.besoin]     || d.besoin     || '—',
+    avancement:          avanLbl[d.avancement]   || d.avancement || '—',
+    budget_estime:       fmt(d.budget),
+    statut_professionnel: statLbl[d.statut]      || d.statut     || '—',
+    revenus_mensuels:    fmtM(d.revenus),
+    apport_personnel:    fmt(d.apport),
+    credits_en_cours:    d.credits === 'oui' ? 'Oui' : d.credits === 'non' ? 'Non' : '—',
+    mensualite_souhaitee: fmtM(d.mensualite),
+    message:             d.message || '—'
+  };
+
+  let sent = false;
+  try {
+    const res = await fetch('https://formspree.io/f/maqkjjow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    sent = res.ok;
+  } catch (_) {}
+
+  if (sent) {
+    document.getElementById('tunnelProgress').style.display = 'none';
+    document.getElementById('tunnelBody').style.display = 'none';
+    document.getElementById('tunnelFooter').style.display = 'none';
+    document.getElementById('tunnelSuccess').style.display = 'block';
+  } else {
+    btn.disabled = false;
+    updateFooterBtn();
+    errEl.style.display = 'flex';
+  }
+}
+
+/* ── NAV ── */
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav();
+window.addEventListener('resize', checkNav);
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+</script>
+</body>
+</html>

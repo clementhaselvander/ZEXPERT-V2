@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Services — Z'Expert Courtier Nancy</title>
+<meta name="description" content="Découvrez les services de Z'Expert : prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais. Courtier expert à Nancy.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Z'Expert">
+<meta property="og:title" content="Nos Services — Z'Expert Courtier Nancy">
+<meta property="og:description" content="Découvrez les services de Z'Expert : prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais. Courtier expert à Nancy.">
+<meta property="og:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Z'Expert — Courtier en crédit immobilier &amp; assurance emprunteur · Nancy · Grand Est">
+<meta property="og:url" content="https://zexpert-courtage.com/pages/services.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nos Services — Z'Expert Courtier Nancy">
+<meta name="twitter:description" content="Prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais. Votre courtier expert à Nancy.">
+<meta name="twitter:image" content="https://zexpert-courtage.com/images/og-zexpert.jpg">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero {
+  position: relative; height: 56vh; min-height: 420px;
+  display: flex; align-items: center; overflow: hidden;
+}
+.page-hero-img {
+  position: absolute; inset: -15% 0;
+  background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1800&q=80&auto=format&fit=crop');
+  background-size: cover; background-position: center 50%;
+  will-change: transform;
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,20,35,0.82) 0%, rgba(10,20,35,0.55) 55%, rgba(10,20,35,0.22) 100%),
+    linear-gradient(to top, rgba(10,20,35,0.55) 0%, transparent 60%);
+}
+.page-hero-line {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: linear-gradient(to bottom, transparent, #1E9EBC 30%, #F5C842 70%, transparent);
+  opacity: 0.7;
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  padding-top: var(--nav-h);
+}
+.page-hero h1 {
+  color: white;
+  opacity: 0; transform: translateY(20px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s forwards;
+}
+.page-hero p {
+  color: rgba(255,255,255,0.75); margin-top: 16px; max-width: 540px; font-size: 1.05rem;
+  opacity: 0; transform: translateY(16px);
+  animation: phIn 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s forwards;
+}
+.page-hero-label {
+  display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(30,158,188,0.9); margin-bottom: 12px;
+  opacity: 0; transform: translateY(12px);
+  animation: phIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
+}
+@keyframes phIn { to { opacity: 1; transform: translateY(0); } }
+
+/* Services grid — bento layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  perspective: 1400px;
+}
+/* Prêt immobilier : carte principale 2/3 */
+.service-card:first-child { grid-column: span 2; }
+/* Prêt relais : accent 2/3 en bas */
+.service-card:nth-child(4) { grid-column: span 2; }
+.service-card {
+  background: white; border-radius: 20px;
+  border: 1px solid var(--gray);
+  overflow: hidden;
+  transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1), transform 0.28s cubic-bezier(0.4,0,0.2,1), border-color 0.28s;
+  display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+}
+.service-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: rgba(30,158,188,0.4);
+}
+/* Image plus haute sur les cartes larges */
+.service-card:first-child .service-card-img,
+.service-card:nth-child(4) .service-card-img { height: 220px; }
+.service-card-img {
+  height: 180px; overflow: hidden; position: relative;
+}
+.service-card-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.5s ease;
+}
+.service-card:hover .service-card-img img {
+  transform: scale(1.04);
+}
+.service-card-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(10,20,35,0.45) 100%);
+}
+.service-card-badge {
+  position: absolute; bottom: 14px; left: 16px;
+}
+.service-card-body {
+  padding: 28px 28px 32px; flex: 1;
+  display: flex; flex-direction: column;
+}
+.service-card-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; flex-shrink: 0;
+}
+.service-card-icon svg { width: 22px; height: 22px; }
+.service-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--navy); }
+.service-card p { color: var(--text-lt); font-size: 0.9rem; line-height: 1.7; flex: 1; }
+.service-card-points {
+  display: flex; flex-direction: column; gap: 7px; margin: 16px 0 20px;
+}
+.service-card-point {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 0.85rem; color: var(--text-lt);
+}
+.service-card-point::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--blue); flex-shrink: 0;
+}
+.service-card-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.88rem; font-weight: 700; color: var(--blue);
+  margin-top: auto; transition: gap 0.2s;
+}
+.service-card:hover .service-card-cta { gap: 10px; }
+
+/* Effet holographique premium, adapte aux cartes existantes */
+.holographic-service-card {
+  --x: 50%;
+  --y: 50%;
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+  position: relative;
+  isolation: isolate;
+  transform: perspective(1100px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) translateY(0);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.holographic-service-card::before,
+.holographic-service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+  z-index: 2;
+}
+.holographic-service-card::before {
+  background:
+    radial-gradient(260px circle at var(--x) var(--y), rgba(30,158,188,0.24), rgba(30,158,188,0.07) 38%, transparent 68%),
+    radial-gradient(180px circle at calc(var(--x) + 12%) calc(var(--y) - 14%), rgba(245,200,66,0.12), transparent 62%);
+  mix-blend-mode: soft-light;
+}
+.holographic-service-card::after {
+  background:
+    linear-gradient(115deg, transparent 18%, rgba(255,255,255,0.18) 32%, rgba(255,255,255,0.04) 43%, transparent 58%),
+    radial-gradient(360px circle at var(--x) var(--y), rgba(255,255,255,0.20), transparent 58%);
+}
+.holographic-service-card:hover {
+  transform: perspective(1100px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) translateY(-5px);
+  border-color: rgba(30,158,188,0.34);
+  box-shadow:
+    0 22px 58px rgba(18,37,58,0.18),
+    0 0 0 1px rgba(255,255,255,0.45) inset,
+    0 0 36px rgba(30,158,188,0.13),
+    0 0 18px rgba(245,200,66,0.06);
+}
+.holographic-service-card:hover::before,
+.holographic-service-card:hover::after {
+  opacity: 1;
+}
+.holographic-service-card .service-card-img,
+.holographic-service-card .service-card-body {
+  position: relative;
+  z-index: 1;
+}
+.holographic-service-card:hover .service-card-body {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.90)),
+    radial-gradient(520px circle at var(--x) var(--y), rgba(30,158,188,0.08), transparent 68%);
+  backdrop-filter: blur(10px);
+}
+.holographic-service-card:hover .service-card-icon {
+  box-shadow: 0 10px 24px rgba(30,158,188,0.14);
+}
+
+/* Why Z'Expert */
+.why-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+}
+.why-item {
+  text-align: center; padding: 32px 24px;
+}
+.why-icon {
+  width: 60px; height: 60px; border-radius: 16px;
+  background: var(--blue-lt); display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.why-icon svg { width: 26px; height: 26px; color: var(--blue); }
+.why-item h4 { color: var(--navy); margin-bottom: 8px; }
+.why-item p { color: var(--text-lt); font-size: 0.88rem; line-height: 1.6; }
+
+/* CTA band */
+.cta-band {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dk));
+  border-radius: 24px; padding: 56px;
+  text-align: center;
+}
+.cta-band h2 { color: white; margin-bottom: 10px; }
+.cta-band p { color: rgba(255,255,255,0.75); margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.cta-band-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card:first-child,
+  .service-card:nth-child(4) { grid-column: span 1; }
+  .service-card:first-child .service-card-img,
+  .service-card:nth-child(4) .service-card-img { height: 180px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .cta-band { padding: 40px 24px; }
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .services-grid { perspective: none; }
+  .holographic-service-card {
+    transform: none !important;
+    will-change: auto;
+  }
+  .holographic-service-card::before {
+    opacity: 0.42;
+    background: radial-gradient(420px circle at 50% 0%, rgba(30,158,188,0.10), transparent 62%);
+  }
+  .holographic-service-card::after {
+    display: none;
+  }
+  .holographic-service-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><img src="uploads/zexpert-logo-v5.svg" alt="Z'Expert"></a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link active">Nos services</a>
+      <a href="simulateur.html" class="nav-link">Simulateur</a>
+      <a href="faq-avis.html" class="nav-link">FAQ & Avis</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger" style="display:none;">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" class="nav-link" onclick="toggleMenu()">Accueil</a>
+  <a href="services.html" class="nav-link" onclick="toggleMenu()">Nos services</a>
+  <a href="simulateur.html" class="nav-link" onclick="toggleMenu()">Simulateur</a>
+  <a href="faq-avis.html" class="nav-link" onclick="toggleMenu()">FAQ & Avis</a>
+  <a href="contact.html" class="btn btn-primary" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-img" id="phImgS"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-line"></div>
+  <div class="container page-hero-content">
+    <span class="page-hero-label">Nos solutions</span>
+    <h1>Des solutions adaptées<br>à chaque projet</h1>
+    <p>Prêt immobilier, rachat de crédit, assurance emprunteur, prêt relais — Z'Expert vous accompagne à chaque étape de votre parcours financier.</p>
+  </div>
+</div>
+
+<!-- Services grid -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 56px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Expertise</span>
+      <h2>Nos domaines d'intervention</h2>
+      <p style="color:var(--text-lt);">Chaque service est assuré par un expert dédié. Étude initiale gratuite et sans engagement.</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- Prêt immobilier -->
+      <a href="pret-immobilier.html" class="service-card holographic-service-card fade-in">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=75&auto=format&fit=crop" alt="Prêt immobilier" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge badge-blue">Prêt immobilier</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#e8f7fb;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1E9EBC" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Prêt immobilier</h3>
+          <p>Obtenez les meilleures conditions pour financer votre achat. Résidence principale, secondaire ou investissement locatif — nous négocions le taux et les conditions pour vous.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Mise en concurrence de 20+ banques</div>
+            <div class="service-card-point">Négociation du taux et des frais</div>
+            <div class="service-card-point">Accompagnement jusqu'à la signature</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Rachat de crédit -->
+      <a href="rachat-credit.html" class="service-card holographic-service-card fade-in fade-in-delay-1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=75&auto=format&fit=crop" alt="Rachat de crédit" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge badge-yellow">Rachat de crédit</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#fff8dc;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="2"><path d="M1 4v6h6"/><path d="M23 20v-6h-6"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg>
+          </div>
+          <h3>Rachat de crédit</h3>
+          <p>Regroupez vos crédits en cours pour réduire vos mensualités et retrouver de la sérénité financière. Une solution idéale si votre situation a évolué.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Regroupement de tous vos crédits</div>
+            <div class="service-card-point">Réduction des mensualités</div>
+            <div class="service-card-point">Nouvelle durée adaptée à votre budget</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Assurance emprunteur -->
+      <a href="assurance-emprunteur.html" class="service-card holographic-service-card fade-in">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=75&auto=format&fit=crop" alt="Assurance emprunteur" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge badge-blue">Assurance emprunteur</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#e8f7fb;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1E9EBC" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Assurance emprunteur</h3>
+          <p>L'assurance peut représenter jusqu'à 30 % du coût total de votre crédit. Grâce à la délégation, nous trouvons une offre équivalente à un tarif souvent deux fois inférieur.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Comparaison des offres du marché</div>
+            <div class="service-card-point">Délégation d'assurance (loi Lemoine)</div>
+            <div class="service-card-point">Économies sur la durée totale</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Prêt relais -->
+      <a href="pret-relais.html" class="service-card holographic-service-card fade-in fade-in-delay-1">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=75&auto=format&fit=crop" alt="Prêt relais" loading="lazy">
+          <div class="service-card-img-overlay"></div>
+          <div class="service-card-badge"><span class="badge" style="background:rgba(42,157,60,0.15);color:#2a9d3c;">Prêt relais</span></div>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-icon" style="background:#f0faf0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2a9d3c" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+          <h3>Prêt relais</h3>
+          <p>Achetez votre nouveau bien avant d'avoir vendu l'ancien. Le prêt relais vous permet de sécuriser votre acquisition sans attendre la vente.</p>
+          <div class="service-card-points">
+            <div class="service-card-point">Financement temporaire de la transition</div>
+            <div class="service-card-point">Gestion de la double charge</div>
+            <div class="service-card-point">Sécurisation de votre nouveau projet</div>
+          </div>
+          <span class="service-card-cta">Découvrir ce service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi Z'Expert -->
+<section class="section" style="background:var(--gray-lt);">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 48px;">
+      <span style="display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Nos engagements</span>
+      <h2>Pourquoi choisir Z'Expert ?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item fade-in">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h4>Gain de temps</h4>
+        <p>Nous démarchons les banques à votre place et centralisons toutes les offres. Vous recevez une synthèse claire, sans démarches répétées.</p>
+      </div>
+      <div class="why-item fade-in fade-in-delay-1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h4>Meilleures conditions</h4>
+        <p>Nos relations privilégiées avec 20+ banques partenaires nous permettent d'obtenir des taux et des conditions inaccessibles en direct.</p>
+      </div>
+      <div class="why-item fade-in fade-in-delay-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>Accompagnement expert</h4>
+        <p>Un interlocuteur unique, disponible et réactif, qui connaît votre dossier de bout en bout et vous guide à chaque étape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band fade-in">
+      <h2>Prêt à démarrer votre projet ?</h2>
+      <p>Un expert Z'Expert analyse votre situation et vous propose la solution adaptée. Réponse sous 48h, sans engagement.</p>
+      <div class="cta-band-btns">
+        <a href="contact.html" class="btn btn-yellow btn-lg">Prendre contact</a>
+        <a href="simulateur.html" class="btn btn-outline-white">Simuler mon projet</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <div class="footer-col footer-col--brand">
+        <img src="../logo-footer.svg" class="footer-logo" alt="Z'Expert" loading="lazy">
+        <p class="footer-desc">Courtier en crédit immobilier et assurance emprunteur.</p>
+        <div class="footer-socials">
+          <a href="tel:+33633677245" class="footer-social-link" title="Téléphone" aria-label="Appeler Z'Expert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-social-link" title="Email" aria-label="Envoyer un email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="../index.html" class="footer-link">Accueil</a>
+        <a href="services.html" class="footer-link">Nos services</a>
+        <a href="simulateur.html" class="footer-link">Simulateur</a>
+        <a href="faq-avis.html" class="footer-link">FAQ &amp; Avis</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="pret-immobilier.html" class="footer-link">Pr&#234;t immobilier</a>
+        <a href="assurance-emprunteur.html" class="footer-link">Assurance emprunteur</a>
+        <a href="rachat-credit.html" class="footer-link">Rachat de cr&#233;dit</a>
+        <a href="pret-relais.html" class="footer-link">Pr&#234;t relais</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">L&#233;gal</div>
+        <a href="mentions-legales.html" class="footer-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-link">RGPD</a>
+        <a href="mentions-legales.html#orias" class="footer-link">ORIAS</a>
+        <a href="mentions-legales.html#mediation" class="footer-link">M&#233;diation</a>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+33633677245" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>06 33 67 72 45</span>
+        </a>
+        <a href="mailto:vincent.haselvander@zexpertnancy.fr" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <span>Envoyer un email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-haselvander-zexpert/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://wa.me/33633677245" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        SARL Z EXPERT &#8212; Capital 100 &#8364; &#8212; RCS Nancy 952&#160;463&#160;263 &#8212; ORIAS n&#176;&#160;24003114 &#160;&#183;&#160; Courtier en Op&#233;rations de Banque et Services de Paiement (COBSP)
+      </div>
+      <div class="footer-bottom-right">
+        <a href="mentions-legales.html" class="footer-bottom-link">Mentions l&#233;gales</a>
+        <a href="mentions-legales.html#rgpd" class="footer-bottom-link">Confidentialit&#233;</a>
+        <span class="footer-bottom-text" id="footerYear"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('footerYear').textContent = '© ' + new Date().getFullYear() + " Z'Expert — Tous droits réservés";
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  const bg = document.getElementById('phImgS');
+  if (bg) bg.style.transform = `translateY(${Math.min(window.scrollY * 0.35, 120)}px)`;
+}, { passive: true });
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function checkNav() {
+  const h = document.getElementById('hamburger');
+  h.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+  if (window.innerWidth > 768) document.getElementById('mobileMenu').classList.remove('open');
+}
+checkNav(); window.addEventListener('resize', checkNav);
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+(function initHolographicServiceCards() {
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!canHover || reducedMotion) return;
+
+  document.querySelectorAll('.holographic-service-card').forEach(card => {
+    card.addEventListener('mousemove', event => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((centerY - y) / centerY) * 6;
+      const rotateY = ((x - centerX) / centerX) * 7;
+
+      card.style.setProperty('--x', `${x}px`);
+      card.style.setProperty('--y', `${y}px`);
+      card.style.setProperty('--rotate-x', `${rotateX.toFixed(2)}deg`);
+      card.style.setProperty('--rotate-y', `${rotateY.toFixed(2)}deg`);
+    }, { passive: true });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--x', '50%');
+      card.style.setProperty('--y', '50%');
+      card.style.setProperty('--rotate-x', '0deg');
+      card.style.setProperty('--rotate-y', '0deg');
+    });
+  });
+})();
+</script>
+</body>
+</html>
