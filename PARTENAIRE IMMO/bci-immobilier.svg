@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="bciTitle bciDesc">
+  <title id="bciTitle">BCI - Britt Conseils Immobilier</title>
+  <desc id="bciDesc">Logo circulaire bleu BCI sans fond blanc.</desc>
+  <circle cx="256" cy="256" r="236" fill="#145f7a"/>
+  <text
+    x="256"
+    y="306"
+    text-anchor="middle"
+    fill="#ffffff"
+    font-family="Montserrat, Avenir Next, Helvetica Neue, Arial, sans-serif"
+    font-size="190"
+    font-weight="300"
+    letter-spacing="-8">BCI</text>
+  <text
+    x="256"
+    y="358"
+    text-anchor="middle"
+    fill="#ffffff"
+    font-family="Montserrat, Avenir Next, Helvetica Neue, Arial, sans-serif"
+    font-size="18"
+    font-weight="600"
+    letter-spacing="1.8">BRITT - CONSEILS IMMOBILIER</text>
+</svg>

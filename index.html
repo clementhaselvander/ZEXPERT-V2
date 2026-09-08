@@ -31,15 +31,14 @@
   overflow: hidden; text-align: center;
 }
 .hero-parallax-bg {
-  position: absolute; top: -30%; left: 0; right: 0; bottom: -30%;
-  z-index: 0; will-change: transform;
+  position: absolute; inset: 0;
+  z-index: 0;
 }
 .hero-parallax-inner {
   position: relative;
   width: 100%; height: 100%;
   background: #071c2a;
   overflow: hidden;
-  animation: heroZoom 24s ease-in-out infinite alternate;
 }
 .hero-vid {
   position: absolute;
@@ -47,19 +46,13 @@
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center center;
-  opacity: 0;
-  transition: opacity 1.4s ease;
+  opacity: 1;
+  transition: none;
   pointer-events: none;
   user-select: none;
-  transform: translateZ(0);
+  transform: none;
   backface-visibility: hidden;
-  will-change: opacity;
   image-rendering: high-quality;
-}
-.hero-vid.active { opacity: 1; }
-@keyframes heroZoom {
-  from { transform: scale(1); }
-  to   { transform: scale(1.035); }
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
@@ -202,6 +195,36 @@
 }
 .hero-scroll-text { writing-mode: vertical-rl; font-size: 0.63rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); text-transform: uppercase; }
 @keyframes heroIn { to { opacity: 1; transform: none; } }
+
+/* ========== BANNIERE PARTENARIAT ASNL ========== */
+.partner-banner-section {
+  padding: 56px 0;
+  background: linear-gradient(180deg, #F8FAFB 0%, #F6F9FA 100%);
+}
+.partner-banner-wrap {
+  max-width: 1500px;
+  width: calc(100% - 64px);
+  margin: 0 auto;
+}
+.partner-banner-link {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+}
+.partner-banner-link:hover,
+.partner-banner-link:focus-visible {
+  transform: translateY(-2px);
+}
+.partner-banner-img { display: block; width: 100%; height: auto; }
+@media (max-width: 900px) {
+  .partner-banner-section { padding: 40px 0; }
+  .partner-banner-wrap { width: calc(100% - 40px); }
+}
+@media (max-width: 480px) {
+  .partner-banner-wrap { width: calc(100% - 32px); }
+  .partner-banner-link { border-radius: 10px; }
+}
 
 /* ========== PAIN POINTS ========== */
 .pain-section { position: relative; overflow: hidden; }
@@ -529,8 +552,6 @@
   }
   #stickyMobileCta { display: flex; }
 }
-
-
 /* ========== SIMULATEUR PROFIL — LIGHT PREMIUM ========== */
 .sp-section {
   position: relative;
@@ -987,23 +1008,41 @@
     box-shadow 0.32s cubic-bezier(0.22,1,0.36,1),
     border-color 0.25s ease;
 }
-.rpi-orbit-card--top { top: 0; left: 50%; transform: translate(-50%, -4%); }
-.rpi-orbit-card--right { top: 50%; right: 0; transform: translate(4%, -50%); }
-.rpi-orbit-card--bottom { bottom: 0; left: 50%; transform: translate(-50%, 4%); }
-.rpi-orbit-card--left { top: 50%; left: 0; transform: translate(-4%, -50%); }
+.rpi-orbit-card--slot-1,
+.rpi-orbit-card--lower-right { top: 10%; left: 50%; transform: translate(-50%, -50%); }
+.rpi-orbit-card--slot-2,
+.rpi-orbit-card--bottom { top: 37.6%; left: 88%; transform: translate(-50%, -50%); }
+.rpi-orbit-card--slot-3,
+.rpi-orbit-card--left { top: 82.4%; left: 73.5%; transform: translate(-50%, -50%); }
+.rpi-orbit-card--slot-4,
+.rpi-orbit-card--top { top: 82.4%; left: 26.5%; transform: translate(-50%, -50%); }
+.rpi-orbit-card--slot-5,
+.rpi-orbit-card--right { top: 37.6%; left: 12%; transform: translate(-50%, -50%); }
 .rpi-orbit-card:hover,
 .rpi-orbit-card:focus-visible {
   border-color: rgba(16,157,187,0.48);
   box-shadow: 0 18px 46px rgba(16,157,187,0.18), 0 4px 12px rgba(0,0,0,0.08);
 }
-.rpi-orbit-card--top:hover,
-.rpi-orbit-card--top:focus-visible { transform: translate(-50%, -10%) scale(1.04); }
-.rpi-orbit-card--right:hover,
-.rpi-orbit-card--right:focus-visible { transform: translate(10%, -50%) scale(1.04); }
+.rpi-orbit-card--slot-1:hover,
+.rpi-orbit-card--slot-1:focus-visible,
+.rpi-orbit-card--slot-2:hover,
+.rpi-orbit-card--slot-2:focus-visible,
+.rpi-orbit-card--slot-3:hover,
+.rpi-orbit-card--slot-3:focus-visible,
+.rpi-orbit-card--slot-4:hover,
+.rpi-orbit-card--slot-4:focus-visible,
+.rpi-orbit-card--slot-5:hover,
+.rpi-orbit-card--slot-5:focus-visible,
+.rpi-orbit-card--lower-right:hover,
+.rpi-orbit-card--lower-right:focus-visible,
 .rpi-orbit-card--bottom:hover,
-.rpi-orbit-card--bottom:focus-visible { transform: translate(-50%, 10%) scale(1.04); }
+.rpi-orbit-card--bottom:focus-visible,
 .rpi-orbit-card--left:hover,
-.rpi-orbit-card--left:focus-visible { transform: translate(-10%, -50%) scale(1.04); }
+.rpi-orbit-card--left:focus-visible,
+.rpi-orbit-card--top:hover,
+.rpi-orbit-card--top:focus-visible,
+.rpi-orbit-card--right:hover,
+.rpi-orbit-card--right:focus-visible { transform: translate(-50%, -50%) scale(1.04); }
 .rpi-orbit-card:focus-visible {
   outline: 3px solid rgba(16,157,187,0.34);
   outline-offset: 4px;
@@ -1028,10 +1067,13 @@
 }
 .rpi-orbit-card--iad img { transform: scale(1.28); }
 .rpi-orbit-card--round img { transform: scale(1.48); max-height: 76px; }
+.rpi-orbit-card--bci img { transform: scale(1.18); max-height: 78px; }
 .rpi-orbit-card--iad:hover img,
 .rpi-orbit-card--iad:focus-visible img { transform: scale(1.34); }
 .rpi-orbit-card--round:hover img,
 .rpi-orbit-card--round:focus-visible img { transform: scale(1.56); }
+.rpi-orbit-card--bci:hover img,
+.rpi-orbit-card--bci:focus-visible img { transform: scale(1.26); }
 .rpi-orbit-center {
   position: absolute;
   inset: 22%;
@@ -1051,9 +1093,9 @@
 }
 .rpi-orbit:hover .rpi-orbit-ring,
 .rpi-orbit:hover .rpi-orbit-logo,
-.rpi-orbit:focus-within .rpi-orbit-ring,
-.rpi-orbit:focus-within .rpi-orbit-logo {
-  animation-play-state: paused;
+.rpi-orbit:has(.rpi-orbit-card:focus-visible) .rpi-orbit-ring,
+.rpi-orbit:has(.rpi-orbit-card:focus-visible) .rpi-orbit-logo {
+  animation-play-state: running;
 }
 @keyframes rpiOrbitSpin {
   from { transform: rotate(0deg); }
@@ -1079,6 +1121,9 @@
   .rpi-orbit-card--iad img { transform: scale(1.08); }
   .rpi-orbit-card--iad:hover img,
   .rpi-orbit-card--iad:focus-visible img { transform: scale(1.16); }
+  .rpi-orbit-card--bci img { transform: scale(1.02); max-height: 64px; }
+  .rpi-orbit-card--bci:hover img,
+  .rpi-orbit-card--bci:focus-visible img { transform: scale(1.08); }
 }
 @media (max-width: 400px) {
   .rpi-stats-row { flex-direction: column; }
@@ -1126,23 +1171,8 @@
 <section class="hero" id="home">
   <div class="hero-parallax-bg" id="heroBg">
     <div class="hero-parallax-inner">
-      <video class="hero-vid" id="heroVid0" muted playsinline preload="auto">
-        <source src="PLACE STAN VIDEO 1.mp4" type="video/mp4">
-      </video>
-      <video class="hero-vid" id="heroVid1" muted playsinline preload="none">
-        <source src="Place_Stanislas_Video_In_a_cinematic_style_a_person_walks_through_a_bTfjxr6b.mp4" type="video/mp4">
-      </video>
-      <video class="hero-vid" id="heroVid2" muted playsinline preload="none">
-        <source src="Hyper-Realistic_Video_In_a_cinematic_style_a_lone_man_with_short_brown_cQmXw2nn.mp4" type="video/mp4">
-      </video>
-      <video class="hero-vid" id="heroVid3" muted playsinline preload="none">
-        <source src="VIDEO PARIS .mp4" type="video/mp4">
-      </video>
-      <video class="hero-vid" id="heroVid4" muted playsinline preload="none">
-        <source src="VIDEO CONSTRUCTION.mp4" type="video/mp4">
-      </video>
-      <video class="hero-vid" id="heroVid5" muted playsinline preload="none">
-        <source src="17338280-hd_1920_1080_60fps.mp4" type="video/mp4">
+      <video class="hero-vid" id="heroVideo" muted playsinline autoplay loop preload="auto">
+        <source src="assets/hero-home-montage.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -1216,7 +1246,14 @@
   </div>
 </section>
 
-<hr class="hr-fade">
+<!-- BANNIERE PARTENARIAT ASNL -->
+<section class="partner-banner-section">
+  <div class="partner-banner-wrap">
+    <a class="partner-banner-link fade-in" href="https://www.asnl.net/" target="_blank" rel="noopener noreferrer" aria-label="Z'EXPERT, partenaire de l'AS Nancy Lorraine — en savoir plus sur le club">
+      <img class="partner-banner-img" src="pages/banniere-zexpert-asnl-marcel-picot.png" alt="Z'EXPERT fier d'être partenaire de l'AS Nancy Lorraine — une même passion pour la Lorraine" loading="lazy" width="2172" height="724">
+    </a>
+  </div>
+</section>
 
 <!-- PAIN POINTS -->
 <section class="section-sm pain-section" style="background: var(--bg);">
@@ -1812,7 +1849,7 @@
 
     <div class="rpi-stats-row fade-in fade-in-delay-2">
       <div class="rpi-stat-item">
-        <span class="rpi-stat-num">4+</span>
+        <span class="rpi-stat-num">5+</span>
         <span class="rpi-stat-label">Partenaires immobiliers</span>
       </div>
       <div class="rpi-stat-divider" aria-hidden="true"></div>
@@ -1835,11 +1872,14 @@
         <a class="rpi-orbit-card rpi-orbit-card--top" href="https://www.facebook.com/p/Christelle-Schlesser-Conseill%C3%A8re-Immobili%C3%A8re-Safti-100063820194064/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la page Facebook de Christelle Schlesser, conseillère immobilière SAFTI">
           <span class="rpi-orbit-logo"><img src="PARTENAIRE IMMO/SAFTI_idupBXHyJv_1.svg" alt="SAFTI" loading="lazy"></span>
         </a>
-        <a class="rpi-orbit-card rpi-orbit-card--right rpi-orbit-card--iad" href="https://www.iadfrance.fr/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le site d'IAD Immobilier">
+        <a class="rpi-orbit-card rpi-orbit-card--right rpi-orbit-card--iad" href="https://www.iadfrance.fr/conseiller-immobilier/stephanie.fischer" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir la page IAD de Stéphanie Fischer">
           <span class="rpi-orbit-logo"><img src="PARTENAIRE IMMO/iad-immobilier.svg" alt="IAD Immobilier" loading="lazy"></span>
         </a>
-        <a class="rpi-orbit-card rpi-orbit-card--bottom" href="https://kg-invest.fr/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le site de KG Invest">
-          <span class="rpi-orbit-logo"><img src="PARTENAIRE IMMO/Logo KG INVEST PNG.png" alt="KG Invest" loading="lazy"></span>
+        <a class="rpi-orbit-card rpi-orbit-card--bottom" href="https://kgimmobilier.fr/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le site de KG Immobilier">
+          <span class="rpi-orbit-logo"><img src="PARTENAIRE IMMO/Logo KG INVEST PNG.png" alt="KG Immobilier" loading="lazy"></span>
+        </a>
+        <a class="rpi-orbit-card rpi-orbit-card--lower-right rpi-orbit-card--bci" href="https://www.buttcroisilleimmobilier.com/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le site de Butt Croisille Immobilier">
+          <span class="rpi-orbit-logo"><img src="PARTENAIRE IMMO/bci-immobilier.svg" alt="Butt Croisille Immobilier" loading="lazy"></span>
         </a>
         <a class="rpi-orbit-card rpi-orbit-card--left rpi-orbit-card--round" href="https://www.latelierimmo.fr/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le site de L'Atelier Immo">
           <span class="rpi-orbit-logo"><img src="PARTENAIRE IMMO/logo_rond (1).png" alt="L'Atelier Immo" loading="lazy"></span>
@@ -2093,50 +2133,34 @@ function toggleAccordion(btn) {
 
 // ── HERO VIDEO MONTAGE ──
 (function () {
-  const vids = Array.from(document.querySelectorAll('.hero-vid'));
-  if (!vids.length) return;
+  const orbit = document.querySelector('.rpi-orbit');
+  if (!orbit) return;
 
-  let current = 0;
-  let busy = false;
-  const FADE = 1400; // ms crossfade
-
-  function goNext() {
-    if (busy) return;
-    busy = true;
-    const prev = current;
-    current = (current + 1) % vids.length;
-
-    // Preload the one after next
-    const afterNext = (current + 1) % vids.length;
-    vids[afterNext].preload = 'auto';
-    vids[afterNext].load();
-
-    vids[current].currentTime = 0;
-    vids[current].classList.add('active');
-    vids[current].play().catch(() => {});
-    vids[current].playbackRate = 0.75;
-
-    setTimeout(() => {
-      vids[prev].classList.remove('active');
-      vids[prev].pause();
-      busy = false;
-    }, FADE);
+  function resumeOrbit() {
+    if (document.activeElement instanceof HTMLElement && orbit.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
   }
 
-  vids.forEach(vid => {
-    vid.addEventListener('ended', goNext);
-    vid.addEventListener('timeupdate', () => {
-      if (!busy && vid.duration > 0 && vid.currentTime >= vid.duration - 1.6) {
-        goNext();
-      }
-    });
+  orbit.querySelectorAll('.rpi-orbit-card').forEach(link => {
+    link.addEventListener('click', () => setTimeout(resumeOrbit, 80));
   });
+  window.addEventListener('pageshow', resumeOrbit);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) resumeOrbit();
+  });
+})();
+
+(function () {
+  const heroVideo = document.getElementById('heroVideo');
+  if (!heroVideo) return;
+
+  heroVideo.muted = true;
+  heroVideo.playsInline = true;
+  heroVideo.preload = 'auto';
 
   // Démarrage
-  vids[0].classList.add('active');
-  vids[0].play().catch(() => {});
-  vids[0].playbackRate = 0.75;
-  if (vids[1]) { vids[1].preload = 'auto'; vids[1].load(); }
+  heroVideo.play().catch(() => {});
 })();
 
 // ── SIMULATEUR PROFIL ──
